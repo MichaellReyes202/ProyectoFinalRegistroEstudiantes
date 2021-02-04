@@ -7,8 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\imagen1.bmp" />
+    <None Remove="Views\Logo Prom celeste Perfil neg.png" />
+    <None Remove="Views\Resources\imagen1.bmp" />
+    <None Remove="Views\Resources\Logo Prom celeste Perfil neg.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MaterialDesignColors" Version="2.0.0-ci2397" />
     <PackageReference Include="MaterialDesignThemes" Version="4.0.0-ci2397" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Views\Resources\imagen1.bmp" />
+    <Resource Include="Views\Resources\Logo Prom celeste Perfil neg.png" />
   </ItemGroup>
 
 </Project>
