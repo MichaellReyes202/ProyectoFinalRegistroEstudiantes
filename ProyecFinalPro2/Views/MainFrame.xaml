@@ -18,11 +18,17 @@
             <ColumnDefinition Width="250"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <materialDesign:ColorZone Mode="PrimaryMid" Grid.ColumnSpan="2" HorizontalAlignment="Stretch">
-            <Grid>
-                <materialDesign:PopupBox PlacementMode="BottomAndAlignLeftEdges" HorizontalAlignment="Right" Margin="10">
-                    <StackPanel Width="60">
-                        <Button x:Name="ButtonExit" Content="Exit" Click="ButtonExit_Click">
+
+        <materialDesign:ColorZone Mode="PrimaryDark" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" >
+            <Grid Background="#FF2196F3" >
+                <materialDesign:PopupBox PlacementMode="LeftAndAlignMiddles" HorizontalAlignment="Right" Margin="15" >
+                    <StackPanel Width="110" Orientation="Horizontal" Height="30">
+                        
+                        <Button x:Name="ButtonMin" Click="ButtonMinimizar_Click" VerticalAlignment="Center" >
+                            <materialDesign:PackIcon Kind="WindowMaximize" Width="20" Height="20" Margin="2" />
+                        </Button>
+                        <Button x:Name="ButtonExit" Click="ButtonExit_Click" VerticalAlignment="Center" >
+                            <materialDesign:PackIcon Kind="Close" Width="20" Height="20" VerticalAlignment="Center" Margin="2" />
                         </Button>
                     </StackPanel>
                 </materialDesign:PopupBox>
@@ -34,12 +40,17 @@
                 <RowDefinition Height="70"/>
                 <RowDefinition Height="326*"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0" Background="BlanchedAlmond">
-                <Image Source="C:\Users\David_Moody\Desktop\C#\WPFNetCore\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\Views\Resources\Logo Prom celeste Perfil neg.png"/>
+            <Grid Grid.Row="0" Background="GhostWhite">
+                <Image Source="/Views/Resources/descarga.jpg"/>
             </Grid>
             <ScrollViewer HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="1">
-                <StackPanel x:Name="Menu" Margin="10"/>
+                <StackPanel x:Name="MenuItem" Margin="10">
+                    <!-- donde se agregaran los item mediante el codigo C#-->
+                </StackPanel>
             </ScrollViewer>
         </Grid>
+        <StackPanel x:Name="StackPanelMain" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch">
+
+        </StackPanel>
     </Grid>
 </Window>

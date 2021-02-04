@@ -12,21 +12,28 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProyecFinalPro2.Controller;
+using ProyecFinalPro2.Views;
 
 namespace ProyecFinalPro2.ViewModel
 {
-     public partial class UserControlMenuItem : UserControl
-     {
-          
+    public partial class UserControlMenuItem : UserControl
+    {
+        MainFrame _context;
 
-          public UserControlMenuItem(ItemMenu itemMenu) {
-               InitializeComponent();
-               ExpanderMenu.Visibility = itemMenu.SubItems == null ? Visibility.Collapsed : Visibility.Visible;
-               ListViewItemMenu.Visibility = itemMenu.SubItems == null ? Visibility.Visible : Visibility.Collapsed;
+        public UserControlMenuItem(ItemMenu itemMenu, MainFrame context)
+        {
+            _context = context;
 
-               this.DataContext = itemMenu;
-          }
+            InitializeComponent();
+            ExpanderMenu.Visibility = itemMenu.SubItems == null ? Visibility.Collapsed : Visibility.Visible;
+            ListViewItemMenu.Visibility = itemMenu.SubItems == null ? Visibility.Visible : Visibility.Collapsed;
 
-        
-     }
+            this.DataContext = itemMenu;
+        }
+
+        private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            _context.SwitchScreen(((SubItem)((ListView)sender).SelectedItem).Screen);
+        }
+    }
 }
