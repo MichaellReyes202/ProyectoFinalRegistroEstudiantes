@@ -7,11 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Controller\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="4.0.0-ci2397" />
   </ItemGroup>
 
