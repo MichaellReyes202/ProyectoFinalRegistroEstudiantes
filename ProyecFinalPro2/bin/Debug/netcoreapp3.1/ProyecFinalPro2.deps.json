@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "ProyecFinalPro2/1.0.0": {
         "dependencies": {
+          "MaterialDesignColors": "2.0.0-ci2397",
           "MaterialDesignThemes": "4.0.0-ci2397"
         },
         "runtime": {

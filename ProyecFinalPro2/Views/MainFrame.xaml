@@ -6,13 +6,10 @@
         xmlns:local="clr-namespace:ProyecFinalPro2.Views"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Registro de Estudiantes PROMECYS" Height="600" MinWidth="1080" WindowStartupLocation="CenterScreen" WindowState="Maximized"
- 
-        >
+        Title="Registro de Estudiantes PROMECYS" Height="600" MinWidth="1080" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
     
-
     <!-- =================================================================================================================  -->
-    <Grid>
+    <Grid MouseDown="Grid_MouseDown">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -23,22 +20,26 @@
         </Grid.ColumnDefinitions>
         <materialDesign:ColorZone Mode="PrimaryMid" Grid.ColumnSpan="2" HorizontalAlignment="Stretch">
             <Grid>
-                <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" HorizontalAlignment="Right" Margin="10"/>
+                <materialDesign:PopupBox PlacementMode="BottomAndAlignLeftEdges" HorizontalAlignment="Right" Margin="10">
+                    <StackPanel Width="60">
+                        <Button x:Name="ButtonExit" Content="Exit" Click="ButtonExit_Click">
+                        </Button>
+                    </StackPanel>
+                </materialDesign:PopupBox>
             </Grid>
         </materialDesign:ColorZone>
-        
+
         <Grid HorizontalAlignment="Stretch" Grid.Row="1" Background="{StaticResource PrimaryHueMidBrush}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="70"/>
                 <RowDefinition Height="326*"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Background="BlanchedAlmond">
-                <Image Source="/Views/Resources/Logo Prom celeste Perfil neg.png" />
+                <Image Source="C:\Users\David_Moody\Desktop\C#\WPFNetCore\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\Views\Resources\Logo Prom celeste Perfil neg.png"/>
             </Grid>
             <ScrollViewer HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="1">
                 <StackPanel x:Name="Menu" Margin="10"/>
             </ScrollViewer>
         </Grid>
     </Grid>
-
 </Window>

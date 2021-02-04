@@ -11,21 +11,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ProyecFinalPro2.Controller;
 
 namespace ProyecFinalPro2.ViewModel
 {
-    /// <summary>
-    /// Lógica de interacción para UserControlMenuItem.xaml
-    /// </summary>
-    public partial class UserControlMenuItem : UserControl
-    {
-        public UserControlMenuItem(ItemMenu itemMenu)
-        {
-            InitializeComponent();
-            ExpanderMenu.Visibility = itemMenu.SubItems == null ? Visibility.Collapsed : Visibility.Visible;
-            ListViewItemMenu.Visibility = itemMenu.SubItems == null ? Visibility.Visible : Visibility.Collapsed;
+     public partial class UserControlMenuItem : UserControl
+     {
+          
 
-            this.DataContext = itemMenu;
-        }
-    }
+          public UserControlMenuItem(ItemMenu itemMenu) {
+               InitializeComponent();
+               ExpanderMenu.Visibility = itemMenu.SubItems == null ? Visibility.Collapsed : Visibility.Visible;
+               ListViewItemMenu.Visibility = itemMenu.SubItems == null ? Visibility.Visible : Visibility.Collapsed;
+
+               this.DataContext = itemMenu;
+          }
+
+        
+     }
 }
