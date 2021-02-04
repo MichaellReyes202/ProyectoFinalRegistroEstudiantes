@@ -1,0 +1,59 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ProyecFinalPro2/1.0.0": {
+        "dependencies": {
+          "MaterialDesignThemes": "4.0.0-ci2397"
+        },
+        "runtime": {
+          "ProyecFinalPro2.dll": {}
+        }
+      },
+      "MaterialDesignColors/2.0.0-ci2397": {
+        "runtime": {
+          "lib/netcoreapp3.1/MaterialDesignColors.dll": {
+            "assemblyVersion": "2.0.0.2397",
+            "fileVersion": "2.0.0.2397"
+          }
+        }
+      },
+      "MaterialDesignThemes/4.0.0-ci2397": {
+        "dependencies": {
+          "MaterialDesignColors": "2.0.0-ci2397"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {
+            "assemblyVersion": "4.0.0.2397",
+            "fileVersion": "4.0.0.2397"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ProyecFinalPro2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MaterialDesignColors/2.0.0-ci2397": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3SfeIVDSVuPXnONahfo6vJKuWQwrAUowxwSvaIRwmdcxZbPBPq7Dvg9kD6VTy48+AGl6/KJJdgzvW/v+aclPAA==",
+      "path": "materialdesigncolors/2.0.0-ci2397",
+      "hashPath": "materialdesigncolors.2.0.0-ci2397.nupkg.sha512"
+    },
+    "MaterialDesignThemes/4.0.0-ci2397": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ej5JCEoXtmpTs1n1s1Do6XzJWh4vVynnsJzR4iN2KhlfVn4fvA1HTgAAtxAZuBiP/LWQqYnALcufINdFHA80QA==",
+      "path": "materialdesignthemes/4.0.0-ci2397",
+      "hashPath": "materialdesignthemes.4.0.0-ci2397.nupkg.sha512"
+    }
+  }
+}
