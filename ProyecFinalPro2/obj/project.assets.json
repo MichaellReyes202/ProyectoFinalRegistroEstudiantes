@@ -97,11 +97,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\David_Moody\\Desktop\\C#\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
+      "projectUniqueName": "C:\\Users\\David_Moody\\Desktop\\C#\\WPFNetCore\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
       "projectName": "ProyecFinalPro2",
-      "projectPath": "C:\\Users\\David_Moody\\Desktop\\C#\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
+      "projectPath": "C:\\Users\\David_Moody\\Desktop\\C#\\WPFNetCore\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
       "packagesPath": "C:\\Users\\David_Moody\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\David_Moody\\Desktop\\C#\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\obj\\",
+      "outputPath": "C:\\Users\\David_Moody\\Desktop\\C#\\WPFNetCore\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\David_Moody\\AppData\\Roaming\\NuGet\\NuGet.Config",

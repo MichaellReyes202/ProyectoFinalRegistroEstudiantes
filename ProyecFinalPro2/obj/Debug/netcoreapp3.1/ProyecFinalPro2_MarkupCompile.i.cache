@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\David_Moody\Desktop\C#\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\
+C:\Users\David_Moody\Desktop\C#\WPFNetCore\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\
 ProyecFinalPro2
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\David_Moody\Desktop\C#\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\App.xaml
+C:\Users\David_Moody\Desktop\C#\WPFNetCore\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\App.xaml
 5-524591247
 
-16-61162438
+171871036914
 194-677996971
 ViewModel\UserControlAddEstudent.xaml;ViewModel\UserControlMenuItem.xaml;ViewModel\UserControlUpdateStudent.xaml;Views\LoginViews.xaml;Views\MainFrame.xaml;
 
-False
+True
 

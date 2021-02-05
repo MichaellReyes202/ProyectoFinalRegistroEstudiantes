@@ -9,21 +9,36 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProyecFinalPro2.Interfaz;
+using ProyecFinalPro2.Controller;
 
 namespace ProyecFinalPro2.Views
 {
-     public partial class Window1 : Window
+     public partial class LoginViews : Window, IGestionWPF
      {
-          public Window1() {
+          private LoginController loginController;
+
+          public LoginViews() {
                InitializeComponent();
+               SeputControllers();
+               Panel2.Visibility = Visibility.Collapsed;
+          }
+          public void SeputControllers() {
+               loginController = new LoginController(this);
           }
 
-          private void Grid_MouseDown(object sender,MouseButtonEventArgs e) {
-               DragMove();
+          public void DragMoveWindows() => this.DragMove();
+
+          public void Exit() => this.Close();
+
+          private void ButtonRegistro_Click(object sender,RoutedEventArgs e) {
+               Panel1.Visibility = Visibility.Collapsed;
+               Panel2.Visibility = Visibility.Visible;
           }
 
-          private void Button_Exit_Click(object sender,RoutedEventArgs e) {
-               this.Close();
+          private void ButtoNewExit_Click(object sender,RoutedEventArgs e) {
+               Panel2.Visibility = Visibility.Collapsed;
+               Panel1.Visibility = Visibility.Visible;
           }
      }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Kg3OTedBxmFm+4eZuAP3VGfTESptV9S2iT6JzAkz4cHfhITOiE09l+c74o8opVc9GKD/v0iugIzbw38jwMxdjg==",
+  "dgSpecHash": "zJH15PsWeHBkXI6SYyLWrJyKudaowkrqFcl0CLP4LtEmvilZF0Mf9wELF/YayOi8sQQDpMNXzVr9C7JrEW0LtA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\David_Moody\\Desktop\\C#\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
+  "projectFilePath": "C:\\Users\\David_Moody\\Desktop\\C#\\WPFNetCore\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\David_Moody\\.nuget\\packages\\materialdesigncolors\\2.0.0-ci2397\\materialdesigncolors.2.0.0-ci2397.nupkg.sha512",
     "C:\\Users\\David_Moody\\.nuget\\packages\\materialdesignthemes\\4.0.0-ci2397\\materialdesignthemes.4.0.0-ci2397.nupkg.sha512"

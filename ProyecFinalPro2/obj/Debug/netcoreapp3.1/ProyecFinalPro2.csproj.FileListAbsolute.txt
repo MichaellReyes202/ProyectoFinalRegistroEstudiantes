@@ -87,3 +87,7 @@ C:\Users\David_Moody\Desktop\C#\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2
 C:\Users\David_Moody\Desktop\C#\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.dll
 C:\Users\David_Moody\Desktop\C#\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.pdb
 C:\Users\David_Moody\Desktop\C#\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.genruntimeconfig.cache
+C:\Users\David_Moody\Desktop\C#\WPFNetCore\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ViewModel\UserControlAddEstudent.g.cs
+C:\Users\David_Moody\Desktop\C#\WPFNetCore\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ViewModel\UserControlUpdateStudent.g.cs
+C:\Users\David_Moody\Desktop\C#\WPFNetCore\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ViewModel\UserControlAddEstudent.baml
+C:\Users\David_Moody\Desktop\C#\WPFNetCore\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ViewModel\UserControlUpdateStudent.baml
