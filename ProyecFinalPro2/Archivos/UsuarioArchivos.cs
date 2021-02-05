@@ -18,6 +18,27 @@ namespace ProyecFinalPro2.Archivos
                binaryFormatter = new BinaryFormatter();
           }
 
+          public void a() {
+               List<UsuarioModels> u = new List<UsuarioModels>();
+               UsuarioModels m = new UsuarioModels();
+               string contenido = "";
+               char delimi = '-';
+               try {
+                    StreamReader streamReader = new StreamReader(path + "Us.txt");
+                    while (streamReader.Peek() >= 0) {
+                        char ontenido = (char) streamReader.Read();
+                    }
+
+                    MessageBox.Show(contenido);
+               } catch (Exception x) {
+                    MessageBox.Show("No se puede leer");
+               }
+               foreach (UsuarioModels usuarioModels in u) {
+                    MessageBox.Show("Nombre " + usuarioModels.nombre + " Clave" + "Tippo " + usuarioModels.tipoUsuario);
+               }
+
+          }
+
           public List<UsuarioModels> Abrir() {
                throw new NotImplementedException();
           }
@@ -27,7 +48,7 @@ namespace ProyecFinalPro2.Archivos
                Stream stream = new FileStream(path + "Usuario.txt",FileMode.Open,FileAccess.Read,FileShare.ReadWrite);
                usuarioModels = (UsuarioModels) binaryFormatter.Deserialize(stream);
 
-               MessageBox.Show("Nombre : " + usuarioModels.nombre + " Clave: " + usuarioModels.clave + " " + usuarioModels.tipoUsuario);
+               MessageBox.Show("Nombre : " + usuarioModels.nombre + " Clave: " + usuarioModels.clave + "-" + usuarioModels.tipoUsuario);
           }
 
           public void Eliminar() {
@@ -41,7 +62,7 @@ namespace ProyecFinalPro2.Archivos
                     binaryFormatter.Serialize(stream,usuario);
                     stream.Flush(); stream.Close();
                } catch (Exception x) {
-                    MessageBox.Show("No");
+                    MessageBox.Show("No serializar");
                }
           }
 
@@ -50,17 +71,16 @@ namespace ProyecFinalPro2.Archivos
           }
 
           public void Guardar(List<UsuarioModels> listas,bool v) {
-
+               if (!Directory.Exists(path)) { Directory.CreateDirectory(path); }
                try {
                     StreamWriter streamWriter = new StreamWriter(path + "Us.txt",v);
                     foreach (UsuarioModels usuarioModels in listas) {
-                         MessageBox.Show("si");
-                         streamWriter.WriteLine(usuarioModels.nombre + "-" + usuarioModels.clave + "-" + usuarioModels.tipoUsuario);
+                         streamWriter.WriteLine(usuarioModels.nombre + "-" + usuarioModels.clave + "," + usuarioModels.tipoUsuario +"/"); 
                     }
                     streamWriter.Flush(); streamWriter.Close();
 
                } catch (Exception x) {
-                    MessageBox.Show("No");
+                    MessageBox.Show("No escrito");
                }
           }
      }

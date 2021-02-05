@@ -35,7 +35,7 @@ namespace ProyecFinalPro2.Controller
                          break;
                     case "ButtonNewRegistro":
                          usuarioArchivos.Guardar(loginViews.NewUser(),true);
-                         
+                         usuarioArchivos.a();
                          break;
                }
           }
