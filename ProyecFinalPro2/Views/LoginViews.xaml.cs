@@ -25,18 +25,23 @@ namespace ProyecFinalPro2.Views
           }
           public void SeputControllers() {
                loginController = new LoginController(this);
+
+               ButtonExit.Click += new RoutedEventHandler(loginController.ButtonHandler);
+               ButtonRegistro.Click += new RoutedEventHandler(loginController.ButtonHandler);
+               ButtoNewExit.Click += new RoutedEventHandler(loginController.ButtonHandler);
+              
           }
 
           public void DragMoveWindows() => this.DragMove();
 
           public void Exit() => this.Close();
 
-          private void ButtonRegistro_Click(object sender,RoutedEventArgs e) {
+          public void OcultarPanel1() {
                Panel1.Visibility = Visibility.Collapsed;
                Panel2.Visibility = Visibility.Visible;
           }
 
-          private void ButtoNewExit_Click(object sender,RoutedEventArgs e) {
+          public void OcultarPanel2() {
                Panel2.Visibility = Visibility.Collapsed;
                Panel1.Visibility = Visibility.Visible;
           }
