@@ -4,9 +4,11 @@ using System.Text;
 
 namespace ProyecFinalPro2.Interfaz
 {
-     interface IGestionSerializar<T>
+     interface IGestionArchivos<T>
      {
           void Guardar(T obj);
+
+          void Guardar(List<T> listas, bool v);
 
           List<T> Abrir();
 
