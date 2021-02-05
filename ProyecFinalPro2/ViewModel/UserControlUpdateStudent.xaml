@@ -29,5 +29,6 @@
         <Border Margin="5"  Grid.Column="3" Background="Brown" VerticalAlignment="Stretch" CornerRadius="10">
 
         </Border>
+        <DataGrid Grid.Column="1" Grid.Row="1" Background="Firebrick"/>
     </Grid>
 </UserControl>
