@@ -8,8 +8,5 @@ namespace ProyecFinalPro2.Interfaz
      {
           void SeputControllers();
 
-          void DragMoveWindows();
-
-          void Exit();
      }
 }

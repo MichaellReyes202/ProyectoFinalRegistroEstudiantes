@@ -14,32 +14,37 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ProyecFinalPro2.Controller;
+using ProyecFinalPro2.Interfaz;
 
 namespace ProyecFinalPro2.Views
 {
-    public partial class MainFrame : Window
+    public partial class MainFrame : Window, IGestionWPF
     {
+        private MainController MC;
         public MainFrame()
         {
             InitializeComponent();
             AddItemMainFrame();
+            SeputControllers();
         }
 
         private void AddItemMainFrame()
         {
+
             var menuRegister = new List<SubItem>();
-            menuRegister.Add(new SubItem("Update", new UserControlUpdateStudent() ));
-            menuRegister.Add(new SubItem("Add",new UserControlAddEstudent() ));
+            menuRegister.Add(new SubItem("Update", new UserControlUpdateStudent()));
+            menuRegister.Add(new SubItem("Add", new UserControlAddEstudent()));
             menuRegister.Add(new SubItem("BD-Student"));
             var item6 = new ItemMenu("Student", menuRegister, PackIconKind.Register);
 
             var menuSchedule = new List<SubItem>();
-
             var menuReports = new List<SubItem>();
             menuReports.Add(new SubItem("Add"));
             menuReports.Add(new SubItem("Delete"));
             menuReports.Add(new SubItem("Update"));
             var item2 = new ItemMenu("Admin", menuReports, PackIconKind.FileReport);
+
+
 
             var item0 = new ItemMenu("Opciones", new UserControl(), PackIconKind.ViewDashboard);
 
@@ -58,26 +63,16 @@ namespace ProyecFinalPro2.Views
             }
         }
         //-----------------------------------------------------------------------------------------------------------------
-        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+
+
+        public void SeputControllers()
         {
-            DragMove();
+            MC = new MainController(this);
+            this.ButtonMin.Click += new RoutedEventHandler(MC.ButtonHandler);
+            this.ButtonExit.Click += new RoutedEventHandler(MC.ButtonHandler);
+            this.BarraSuperior.MouseDown += new MouseButtonEventHandler(MC.DragMoveWindows); ;
         }
 
-        private void ButtonExit_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-        private void ButtonMinimizar_Click(object sender, RoutedEventArgs e)
-        {
-            if (this.WindowState == WindowState.Normal)
-            {
-                this.WindowState = System.Windows.WindowState.Maximized;
-            }
-            else
-            {
-                this.WindowState = System.Windows.WindowState.Normal;
-            }
 
-        }
     }
 }
