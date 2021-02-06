@@ -9,7 +9,7 @@
         Title="Registro de Estudiantes PROMECYS" Height="600" MinWidth="1080" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
     
     <!-- =================================================================================================================  -->
-    <Grid MouseDown="Grid_MouseDown">
+    <Grid x:Name="BarraSuperior" >
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -24,10 +24,10 @@
                 <materialDesign:PopupBox PlacementMode="LeftAndAlignMiddles" HorizontalAlignment="Right" Margin="15" >
                     <StackPanel Width="110" Orientation="Horizontal" Height="30">
                         
-                        <Button x:Name="ButtonMin" Click="ButtonMinimizar_Click" VerticalAlignment="Center" >
+                        <Button x:Name="ButtonMin" VerticalAlignment="Center">
                             <materialDesign:PackIcon Kind="WindowMaximize" Width="20" Height="20" Margin="2" />
                         </Button>
-                        <Button x:Name="ButtonExit" Click="ButtonExit_Click" VerticalAlignment="Center" >
+                        <Button x:Name="ButtonExit" VerticalAlignment="Center" >
                             <materialDesign:PackIcon Kind="Close" Width="20" Height="20" VerticalAlignment="Center" Margin="2" />
                         </Button>
                     </StackPanel>
@@ -44,9 +44,15 @@
                 <Image Source="/Views/Resources/descarga.jpg"/>
             </Grid>
             <ScrollViewer HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="1">
+                
                 <StackPanel x:Name="MenuItem" Margin="10">
+                    
+                    
                     <!-- donde se agregaran los item mediante el codigo C#-->
+                    
+                    
                 </StackPanel>
+                
             </ScrollViewer>
         </Grid>
         <StackPanel x:Name="StackPanelMain" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch">
