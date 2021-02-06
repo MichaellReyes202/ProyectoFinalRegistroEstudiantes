@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\David_Moody\Desktop\C#\WPFNetCore\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\App.xaml
-5-524591247
+61000453221
 
-17-1967405683
+201045157138
 194-677996971
-ViewModel\UserControlAddEstudent.xaml;ViewModel\UserControlMenuItem.xaml;ViewModel\UserControlUpdateStudent.xaml;Views\LoginViews.xaml;Views\MainFrame.xaml;
+ViewModel\UserControlAddEstudent.xaml;ViewModel\UserControlMenuItem.xaml;ViewModel\UserControlStudent.xaml;ViewModel\UserControlUpdateStudent.xaml;Views\LoginViews.xaml;Views\MainFrame.xaml;
 
 False
 

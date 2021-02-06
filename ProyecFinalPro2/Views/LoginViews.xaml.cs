@@ -24,14 +24,40 @@ namespace ProyecFinalPro2.Views
           public LoginViews() {
                InitializeComponent();
                SeputControllers();
-               Panel2.Visibility = Visibility.Collapsed;
           }
           public void SeputControllers() {
                loginController = new LoginController(this);
+               Panel2.Visibility = Visibility.Collapsed;
+
+               ButtonLogin.Click += new RoutedEventHandler(loginController.ButtonHandler);
                ButtonExit.Click += new RoutedEventHandler(loginController.ButtonHandler);
                ButtonRegistro.Click += new RoutedEventHandler(loginController.ButtonHandler);
                ButtoNewExit.Click += new RoutedEventHandler(loginController.ButtonHandler);
                ButtonNewRegistro.Click += new RoutedEventHandler(loginController.ButtonHandler);
+          }
+
+          public List<UsuarioModels> NewUser() {
+               usuarioViews = new UsuarioModels();
+               listaUsuario = new List<UsuarioModels>();
+
+               usuarioViews.nombre = TextBlockNewUsuario.Text;
+               usuarioViews.clave = PasswordBoxNewUsuario.Password;
+
+               if (RadioUsuario.IsChecked == true) {
+                    usuarioViews.tipoU = "Usuario";
+               } else if (RadioAdminis.IsChecked == true) {
+                    usuarioViews.tipoU = "Administrador";
+               }
+
+               listaUsuario.Add(usuarioViews);
+               return listaUsuario;
+          }
+
+          public UsuarioModels ValidarUsuario() {
+               usuarioViews = new UsuarioModels();
+               usuarioViews.nombre = TextBlockUsuario.Text;
+               usuarioViews.clave = PasswordBoxUsuario.Password;
+               return usuarioViews;
           }
 
           public void DragMoveWindows() => this.DragMove();
@@ -46,16 +72,6 @@ namespace ProyecFinalPro2.Views
           public void OcultarPanel2() {
                Panel2.Visibility = Visibility.Collapsed;
                Panel1.Visibility = Visibility.Visible;
-          }
-
-          public List<UsuarioModels> NewUser() {
-               usuarioViews = new UsuarioModels();
-               listaUsuario = new List<UsuarioModels>();
-               usuarioViews.nombre = TextBlockNewUsuario.Text;
-               usuarioViews.clave = PasswordBoxNewUsuario.Password;
-               usuarioViews.tipoUsuario = ((RadioAdminis.IsChecked == true) ? true : false);
-               listaUsuario.Add(usuarioViews);
-               return listaUsuario;
           }
      }
 }

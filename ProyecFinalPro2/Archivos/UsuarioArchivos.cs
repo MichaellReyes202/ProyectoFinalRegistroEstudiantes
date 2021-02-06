@@ -11,45 +11,51 @@ namespace ProyecFinalPro2.Archivos
 {
      class UsuarioArchivos : IGestionArchivos<UsuarioModels>
      {
-          private string path = @"c:\DatosUsuarios\";
+          private string path = @"c:\Datos Usuarios\";
           private BinaryFormatter binaryFormatter;
+          private List<UsuarioModels> listas;
+          private string contenido;
 
           public UsuarioArchivos() {
                binaryFormatter = new BinaryFormatter();
           }
 
-          public void a() {
-               List<UsuarioModels> u = new List<UsuarioModels>();
-               UsuarioModels m = new UsuarioModels();
-               string contenido = "";
-               char delimi = '-';
-               try {
-                    StreamReader streamReader = new StreamReader(path + "Us.txt");
-                    while (streamReader.Peek() >= 0) {
-                        char ontenido = (char) streamReader.Read();
-                    }
-
-                    MessageBox.Show(contenido);
-               } catch (Exception x) {
-                    MessageBox.Show("No se puede leer");
-               }
-               foreach (UsuarioModels usuarioModels in u) {
-                    MessageBox.Show("Nombre " + usuarioModels.nombre + " Clave" + "Tippo " + usuarioModels.tipoUsuario);
-               }
-
-          }
-
           public List<UsuarioModels> Abrir() {
-               throw new NotImplementedException();
+               listas = new List<UsuarioModels>();
+
+               try {
+                    StreamReader streamReader = new StreamReader(path + "ListaUsuarios.txt");
+                    while ((contenido = streamReader.ReadLine()) != null) {
+                         string[] delimitador = contenido.Split(",");
+                         UsuarioModels usuario = new UsuarioModels();
+                         usuario.nombre = delimitador[0];
+                         usuario.clave = delimitador[1];
+                         usuario.tipoU = delimitador[2];
+                         listas.Add(usuario);
+                    }
+                    streamReader.Close();
+               } catch (Exception x) { MessageBox.Show("Error Archivo Read"); }
+               return listas;
           }
 
-          public void ller() {
-               UsuarioModels usuarioModels = new UsuarioModels();
-               Stream stream = new FileStream(path + "Usuario.txt",FileMode.Open,FileAccess.Read,FileShare.ReadWrite);
-               usuarioModels = (UsuarioModels) binaryFormatter.Deserialize(stream);
+          public void Guardar(List<UsuarioModels> listas,bool v) {
+               if (!Directory.Exists(path)) { Directory.CreateDirectory(path); }
 
-               MessageBox.Show("Nombre : " + usuarioModels.nombre + " Clave: " + usuarioModels.clave + "-" + usuarioModels.tipoUsuario);
+               try {
+                    StreamWriter streamWriter = new StreamWriter(path + "ListaUsuarios.txt",v);
+                    foreach (UsuarioModels u in listas) {
+                         streamWriter.WriteLine(u.nombre + "," + u.clave + "," + u.tipoU);
+                    }
+                    streamWriter.Flush(); streamWriter.Close();
+
+               } catch (Exception x) { MessageBox.Show("Errro Archvio Write"); }
           }
+
+          //public void ller() {
+          //     UsuarioModels usuarioModels = new UsuarioModels();
+          //     Stream stream = new FileStream(path + "Usuario.txt",FileMode.Open,FileAccess.Read,FileShare.ReadWrite);
+          //     usuarioModels = (UsuarioModels) binaryFormatter.Deserialize(stream);
+          //}
 
           public void Eliminar() {
                throw new NotImplementedException();
@@ -68,20 +74,6 @@ namespace ProyecFinalPro2.Archivos
 
           public void Modificar() {
                throw new NotImplementedException();
-          }
-
-          public void Guardar(List<UsuarioModels> listas,bool v) {
-               if (!Directory.Exists(path)) { Directory.CreateDirectory(path); }
-               try {
-                    StreamWriter streamWriter = new StreamWriter(path + "Us.txt",v);
-                    foreach (UsuarioModels usuarioModels in listas) {
-                         streamWriter.WriteLine(usuarioModels.nombre + "-" + usuarioModels.clave + "," + usuarioModels.tipoUsuario +"/"); 
-                    }
-                    streamWriter.Flush(); streamWriter.Close();
-
-               } catch (Exception x) {
-                    MessageBox.Show("No escrito");
-               }
           }
      }
 }

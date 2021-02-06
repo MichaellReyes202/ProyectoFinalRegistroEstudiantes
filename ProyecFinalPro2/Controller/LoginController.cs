@@ -7,6 +7,8 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Controls;
 using ProyecFinalPro2.Archivos;
+using ProyecFinalPro2.Models;
+
 
 namespace ProyecFinalPro2.Controller
 {
@@ -24,20 +26,36 @@ namespace ProyecFinalPro2.Controller
                Button button = (Button) sender;
 
                switch (button.Name) {
-                    case "ButtonExit":
-                         loginViews.Exit();
-                         break;
-                    case "ButtonRegistro":
-                         loginViews.OcultarPanel1();
-                         break;
-                    case "ButtoNewExit":
-                         loginViews.OcultarPanel2();
-                         break;
+                    case "ButtonExit": loginViews.Exit(); break;
+                    case "ButtoNewExit": loginViews.OcultarPanel2(); break;
+                    case "ButtonRegistro": loginViews.OcultarPanel1(); break;
                     case "ButtonNewRegistro":
                          usuarioArchivos.Guardar(loginViews.NewUser(),true);
-                         usuarioArchivos.a();
+                         loginViews.OcultarPanel2();
+                         break;
+                    case "ButtonLogin":
+                         switch (ValidarUsuarioDatos(usuarioArchivos.Abrir(),loginViews.ValidarUsuario())) {
+                              case "Usuario":
+                                   MessageBox.Show("Usuario");
+                                   break;
+                              case "Administrador":
+                                   MessageBox.Show("Admistr");
+                                   break;
+                              default:
+                                   MessageBox.Show("No exite");
+                                   break;
+                         }
                          break;
                }
+          }
+
+          public string ValidarUsuarioDatos(List<UsuarioModels> l,UsuarioModels u) {
+               foreach (UsuarioModels usuario in l) {
+                    if (usuario.nombre.Equals(u.nombre) && usuario.clave.Equals(u.clave)) {
+                         return usuario.tipoU;
+                    }
+               }
+               return "No existe";
           }
 
           public void DragMoveWindows(object sender,MouseButtonEventArgs e) {
