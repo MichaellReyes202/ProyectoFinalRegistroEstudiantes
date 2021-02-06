@@ -7,12 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ViewModel\UNI.png" />
     <None Remove="Views\descarga.jpg" />
     <None Remove="Views\imagen1.bmp" />
     <None Remove="Views\Logo Prom celeste Perfil neg.png" />
     <None Remove="Views\Resources\descarga.jpg" />
     <None Remove="Views\Resources\imagen1.bmp" />
     <None Remove="Views\Resources\Logo Prom celeste Perfil neg.png" />
+    <None Remove="Views\Resources\UNI.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +26,7 @@
     <Resource Include="Views\Resources\descarga.jpg" />
     <Resource Include="Views\Resources\imagen1.bmp" />
     <Resource Include="Views\Resources\Logo Prom celeste Perfil neg.png" />
+    <Resource Include="Views\Resources\UNI.png" />
   </ItemGroup>
 
 </Project>

@@ -26,6 +26,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="ViewModel\UserControlStudent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="ViewModel\UserControlAddEstudent.xaml">
       <SubType>Designer</SubType>
     </Page>
