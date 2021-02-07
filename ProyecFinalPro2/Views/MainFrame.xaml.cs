@@ -32,21 +32,22 @@ namespace ProyecFinalPro2.Views
         {
 
             var menuRegister = new List<SubItem>();
-            menuRegister.Add(new SubItem("Update", new UserControlUpdateStudent()));
+            // menuRegister.Add(new SubItem("Update", new UserControlUpdateStudent()));
+            menuRegister.Add(new SubItem("Update", new UserControlStudent()));
             menuRegister.Add(new SubItem("Add", new UserControlAddEstudent()));
             menuRegister.Add(new SubItem("BD-Student"));
-            var item6 = new ItemMenu("Student", menuRegister, PackIconKind.Register);
+            var item6 = new ItemMenu("  Student", menuRegister, PackIconKind.Register);
 
             var menuSchedule = new List<SubItem>();
             var menuReports = new List<SubItem>();
-            menuReports.Add(new SubItem("Add"));
-            menuReports.Add(new SubItem("Delete"));
-            menuReports.Add(new SubItem("Update"));
-            var item2 = new ItemMenu("Admin", menuReports, PackIconKind.FileReport);
+            menuReports.Add(new SubItem(" Add"));
+            menuReports.Add(new SubItem(" Delete"));
+            menuReports.Add(new SubItem(" Update"));
+            var item2 = new ItemMenu("  Admin", menuReports, PackIconKind.FileReport);
 
 
 
-            var item0 = new ItemMenu("Opciones", new UserControl(), PackIconKind.ViewDashboard);
+            var item0 = new ItemMenu(" Opciones", new UserControl(), PackIconKind.ViewDashboard);
 
             MenuItem.Children.Add(new UserControlMenuItem(item0, this));
             MenuItem.Children.Add(new UserControlMenuItem(item6, this));

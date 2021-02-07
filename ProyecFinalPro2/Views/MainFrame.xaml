@@ -9,7 +9,7 @@
         Title="Registro de Estudiantes PROMECYS" Height="600" MinWidth="1080" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
     
     <!-- =================================================================================================================  -->
-    <Grid x:Name="BarraSuperior" >
+    <Grid x:Name="BarraSuperior" Background="White" >
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
@@ -20,11 +20,11 @@
         </Grid.ColumnDefinitions>
 
         <materialDesign:ColorZone Mode="PrimaryDark" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" >
-            <Grid Background="#FF2196F3" >
+            <Grid  >
                 <materialDesign:PopupBox PlacementMode="LeftAndAlignMiddles" HorizontalAlignment="Right" Margin="15" >
                     <StackPanel Width="110" Orientation="Horizontal" Height="30">
-                        
-                        <Button x:Name="ButtonMin" VerticalAlignment="Center">
+
+                        <Button x:Name="ButtonMin" VerticalAlignment="Center" >
                             <materialDesign:PackIcon Kind="WindowMaximize" Width="20" Height="20" Margin="2" />
                         </Button>
                         <Button x:Name="ButtonExit" VerticalAlignment="Center" >
@@ -35,28 +35,19 @@
             </Grid>
         </materialDesign:ColorZone>
 
-        <Grid HorizontalAlignment="Stretch" Grid.Row="1" Background="{StaticResource PrimaryHueMidBrush}">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="326*"/>
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0" Background="GhostWhite">
-                <Image Source="/Views/Resources/descarga.jpg"/>
-            </Grid>
-            <ScrollViewer HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="1">
-                
-                <StackPanel x:Name="MenuItem" Margin="10">
-                    
-                    
+        <Grid HorizontalAlignment="Stretch" Grid.Row="1" Height="auto" Background="{StaticResource PrimaryHueMidBrush}">
+            <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Margin="0,14,0,0" Grid.RowSpan="1" >
+
+                <StackPanel x:Name="MenuItem" Margin="10" Height="515" VerticalAlignment="Top">
                     <!-- donde se agregaran los item mediante el codigo C#-->
-                    
-                    
                 </StackPanel>
-                
+
             </ScrollViewer>
         </Grid>
-        <StackPanel x:Name="StackPanelMain" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch">
+        <ScrollViewer Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Visible">
+            <StackPanel x:Name="StackPanelMain"  HorizontalAlignment="Stretch">
 
-        </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>
