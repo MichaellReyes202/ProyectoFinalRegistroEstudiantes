@@ -6,13 +6,8 @@
       "version": "3.1.0"
     },
     "additionalProbingPaths": [
-<<<<<<< HEAD
       "C:\\Users\\David_Moody\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\David_Moody\\.nuget\\packages"
-=======
-      "C:\\Users\\user\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\user\\.nuget\\packages"
->>>>>>> 59921e7e6080b86d644d19029ed10814679b4252
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

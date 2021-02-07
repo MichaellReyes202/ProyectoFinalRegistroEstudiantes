@@ -92,16 +92,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\David_Moody\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\user\\.nuget\\packages\\": {}
->>>>>>> 59921e7e6080b86d644d19029ed10814679b4252
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\David_Moody\\Desktop\\C#\\WPFNetCore\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
       "projectName": "ProyecFinalPro2",
       "projectPath": "C:\\Users\\David_Moody\\Desktop\\C#\\WPFNetCore\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
@@ -110,16 +105,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\David_Moody\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\Proyecto Final Programacion 2\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
-      "projectName": "ProyecFinalPro2",
-      "projectPath": "C:\\Users\\user\\Desktop\\Proyecto Final Programacion 2\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\Proyecto Final Programacion 2\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 59921e7e6080b86d644d19029ed10814679b4252
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -173,5 +158,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\David_Moody\\Desktop\\C#\\WPFNetCore\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

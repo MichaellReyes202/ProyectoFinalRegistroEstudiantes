@@ -71,7 +71,6 @@ namespace ProyecFinalPro2.Archivos
                     MessageBox.Show("No serializar");
                }
           }
-
           public void Modificar() {
                throw new NotImplementedException();
           }
