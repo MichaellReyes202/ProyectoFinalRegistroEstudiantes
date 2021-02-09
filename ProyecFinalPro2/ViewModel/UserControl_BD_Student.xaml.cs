@@ -16,9 +16,9 @@ namespace ProyecFinalPro2.ViewModel
     /// <summary>
     /// Lógica de interacción para UserControlDashboard.xaml
     /// </summary>
-    public partial class UserControlUpdateStudent : UserControl
+    public partial class UserControl_BD_Student : UserControl
     {
-        public UserControlUpdateStudent()
+        public UserControl_BD_Student()
         {
             InitializeComponent();
         }
