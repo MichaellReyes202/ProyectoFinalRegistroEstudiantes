@@ -32,10 +32,11 @@ namespace ProyecFinalPro2.Views
         {
 
             var menuRegister = new List<SubItem>();
-            // menuRegister.Add(new SubItem("Update", new UserControlUpdateStudent()));
-            menuRegister.Add(new SubItem("Update", new UserControlStudent()));
-            menuRegister.Add(new SubItem("Add", new UserControlAddEstudent()));
-            menuRegister.Add(new SubItem("BD-Student"));
+            
+            
+            menuRegister.Add(new SubItem("New registration", new UserControlStudent()));
+            menuRegister.Add(new SubItem("Registry", new UserControl_BD_Student()));
+            
             var item6 = new ItemMenu("  Student", menuRegister, PackIconKind.Register);
 
             var menuSchedule = new List<SubItem>();
