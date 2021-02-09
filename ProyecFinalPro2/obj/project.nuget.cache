@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "r+7TW8J2ifqTk7z4+mYTVvCwVYEWZqrgPkCoODmes8nM+bacD5WY8I4uSxxJX46ysgBsxRitGe10pccqsRDpKA==",
+  "dgSpecHash": "JilYtaHxbgrMY+jPDWi2kjA6C/fCn6gllt6s02fctpbjWdcodSfZDlxAEoxpu+zZdWOQAlsZ82PVjRv7iw3TOg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mauro\\Desktop\\Proyectos de C#\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\Proyecto Final Programacion 2\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Mauro\\.nuget\\packages\\materialdesigncolors\\2.0.0-ci2397\\materialdesigncolors.2.0.0-ci2397.nupkg.sha512",
-    "C:\\Users\\Mauro\\.nuget\\packages\\materialdesignthemes\\4.0.0-ci2397\\materialdesignthemes.4.0.0-ci2397.nupkg.sha512"
+    "C:\\Users\\user\\.nuget\\packages\\materialdesigncolors\\2.0.0-ci2397\\materialdesigncolors.2.0.0-ci2397.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\materialdesignthemes\\4.0.0-ci2397\\materialdesignthemes.4.0.0-ci2397.nupkg.sha512"
   ],
   "logs": []
 }
