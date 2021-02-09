@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyecFinalPro2.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,9 +19,22 @@ namespace ProyecFinalPro2.Views
     /// </summary>
     public partial class UserControlStudent : UserControl
     {
+        
+
         public UserControlStudent()
         {
             InitializeComponent();
+            SetupController();
+            TituloBlock.Text = Student.Title();
+            FechaBlock.Text = Student.Day() + "/" + Student.Moth() + "/" + Student.Year();
         }
+
+        public void SetupController() 
+        { 
+        
+        }
+
+
+
     }
 }

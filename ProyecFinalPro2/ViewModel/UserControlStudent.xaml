@@ -4,37 +4,30 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProyecFinalPro2.Views"
-             mc:Ignorable="d" d:DesignWidth="830" Height="1282">
+             mc:Ignorable="d" d:DesignWidth="830" Height="1224">
     <Grid>
         <!--Generamos 2 grid una para el Titulo y otro para el formulario-->
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="203*"/>
+            <RowDefinition Height="75*"/>
             <!--Grid Titulo-->
-            <RowDefinition Height="1072*"/>
+            <RowDefinition Height="566*"/>
             <!--Grid Formulario-->
         </Grid.RowDefinitions>
 
         <!--Definimos las herramientas que se ban a Implementar para el Grid Titulo-->
 
         <Grid Grid.Row="0" Margin="0,0,0,3">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="129*"/>
-                <RowDefinition Height="88*"/>
-            </Grid.RowDefinitions>
-
-            <Grid Grid.Row="0">
-                <TextBlock x:Name="Titulo" Margin="259,10,89,10" FontSize="18" FontWeight="Bold" FontStyle="Italic" FontFamily="Eras ITC" TextAlignment="Center" Text="" Foreground="#FF1D79D4"/>
-                <StackPanel x:Name="UNI" Width="159" HorizontalAlignment="Left" Margin="21,10,0,10">
-                    <Image Source="/Views/Resources/UNI.png" Height="101" Width="148" HorizontalAlignment="Stretch"/>
-                </StackPanel>
-            </Grid>
-
+            <TextBlock x:Name="TituloBlock" FontSize="20" FontWeight="Bold" FontStyle="Italic" FontFamily="Eras ITC" TextAlignment="Center" Text="" Foreground="#FF1D79D4" HorizontalAlignment="Stretch" Width="635" Margin="185,49,0,27"/>
+            <StackPanel x:Name="UNI" Width="159" HorizontalAlignment="Left" Margin="21,10,0,10">
+                <Image Source="/Views/Resources/UNI.png" Height="101" Width="148" HorizontalAlignment="Stretch"/>
+            </StackPanel>
         </Grid>
 
         <!--Generamos bordes para el Grid Formulario-->
         <Grid Grid.Row="1">
-            <Border Background="Transparent" BorderBrush="#FF1D79D4" BorderThickness="2" CornerRadius="10" Margin="0,-19,0,10"/>
+            <Border Background="Transparent" BorderBrush="#FF1D79D4" BorderThickness="2" CornerRadius="10" Margin="0,-19,0,10">
+            </Border>
         </Grid>
 
         <!--Definimos las herramientas a usar en Grid Formulario-->
@@ -392,9 +385,25 @@
                 </Grid>
 
                 <Grid Grid.Row="2">
-                    <TextBlock x:Name="Fecha" HorizontalAlignment="Left" Margin="25,10,0,0" Text="FECHA" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="111" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"/>
-                    <TextBlock x:Name="Firma_Fun" HorizontalAlignment="Left" Margin="252,44,0,0" Text="FIRMA DEL FUNCIONARIO" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="198" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" OpacityMask="Black"/>
-                    <TextBlock x:Name="Firma_Est" HorizontalAlignment="Left" Margin="583,44,0,0" Text="FIRMA DEL ESTUDIANTE" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="183" FontWeight="Bold" FontStyle="Italic" FontFamily="Eras ITC" FontSize="14" Foreground="#FF1D79D4"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="174*"/>
+                        <ColumnDefinition Width="333*"/>
+                        <ColumnDefinition Width="323*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBlock x:Name="Fecha" HorizontalAlignment="Center" Text="FECHA" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="52" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4" Margin="0,25,0,0"/>
+                        <TextBlock x:Name="FechaBlock" Margin="24,50,24,-21" TextWrapping="Wrap" Height="31" Width="126" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" />
+                    </Grid>
+
+                    <Grid Grid.Column="1">
+                        <TextBlock x:Name="Firma_Fun" HorizontalAlignment="Left" Margin="78,44,0,0" Text="FIRMA DEL FUNCIONARIO" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="198" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" OpacityMask="Black" Grid.Column="1"/>
+                    </Grid>
+
+                    <Grid Grid.Column="2">
+                        <TextBlock x:Name="Firma_Est" HorizontalAlignment="Left" Margin="76,44,0,0" Text="FIRMA DEL ESTUDIANTE" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="183" FontWeight="Bold" FontStyle="Italic" FontFamily="Eras ITC" FontSize="14" Foreground="#FF1D79D4" Grid.Column="2"/>
+                    </Grid>
+
                 </Grid>
 
             </Grid>
