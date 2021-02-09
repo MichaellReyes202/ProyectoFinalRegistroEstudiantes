@@ -34,8 +34,7 @@
 
         <!--Generamos bordes para el Grid Formulario-->
         <Grid Grid.Row="1">
-            <ScrollBar x:Name="Scroll" Margin="811,8,-2,-8"/>
-            <Border Background="Transparent" BorderBrush="#FF1D79D4" BorderThickness="2" CornerRadius="10" Margin="0,0,0,10"/>
+            <Border Background="Transparent" BorderBrush="#FF1D79D4" BorderThickness="2" CornerRadius="10" Margin="0,-19,0,10"/>
         </Grid>
 
         <!--Definimos las herramientas a usar en Grid Formulario-->
@@ -43,6 +42,7 @@
 
             <!--Definimos los Row Grid segun las partes del Grid Formulario-->
             <Grid.RowDefinitions>
+
                 <RowDefinition Height="87"/>
                 <!--Grid General-->
                 <RowDefinition Height="313"/>
@@ -55,12 +55,44 @@
 
             <!--Definimos las herramientas de Grid General del Grid Formulario-->
             <Grid Grid.Row="0">
-                <TextBlock x:Name="facu" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" Height="20" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" FontSize="14" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="FACULTAD DE CIENCIAS Y SISTEMAS"/></TextBlock>
-                <TextBlock x:Name="sist" HorizontalAlignment="Left" Margin="509,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="18" Width="290" FontFamily="Eras ITC" FontStyle="Italic" FontWeight="Bold" FontSize="14" Foreground="#FF1D79D4"><Run Language="es-ni" Text="CARRERA: DE INGENIERIA DE SISTEMAS"/></TextBlock>
-                <TextBlock x:Name="grupe" HorizontalAlignment="Left" Margin="526,7,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="63" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" FontSize="14"><Run Text="GRUPO"/><Run Language="es-ni" Text=" :"/></TextBlock>
-                <TextBox x:Name="GrupBox" HorizontalAlignment="Left" Margin="594,-6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"  Cursor="IBeam" Height="25" Foreground="#FF1D79D4" FontFamily="Eras ITC" FontSize="12" FontWeight="Bold" FontStyle="Italic"/>
-                <TextBlock x:Name="turno" HorizontalAlignment="Left" Margin="10,55,0,0" Text="TURNO :" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="64" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" FontSize="14" TextAlignment="Center" Foreground="#FF1D79D4"/>
-                <ComboBox x:Name="ComboTurno" HorizontalAlignment="Left" Height="24" Margin="94,43,0,0" VerticalAlignment="Top" Width="104" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"/>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="337*"/>
+                    <ColumnDefinition Width="163*"/>
+                    <ColumnDefinition Width="330*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="29*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="33*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <TextBlock x:Name="facu" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="263" Height="20" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" FontSize="14" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="FACULTAD DE CIENCIAS Y SISTEMAS"/></TextBlock>
+                </Grid >
+
+                <Grid Grid.Row="0" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="101*"/>
+                        <ColumnDefinition Width="203*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="1">
+                        <TextBlock x:Name="grupe" Margin="10,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="15" Width="66" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" FontSize="14" HorizontalAlignment="Left"><Run Text="GRUPO"/><Run Language="es-ni" Text=" :"/></TextBlock>
+                        <TextBox x:Name="GrupBox" Margin="81,0,10,0" TextWrapping="Wrap" VerticalAlignment="Center"  Cursor="IBeam" Height="25" Foreground="#FF1D79D4" FontFamily="Eras ITC" FontSize="12" FontWeight="Bold" FontStyle="Italic"/>
+                    </Grid>
+
+                </Grid>
+
+                <Grid Grid.Row="2" Grid.Column="0">
+                    <TextBlock x:Name="turno" HorizontalAlignment="Left" Margin="10,15,0,0" Text="TURNO :" TextWrapping="Wrap" VerticalAlignment="Center" Height="24" Width="64" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" FontSize="14" TextAlignment="Center" Foreground="#FF1D79D4"/>
+                    <ComboBox x:Name="ComboTurno" HorizontalAlignment="Left" Height="23" Width="113" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" Margin="79,0,0,0"/>
+                </Grid>
+
+                <Grid Grid.Row="2" Grid.Column="2" >
+                    <TextBlock x:Name="sist" Margin="30,10,10,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="18" Width="290" FontFamily="Eras ITC" FontStyle="Italic" FontWeight="Bold" FontSize="14" Foreground="#FF1D79D4"><Run Language="es-ni" Text="CARRERA: DE INGENIERIA DE SISTEMAS"/></TextBlock>
+                </Grid>
+
             </Grid>
 
             <!--Definimos las herramientas de Grid Datos Personales del Grid Formulario-->
@@ -73,119 +105,268 @@
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0">
-                    <TextBlock x:Name="Datos1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="180" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"><Run Language="es-ni" Text="I. DATOS PERSONALES"/></TextBlock>
-                    <TextBlock x:Name="Nom" HorizontalAlignment="Left" Margin="10,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="180" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" FontSize="14" Foreground="#FF1D79D4"><Run Text="NOMBRE Y APELLIDOS"/><Run Language="es-ni" Text=" :"/></TextBlock>
-                    <TextBox x:Name="Nom_ApBox" HorizontalAlignment="Left" Margin="195,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="608" Height="29" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" Foreground="#FF1D79D4" FontSize="14"/>
-                    <TextBlock x:Name="Carne" HorizontalAlignment="Left" Margin="10,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="80" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"><Run Text="CARNET"/><Run Language="es-ni" Text=" #"/><LineBreak/><Run Language="es-ni"/></TextBlock>
-                    <TextBox x:Name="CarnetBox" HorizontalAlignment="Left" Margin="90,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Height="28" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam"/>
-                    <TextBlock x:Name="sex" HorizontalAlignment="Left" Margin="616,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="187" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center"><Run Language="es-ni" Text="SEXO" Foreground="#FF1D79D4"/></TextBlock>
-                    <TextBlock x:Name="Esta" HorizontalAlignment="Center" Margin="0,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="214" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center"><Run Language="es-ni" Text="ESTADO CIVIL" Foreground="#FF1D79D4"/></TextBlock>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="37*"/>
+                        <RowDefinition Height="32*"/>
+                        <RowDefinition Height="25*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" Margin="0,0,0,1">
+                        <TextBlock x:Name="Datos1" HorizontalAlignment="Left" Margin="10,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="176" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"><Run Language="es-ni" Text="I. DATOS PERSONALES"/></TextBlock>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <TextBlock x:Name="Nom" HorizontalAlignment="Left" Margin="10,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="180" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" FontSize="14" Foreground="#FF1D79D4"><Run Text="NOMBRE Y APELLIDOS"/><Run Language="es-ni" Text=" :"/></TextBlock>
+                        <TextBox x:Name="Nom_ApBox" Margin="195,3,10,0" TextWrapping="Wrap" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" Foreground="#FF1D79D4" FontSize="14"/>
+                    </Grid>
+
+                    <Grid Grid.Row="2">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="299*"/>
+                            <ColumnDefinition Width="299*"/>
+                            <ColumnDefinition Width="234*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+                            <TextBlock x:Name="Carne" Margin="10,12,208,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="22" Width="80" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" HorizontalAlignment="Left"><Run Text="CARNET"/><Run Language="es-ni" Text=" #"/><LineBreak/><Run Language="es-ni"/></TextBlock>
+                            <TextBox x:Name="CarnetBox" Margin="95,0,10,0" TextWrapping="Wrap" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" VerticalAlignment="Center"/>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+                            <TextBlock x:Name="Esta" Margin="104,10,76,-2" TextWrapping="Wrap" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center"><Run Language="es-ni" Text="ESTADO CIVIL" Foreground="#FF1D79D4"/></TextBlock>
+                        </Grid>
+
+                        <Grid Grid.Column="2">
+                            <TextBlock x:Name="sex" Margin="0,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" HorizontalAlignment="Center"><Run Language="es-ni" Text="SEXO" Foreground="#FF1D79D4"/></TextBlock>
+                        </Grid>
+
+                    </Grid>
+
                 </Grid>
 
                 <Grid Grid.Row="1">
-                    <StackPanel x:Name="Stack_sex" Margin="622,5,29,5" Orientation="Horizontal">
-                        <RadioButton x:Name="MRadio" Content="M" Width="89" Height="30" Panel.ZIndex="0" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" IsChecked="True"/>
-                        <RadioButton x:Name="FRadio" Content="F" Width="83" Height="29" Panel.ZIndex="1" VerticalAlignment="Stretch" FlowDirection="RightToLeft" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"/>
-                    </StackPanel>
 
-                    <StackPanel x:Name="Stack_civil" Margin="325,5,299,5" Orientation="Horizontal" Grid.Row="1">
-                        <RadioButton x:Name="SolteroRadio" Content="SOLTERO" Width="101" Height="28" Panel.ZIndex="0" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" IsChecked="True"/>
-                        <RadioButton x:Name="CasadoRadio" Content="CASADO" Width="101" Height="30" Panel.ZIndex="1" VerticalAlignment="Stretch" FlowDirection="RightToLeft" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"/>
-                    </StackPanel>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="317*"/>
+                        <ColumnDefinition Width="269*"/>
+                        <ColumnDefinition Width="244*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="1">
+                        <StackPanel x:Name="Stack_civil" Margin="24,0,0,7" Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Center">
+                            <RadioButton x:Name="SolteroRadio" Content="SOLTERO" Width="101" Height="28" Panel.ZIndex="0" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" IsChecked="True"/>
+                            <RadioButton x:Name="CasadoRadio" Content="CASADO" Width="101" Height="30" Panel.ZIndex="1" VerticalAlignment="Stretch" FlowDirection="RightToLeft" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid Grid.Column="2">
+                        <StackPanel x:Name="Stack_sex" Margin="0,4,0,0" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
+                            <RadioButton x:Name="MRadio" Content="M" Width="80" Height="30" Panel.ZIndex="0" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" IsChecked="True"/>
+                            <RadioButton x:Name="FRadio" Content="F" Width="78" Height="29" Panel.ZIndex="1" VerticalAlignment="Stretch" FlowDirection="RightToLeft" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"/>
+                        </StackPanel>
+                    </Grid>
+
                 </Grid>
 
                 <Grid Grid.Row="2">
-                    <TextBlock x:Name="LyF" HorizontalAlignment="Left" Margin="10,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="261" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Text="LUGAR Y FECHA DE NACIMIENTO"/><Run Language="es-ni" Text=" :"/></TextBlock>
-                    <TextBlock x:Name="age" HorizontalAlignment="Left" Margin="605,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="82" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="EDAD:"/></TextBlock>
-                    <TextBox x:Name="LyFBox" HorizontalAlignment="Left" Margin="276,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="321" Height="24" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" Foreground="#FF1D79D4" FontSize="14"/>
-                    <TextBox x:Name="AgeBox" HorizontalAlignment="Left" Margin="689,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" Height="24" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam"/>
-                    <TextBlock x:Name="Nacional" HorizontalAlignment="Left" Margin="10,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="133" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="NACIONALIDAD :"/></TextBlock>
-                    <ComboBox x:Name="ComboNacional" HorizontalAlignment="Left" Margin="148,47,0,0" VerticalAlignment="Top" Width="123" Height="24"/>
-                    <TextBlock x:Name="Depart" HorizontalAlignment="Left" Margin="282,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="133" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="DEPARTAMENTO "/><Run Text=":"/></TextBlock>
-                    <ComboBox x:Name="ComboDepart" HorizontalAlignment="Left" Margin="420,47,0,0" VerticalAlignment="Top" Width="144" Height="24"/>
-                    <TextBlock x:Name="Muni" HorizontalAlignment="Left" Margin="569,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="107" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="MUNICIPIO : "/></TextBlock>
-                    <ComboBox x:Name="ComboMuni" HorizontalAlignment="Left" Margin="681,43,0,0" VerticalAlignment="Top" Width="123" Height="26"/>
-                    <TextBox x:Name="DepartBox" HorizontalAlignment="Left" Margin="453,280,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="24" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" Foreground="#FF1D79D4" FontSize="14"/>
-                    <TextBlock x:Name="Direct" HorizontalAlignment="Left" Margin="10,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="100" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="DIRECCION :"/></TextBlock>
-                    <TextBox x:Name="DirectionBox" HorizontalAlignment="Left" Margin="115,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="689" Height="28" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" Foreground="#FF1D79D4" FontSize="14"/>
-                    <TextBlock x:Name="Phone" HorizontalAlignment="Left" Margin="10,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="100" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="TELEFONO #"/></TextBlock>
-                    <TextBox x:Name="Phonebox" HorizontalAlignment="Left" Margin="115,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="24" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" Foreground="#FF1D79D4" FontSize="14"/>
-                    <TextBlock x:Name="E_Mail" HorizontalAlignment="Left" Margin="296,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="72" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="E-MAIL :"/></TextBlock>
-                    <TextBox x:Name="E_MailBox" HorizontalAlignment="Left" Margin="373,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Height="24" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" Foreground="#FF1D79D4" FontSize="14"/>
-                    <TextBlock x:Name="Cel" HorizontalAlignment="Left" Margin="554,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="37" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="CEL:"/></TextBlock>
-                    <TextBox x:Name="Cel_box" HorizontalAlignment="Left" Margin="596,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" Height="26" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" Foreground="#FF1D79D4" FontSize="14"/>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40*"/>
+                        <RowDefinition Height="49*"/>
+                        <RowDefinition Height="39*"/>
+                        <RowDefinition Height="48*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="613*"/>
+                            <ColumnDefinition Width="217*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+                            <TextBlock x:Name="LyF" HorizontalAlignment="Left" Margin="10,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="18" Width="252" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Text="LUGAR Y FECHA DE NACIMIENTO"/><Run Language="es-ni" Text=" :"/></TextBlock>
+                            <TextBox x:Name="LyFBox" Margin="267,0,10,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="28" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" Foreground="#FF1D79D4" FontSize="14"/>
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+                            <TextBlock x:Name="age" HorizontalAlignment="Left" Margin="10,15,0,0" TextWrapping="Wrap" Width="57" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4" VerticalAlignment="Top"><Run Language="es-ni" Text="EDAD:"/></TextBlock>
+                            <TextBox x:Name="AgeBox" Margin="67,0,15,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="24" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam"/>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="281*"/>
+                            <ColumnDefinition Width="293*"/>
+                            <ColumnDefinition Width="256*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+                            <TextBlock x:Name="Nacional" HorizontalAlignment="Left" Margin="10,18,0,9" TextWrapping="Wrap" Width="133" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="NACIONALIDAD :"/></TextBlock>
+                            <ComboBox x:Name="ComboNacional" Margin="148,0,10,0" Height="24"/>
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+                            <TextBlock x:Name="Depart" HorizontalAlignment="Left" Margin="10,18,0,9" TextWrapping="Wrap" Width="133" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="DEPARTAMENTO "/><Run Text=":"/></TextBlock>
+                            <ComboBox x:Name="ComboDepart" Margin="148,0,10,0" Height="24"/>
+                        </Grid>
+
+                        <Grid Grid.Column="2">
+                            <TextBlock x:Name="Muni" HorizontalAlignment="Left" Margin="10,17,0,10" TextWrapping="Wrap" Width="89" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="MUNICIPIO : "/></TextBlock>
+                            <ComboBox x:Name="ComboMuni" Margin="106,0,10,0" Height="26"/>
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid Grid.Row="2">
+                        <TextBlock x:Name="Direct" HorizontalAlignment="Left" Margin="10,17,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="22" Width="92" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="DIRECCION :"/></TextBlock>
+                        <TextBox x:Name="DirectionBox" Margin="107,0,13,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="28" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" Foreground="#FF1D79D4" FontSize="14"/>
+                    </Grid>
+
+                    <Grid Grid.Row="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150*"/>
+                            <ColumnDefinition Width="127*"/>
+                            <ColumnDefinition Width="138*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0">
+                            <TextBlock x:Name="Phone" HorizontalAlignment="Left" Margin="14,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="14" Width="100" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="TELEFONO #"/></TextBlock>
+                            <TextBox x:Name="Phonebox" Margin="119,19,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" Foreground="#FF1D79D4" FontSize="14"/>
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+                            <TextBlock x:Name="E_Mail" HorizontalAlignment="Left" Margin="10,26,0,0" TextWrapping="Wrap" Width="60" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4" VerticalAlignment="Top"><Run Language="es-ni" Text="E-MAIL :"/></TextBlock>
+                            <TextBox x:Name="E_MailBox" Margin="75,18,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" Foreground="#FF1D79D4" FontSize="14"/>
+                        </Grid>
+
+                        <Grid Grid.Column="2">
+                            <TextBlock x:Name="Cel" HorizontalAlignment="Left" Margin="10,27,0,0" TextWrapping="Wrap" Width="37" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4" VerticalAlignment="Top"><Run Language="es-ni" Text="CEL:"/></TextBlock>
+                            <TextBox x:Name="Cel_box" Margin="52,17,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" Foreground="#FF1D79D4" FontSize="14"/>
+                        </Grid>
+
+                    </Grid>
+
                 </Grid>
+
             </Grid>
 
             <!--Definimos las herramientas de Grid Informacion General del Grid Formulario-->
             <Grid Grid.Row="2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="62*"/>
-                    <RowDefinition Height="115*"/>
-                    <RowDefinition Height="93*"/>
+                    <RowDefinition Height="133*"/>
+                    <RowDefinition Height="75*"/>
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0">
-                    <TextBlock x:Name="Datos2" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="210" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"><Run Text="I"/><Run Language="es-ni" Text="I. INFORMACION GENERAL :"/></TextBlock>
-                    <TextBlock x:Name="Centro" HorizontalAlignment="Left" Margin="10,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="378" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Text="CENTRO DONDE FINALIZO LA ENSEÑANZA MEDIA"/><Run Language="es-ni" Text=" :"/></TextBlock>
-                    <TextBox x:Name="CentroBox" HorizontalAlignment="Left" Margin="393,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="412" Height="26" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" Foreground="#FF1D79D4" FontSize="14"/>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="27*"/>
+                        <RowDefinition Height="35*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <TextBlock x:Name="Datos2" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="210" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"><Run Text="I"/><Run Language="es-ni" Text="I. INFORMACION GENERAL :"/></TextBlock>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <TextBlock x:Name="Centro" HorizontalAlignment="Left" Margin="10,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="14" Width="378" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Text="CENTRO DONDE FINALIZO LA ENSEÑANZA MEDIA"/><Run Language="es-ni" Text=" :"/></TextBlock>
+                        <TextBox x:Name="CentroBox" Margin="393,3,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" Foreground="#FF1D79D4" FontSize="14"/>
+                    </Grid>
+
                 </Grid>
 
                 <Grid Grid.Row="1">
-                    <TextBlock x:Name="TipoC" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="210" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Text="TIPO DE CENTRO ESTATAL"/><Run Language="es-ni" Text=" :"/></TextBlock>
-                    <StackPanel Margin="310,6,37,78" Orientation="Horizontal">
-                        <RadioButton x:Name="EstaRadio" Content="ESTATAL " Width="160" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" IsChecked="True" Foreground="#FF1D79D4"/>
-                        <RadioButton x:Name="PrivRadio" Content="PRIVADO" Width="160" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Panel.ZIndex="1" Foreground="#FF1D79D4"/>
-                        <RadioButton x:Name="SubRadio" Content="SUBVENCIONADO" Width="158" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Height="26" Panel.ZIndex="2" Foreground="#FF1D79D4"/>
-                    </StackPanel>
-                    <TextBlock x:Name="TipoE" HorizontalAlignment="Left" Margin="10,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="168" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="TIPO DE ESTUDIANTE :"/></TextBlock>
-                    <StackPanel Margin="310,42,64,44" Orientation="Horizontal">
-                        <RadioButton x:Name="OrdiRadio" Content="ORDINARIO" Width="160" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" IsChecked="True" Foreground="#FF1D79D4"/>
-                        <RadioButton x:Name="BecRadio" Content="BECARIO" Width="160" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Panel.ZIndex="1" Foreground="#FF1D79D4"/>
-                        <RadioButton x:Name="TrabRadio" Content="TRABAJADOR" Width="127" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Height="27" Panel.ZIndex="2" Foreground="#FF1D79D4"/>
-                    </StackPanel>
-                    <TextBlock x:Name="TipoL" HorizontalAlignment="Left" Margin="10,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="181" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="CONDICION LABORAL :"/></TextBlock>
-                    <StackPanel Margin="310,76,243,10" Orientation="Horizontal">
-                        <RadioButton x:Name="TrabSRadio" Content="TRABAJA SI" Width="149" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" IsChecked="True" Height="26" Foreground="#FF1D79D4"/>
-                        <RadioButton x:Name="TrabNRadio" Content="TRABAJA NO" Width="121" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Panel.ZIndex="1" Height="24" Foreground="#FF1D79D4"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="231*"/>
+                        <ColumnDefinition Width="74*"/>
+                        <ColumnDefinition Width="525*"/>
+                    </Grid.ColumnDefinitions>
 
-                    </StackPanel>
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="37*"/>
+                            <RowDefinition Height="45*"/>
+                            <RowDefinition Height="51*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <TextBlock x:Name="TipoC" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Height="18" Width="212" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Text="TIPO DE CENTRO ESTATAL"/><Run Language="es-ni" Text=" :"/></TextBlock>
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+                            <TextBlock x:Name="TipoE" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Height="16" Width="168" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4" Margin="10,0,0,0"><Run Language="es-ni" Text="TIPO DE ESTUDIANTE :"/></TextBlock>
+                        </Grid>
+
+                        <Grid Grid.Row="2">
+                            <TextBlock x:Name="TipoL" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="17" Width="172" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="CONDICION LABORAL :"/></TextBlock>
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid Grid.Column="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40*"/>
+                            <RowDefinition Height="42*"/>
+                            <RowDefinition Height="41*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <StackPanel Margin="10,7,0,0" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
+                                <RadioButton x:Name="EstaRadio" Content="ESTATAL " Width="160" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" IsChecked="True" Foreground="#FF1D79D4"/>
+                                <RadioButton x:Name="PrivRadio" Content="PRIVADO" Width="160" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Panel.ZIndex="1" Foreground="#FF1D79D4"/>
+                                <RadioButton x:Name="SubRadio" Content="SUBVENCIONADO" Width="158" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Height="26" Panel.ZIndex="2" Foreground="#FF1D79D4"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Width="462" Margin="10,8,0,0">
+                                <RadioButton x:Name="OrdiRadio" Content="ORDINARIO" Width="160" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" IsChecked="True" Foreground="#FF1D79D4"/>
+                                <RadioButton x:Name="BecRadio" Content="BECARIO" Width="160" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Panel.ZIndex="1" Foreground="#FF1D79D4"/>
+                                <RadioButton x:Name="TrabRadio" Content="TRABAJADOR" Width="127" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Height="27" Panel.ZIndex="2" Foreground="#FF1D79D4"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid Grid.Row="2">
+                            <StackPanel Margin="10,8,0,0" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
+                                <RadioButton x:Name="TrabSRadio" Content="TRABAJA SI" Width="149" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" IsChecked="True" Height="26" Foreground="#FF1D79D4"/>
+                                <RadioButton x:Name="TrabNRadio" Content="TRABAJA NO" Width="121" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Panel.ZIndex="1" Height="24" Foreground="#FF1D79D4"/>
+                            </StackPanel>
+
+                        </Grid>
+
+                    </Grid>
+
                 </Grid>
 
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="73*"/>
-                        <ColumnDefinition Width="93*"/>
+                        <ColumnDefinition Width="87*"/>
+                        <ColumnDefinition Width="328*"/>
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0"/>
 
-                    <Grid Grid.Column="1">
-                        <Border Background="Transparent" BorderBrush="#FF1D79D4" BorderThickness="2" CornerRadius="10" Margin="-44,0,25,0">
+                    <Grid Grid.ColumnSpan="2">
+                        <Border Background="Transparent" BorderBrush="#FF1D79D4" BorderThickness="2" >
                             <TextBlock x:Name="Situacion" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"><Run Language="es-ni" Text="SITUACION ESCOLAR"/></TextBlock>
                         </Border>
                     </Grid>
 
                     <Grid Grid.Column="1">
-                        <StackPanel Margin="-33,0,10,0">
-                            <Grid Height="88" Width="306" HorizontalAlignment="Right">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="40*"/>
-                                    <ColumnDefinition Width="40*"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid Grid.Column="0" Margin="-9,0,5,0">
-                                    <RadioButton x:Name="NewIngRadio" Content="NUEVO INGR." HorizontalAlignment="Center" VerticalAlignment="Top" Height="26" Width="154" FontSize="14" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" IsChecked="True" Foreground="#FF1D79D4"/>
-                                    <RadioButton x:Name="ReingRadio" Content="REINGRESO" HorizontalAlignment="Center" VerticalAlignment="Top" Height="26" Width="154" Margin="0,26,0,0" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"/>
-                                    <RadioButton x:Name="TrasInRadio" Content="TRAS. INTER." HorizontalAlignment="Center"  VerticalAlignment="Top" Height="26" Width="154" Margin="0,52,0,0" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"/>
-                                </Grid>
-                                <Grid Margin="139,0,10,0" Grid.ColumnSpan="2">
-                                    <RadioButton x:Name="TrasExRadio" Content="TRAS. EXTER." HorizontalAlignment="Center" VerticalAlignment="Top" Height="26" Width="154" FontSize="14" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"/>
-                                    <RadioButton x:Name="ContRadio" Content="CONT. CARRERA" HorizontalAlignment="Center" VerticalAlignment="Top" Height="26" Width="154" Margin="0,26,0,0" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"/>
-                                    <RadioButton x:Name="SecondCarRadio" Content="SEG. CARRERA" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="26" Width="154" Margin="0,52,0,0" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"/>
-                                </Grid>
-
-                            </Grid>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                            <RadioButton x:Name="IngrRadio" Content="Nuevo Ingr." FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Width="97" Foreground="#FF1D79D4" IsChecked="True"/>
+                            <RadioButton x:Name="ReingrRadio" Content="Reingreso" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Width="97" Foreground="#FF1D79D4"/>
+                            <RadioButton x:Name="TrasExRadio" Content="Tras. Externo" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Width="110" Foreground="#FF1D79D4"/>
+                            <RadioButton x:Name="TrasIntRadio" Content="Tras. Interno" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Width="110" Foreground="#FF1D79D4"/>
+                            <RadioButton x:Name="ContiRadio" Content="Conti. de Carrera" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Width="130" Foreground="#FF1D79D4"/>
+                            <RadioButton x:Name="SegRadio" Content="Seg. Carrera" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Width="97" Foreground="#FF1D79D4"/>
                         </StackPanel>
+
                     </Grid>
                 </Grid>
             </Grid>
@@ -203,7 +384,7 @@
                 </Grid>
 
                 <Grid Grid.Row="1">
-                    <DataGrid AutoGenerateColumns="False" Margin="10,0,22,0">
+                    <DataGrid x:Name="DatGrid" AutoGenerateColumns="False" Margin="10,0,10,0">
                         <DataGrid.CellStyle>
                             <Style/>
                         </DataGrid.CellStyle>
@@ -211,11 +392,15 @@
                 </Grid>
 
                 <Grid Grid.Row="2">
-                    <TextBlock HorizontalAlignment="Left" Margin="25,10,0,0" Text="FECHA" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="111" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="252,44,0,0" Text="FIRMA DEL FUNCIONARIO" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="198" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" OpacityMask="Black"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="583,44,0,0" Text="FIRMA DEL ESTUDIANTE" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="183" FontWeight="Bold" FontStyle="Italic" FontFamily="Eras ITC" FontSize="14" Foreground="#FF1D79D4"/>
+                    <TextBlock x:Name="Fecha" HorizontalAlignment="Left" Margin="25,10,0,0" Text="FECHA" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="111" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"/>
+                    <TextBlock x:Name="Firma_Fun" HorizontalAlignment="Left" Margin="252,44,0,0" Text="FIRMA DEL FUNCIONARIO" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="198" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" OpacityMask="Black"/>
+                    <TextBlock x:Name="Firma_Est" HorizontalAlignment="Left" Margin="583,44,0,0" Text="FIRMA DEL ESTUDIANTE" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="183" FontWeight="Bold" FontStyle="Italic" FontFamily="Eras ITC" FontSize="14" Foreground="#FF1D79D4"/>
                 </Grid>
+
             </Grid>
+
         </Grid>
+
     </Grid>
+
 </UserControl>
