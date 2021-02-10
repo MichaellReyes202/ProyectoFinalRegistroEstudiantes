@@ -1,11 +1,34 @@
 {
   "version": 2,
-  "dgSpecHash": "JilYtaHxbgrMY+jPDWi2kjA6C/fCn6gllt6s02fctpbjWdcodSfZDlxAEoxpu+zZdWOQAlsZ82PVjRv7iw3TOg==",
+  "dgSpecHash": "puVH+dgJtwFndr5tSif2QtcHA2QS8yZUjE0IRxs3jeqJSKgdKNQI758j+NJu89GmwfZS2A8k6W9s11K8Xjfl+w==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\Proyecto Final Programacion 2\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\caliburn.micro\\3.2.0\\caliburn.micro.3.2.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\caliburn.micro.core\\3.2.0\\caliburn.micro.core.3.2.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\materialdesigncolors\\2.0.0-ci2397\\materialdesigncolors.2.0.0-ci2397.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\materialdesignthemes\\4.0.0-ci2397\\materialdesignthemes.4.0.0-ci2397.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Caliburn.Micro 3.2.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v3.1\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "Caliburn.Micro",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Caliburn.Micro.Core 3.2.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v3.1\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "Caliburn.Micro.Core",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

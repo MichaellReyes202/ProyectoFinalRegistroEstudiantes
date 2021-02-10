@@ -99,3 +99,8 @@ C:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudia
 C:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ViewModel\UserControlUsuario.baml
 C:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ViewModel\UserControl_BD_Student.baml
 >>>>>>> bf53d5a705be3e93d50cce366794605260ed10c5
+C:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\bin\Debug\netcoreapp3.1\Caliburn.Micro.Platform.Core.dll
+C:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\bin\Debug\netcoreapp3.1\Caliburn.Micro.Platform.dll
+C:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\bin\Debug\netcoreapp3.1\System.Windows.Interactivity.dll
+C:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\bin\Debug\netcoreapp3.1\Caliburn.Micro.dll
+C:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs

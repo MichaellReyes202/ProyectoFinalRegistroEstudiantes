@@ -6,16 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "ProyecFinalPro2/1.0.0": {
-        "dependencies": {
-          "Caliburn.Micro": "3.2.0",
-          "MaterialDesignColors": "2.0.0-ci2397",
-          "MaterialDesignThemes": "4.0.0-ci2397"
-        },
-        "runtime": {
-          "ProyecFinalPro2.dll": {}
-        }
-      },
       "Caliburn.Micro/3.2.0": {
         "dependencies": {
           "Caliburn.Micro.Core": "3.2.0"
@@ -65,11 +55,6 @@
     }
   },
   "libraries": {
-    "ProyecFinalPro2/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Caliburn.Micro/3.2.0": {
       "type": "package",
       "serviceable": true,
