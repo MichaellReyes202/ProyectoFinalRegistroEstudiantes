@@ -377,10 +377,27 @@
                 </Grid>
 
                 <Grid Grid.Row="1">
-                    <DataGrid x:Name="DatGrid" AutoGenerateColumns="False" Margin="10,0,10,0">
-                        <DataGrid.CellStyle>
-                            <Style/>
-                        </DataGrid.CellStyle>
+                    <DataGrid x:Name="DatGrid" AutoGenerateColumns="True" Margin="10,0,10,0" >
+                        
+                        <DataGrid.Resources>
+                            <Style TargetType="{x:Type DataGridColumnHeader}">
+                                <Setter Property="Background" Value="CornflowerBlue"/>
+                                <Setter Property="FontWeight" Value="SemiBold"/>
+                                <Setter Property="BorderThickness" Value="1,1,1,1"/>
+                                <Setter Property="BorderBrush" Value="Black"/>
+                                <Setter Property="FontSize" Value="14"/>
+                                <Setter Property="FontFamily" Value="Eras ITC"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="FontStyle" Value="Italic"/>
+                                <Setter Property="Foreground" Value="Blue"/>
+                            </Style>
+                        </DataGrid.Resources>
+                        
+                        <DataGrid.Columns>
+                            <DataGridTextColumn x:Name="CodigoDataG" Header=" Codigo" Width="200" FontWeight="Bold" FontStyle="Italic" />
+                            <DataGridTextColumn x:Name="AsignaturasDataG" Header=" Asignaturas" Width="410"/>
+                            <DataGridTextColumn x:Name="GrupoDataG" Header=" Grupo" Width="200"/>
+                        </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
 

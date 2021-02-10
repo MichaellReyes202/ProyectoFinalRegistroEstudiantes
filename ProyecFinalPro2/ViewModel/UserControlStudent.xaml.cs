@@ -27,10 +27,13 @@ namespace ProyecFinalPro2.Views
             SetupController();
             TituloBlock.Text = Student.Title();
             FechaBlock.Text = Student.Day() + "/" + Student.Moth() + "/" + Student.Year();
+            
         }
 
+
         public void SetupController() 
-        { 
+        {
+            
         
         }
 
