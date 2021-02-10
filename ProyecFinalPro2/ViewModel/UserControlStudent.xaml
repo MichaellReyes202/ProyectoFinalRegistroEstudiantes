@@ -22,6 +22,7 @@
             <StackPanel x:Name="UNI" Width="159" HorizontalAlignment="Left" Margin="21,10,0,10">
                 <Image Source="/Views/Resources/UNI.png" Height="101" Width="148" HorizontalAlignment="Stretch"/>
             </StackPanel>
+            <Button Content="Button" HorizontalAlignment="Left" Margin="678,10,0,0" VerticalAlignment="Top" Height="34" Width="98" Click="Button_Click"/>
         </Grid>
 
         <!--Generamos bordes para el Grid Formulario-->
@@ -378,7 +379,7 @@
 
                 <Grid Grid.Row="1">
                     <DataGrid x:Name="DatGrid" AutoGenerateColumns="True" Margin="10,0,10,0" >
-                        
+
                         <DataGrid.Resources>
                             <Style TargetType="{x:Type DataGridColumnHeader}">
                                 <Setter Property="Background" Value="CornflowerBlue"/>
@@ -392,7 +393,7 @@
                                 <Setter Property="Foreground" Value="Blue"/>
                             </Style>
                         </DataGrid.Resources>
-                        
+
                         <DataGrid.Columns>
                             <DataGridTextColumn x:Name="CodigoDataG" Header=" Codigo" Width="200" FontWeight="Bold" FontStyle="Italic" />
                             <DataGridTextColumn x:Name="AsignaturasDataG" Header=" Asignaturas" Width="410"/>

@@ -34,3 +34,4 @@ C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\Proyecto
 C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.dll
 C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.pdb
 C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.genruntimeconfig.cache
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.csprojAssemblyReference.cache

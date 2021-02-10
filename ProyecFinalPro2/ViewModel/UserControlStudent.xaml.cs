@@ -1,6 +1,7 @@
 ﻿using ProyecFinalPro2.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,6 +20,7 @@ namespace ProyecFinalPro2.Views
     /// </summary>
     public partial class UserControlStudent : UserControl
     {
+        //String path = @"C:\Users\Mauro\Desktop\Proyectos de C#";
         
 
         public UserControlStudent()
@@ -37,7 +39,33 @@ namespace ProyecFinalPro2.Views
         
         }
 
+        public void Guardar()
+        {
+            /*
+            if (!Directory.Exists(path)) { Directory.CreateDirectory(path); }
+
+            try
+            {
+                StreamWriter streamWriter = new StreamWriter(path + Nom_ApBox.Text, true);
+
+                streamWriter.WriteLine(CarnetBox.Text+"," + Nom_ApBox.Text + "," + LyFBox.Text);
+                
+                streamWriter.Flush(); streamWriter.Close();
+
+            }
+            catch (Exception x) { MessageBox.Show("Errro Archvio Write"); }
+            */
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string path = @"RegistroEstudiantes\"+CarnetBox.Text;
+            if (!Directory.Exists(path)) { Directory.CreateDirectory(path); }
+
+        }
 
 
+
+        
     }
 }
