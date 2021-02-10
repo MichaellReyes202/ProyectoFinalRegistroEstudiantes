@@ -6,6 +6,7 @@ namespace ProyecFinalPro2.Models
 {
     class Student
     {
+
         public string GrupBox { get; set; }
         public int ComboTurno { get; set; }
         public string NyABox { get; set; }
@@ -23,9 +24,22 @@ namespace ProyecFinalPro2.Models
         public string TelfBox { get; set; }
         public string CelBox { get; set; }
         public string EmailBox { get; set; }
-
-
-
+        public string CentroBox { get; set; }
+        public bool EstaRadio{ get; set; }
+        public bool PrivRadio { get; set; }
+        public bool SubvRadio { get; set; }
+        public bool OrdiRadio{ get; set; }
+        public bool BecRadio { get; set; }
+        public bool TrabRadio { get; set; }
+        public bool TrabajaSRadio { get; set; }
+        public bool TrabajaNRadio { get; set; }
+        public bool NIngrRadio { get; set; }
+        public bool ReingreRadio { get; set; }
+        public bool TrasIntRadio { get; set; }
+        public bool TrasExteRadio { get; set; }
+        public bool ContCarrRadio { get; set; }
+        public bool SegCarrRadio { get; set; }
+        
         public static string Title() 
         {
             return "HOJA DE MATRICULA CURSO ELECTIVO "+Year()+"\nPROGRAMA DE MODALIDAD ESPECIAL (PROMECYS)";
