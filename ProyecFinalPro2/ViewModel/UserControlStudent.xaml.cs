@@ -12,60 +12,91 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ProyecFinalPro2.Interfaz;
+using ProyecFinalPro2.Controller;
 
 namespace ProyecFinalPro2.Views
 {
     /// <summary>
     /// Lógica de interacción para UserControl1.xaml
     /// </summary>
-    public partial class UserControlStudent : UserControl
+    public partial class UserControlStudent : UserControl, IGestionWPF
     {
         //String path = @"C:\Users\Mauro\Desktop\Proyectos de C#";
+       
         
 
         public UserControlStudent()
         {
             InitializeComponent();
-            SetupController();
+            SeputControllers();
             TituloBlock.Text = Student.Title();
-            FechaBlock.Text = Student.Day() + "/" + Student.Moth() + "/" + Student.Year();
+            FechaBlock.Text = Student.Day() + "-" + Student.Moth() + "-" + Student.Year();
             
         }
 
-
-        public void SetupController() 
+        public void SeputControllers()
         {
-            
-        
+            StudentController EstControl = new StudentController(this);
+            guardar.Click += new RoutedEventHandler(EstControl.Guardar);
         }
 
-        public void Guardar()
+        public List<Student> getestudiantes() 
         {
-            /*
-            if (!Directory.Exists(path)) { Directory.CreateDirectory(path); }
-
-            try
-            {
-                StreamWriter streamWriter = new StreamWriter(path + Nom_ApBox.Text, true);
-
-                streamWriter.WriteLine(CarnetBox.Text+"," + Nom_ApBox.Text + "," + LyFBox.Text);
-                
-                streamWriter.Flush(); streamWriter.Close();
-
-            }
-            catch (Exception x) { MessageBox.Show("Errro Archvio Write"); }
-            */
+            Student Estudiante = new Student();
+            List<Student> est = new List<Student>();
+            Estudiante.CarnetBox = CarnetBox.Text;
+            Estudiante.NyABox = Nom_ApBox.Text;
+            est.Add(Estudiante);
+            return est;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public Student getAll() 
         {
-            string path = @"RegistroEstudiantes\"+CarnetBox.Text;
-            if (!Directory.Exists(path)) { Directory.CreateDirectory(path); }
-
+            Student Estudiante = new Student();
+            Estudiante.GrupBox = CarnetBox.Text;
+            Estudiante.ComboTurno = Convert.ToInt32(ComboTurno.SelectedIndex);
+            Estudiante.NyABox = Nom_ApBox.Text;
+            Estudiante.CarnetBox = CarnetBox.Text;
+            Estudiante.SolteroRadio = SolteroRadio.IsChecked;
+            Estudiante.CasadoRadio = CasadoRadio.IsChecked;
+            Estudiante.MRadio = MRadio.IsChecked;
+            Estudiante.FRadio = FRadio.IsChecked;
+            Estudiante.LyFBox = LyFBox.Text;
+            Estudiante.AgeBox = AgeBox.Text;
+            Estudiante.ComboNacional = Convert.ToInt32(ComboNacional.SelectedIndex);
+            Estudiante.ComboDepart = Convert.ToInt32(ComboDepart.SelectedIndex);
+            Estudiante.ComboMuni = Convert.ToInt32(ComboMuni.SelectedIndex);
+            Estudiante.DirectBox = DirectionBox.Text;
+            Estudiante.TelfBox = Phonebox.Text;
+            Estudiante.CelBox = Cel_box.Text;
+            Estudiante.CentroBox = CentroBox.Text;
+            Estudiante.EstaRadio = EstaRadio.IsChecked;
+            Estudiante.PrivRadio = PrivRadio.IsChecked;
+            Estudiante.SubvRadio = SubRadio.IsChecked;
+            Estudiante.OrdiRadio = OrdiRadio.IsChecked;
+            Estudiante.BecRadio = BecRadio.IsChecked;
+            Estudiante.TrabRadio = TrabRadio.IsChecked;
+            Estudiante.TrabajaSRadio = TrabSRadio.IsChecked;
+            Estudiante.TrabajaNRadio = TrabNRadio.IsChecked;
+            Estudiante.NIngrRadio = IngrRadio.IsChecked;
+            Estudiante.ReingreRadio = ReingrRadio.IsChecked;
+            Estudiante.TrasIntRadio = TrasIntRadio.IsChecked;
+            Estudiante.TrasExteRadio = TrasExRadio.IsChecked;
+            Estudiante.ContCarrRadio = ContiRadio.IsChecked;
+            Estudiante.SegCarrRadio = SegRadio.IsChecked;
+            return Estudiante;    
         }
 
+        public string mandar_carnet() 
+        {
+            return CarnetBox.Text;
+        }
 
+        public string mandar_fecha() 
+        {
+            return FechaBlock.Text ; 
+        }
 
-        
     }
 }

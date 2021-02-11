@@ -61,7 +61,7 @@ namespace ProyecFinalPro2.Archivos
                throw new NotImplementedException();
           }
 
-          public void Guardar(UsuarioModels usuario) {
+          public void Guardar(UsuarioModels usuario, string a , string b) {
                if (!Directory.Exists(path)) { Directory.CreateDirectory(path); }
                try {
                     Stream stream = new FileStream(path + "Usuario.txt",FileMode.Create,FileAccess.Write,FileShare.None);

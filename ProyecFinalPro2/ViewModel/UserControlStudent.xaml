@@ -22,7 +22,7 @@
             <StackPanel x:Name="UNI" Width="159" HorizontalAlignment="Left" Margin="21,10,0,10">
                 <Image Source="/Views/Resources/UNI.png" Height="101" Width="148" HorizontalAlignment="Stretch"/>
             </StackPanel>
-            <Button Content="Button" HorizontalAlignment="Left" Margin="678,10,0,0" VerticalAlignment="Top" Height="34" Width="98" Click="Button_Click"/>
+            <Button x:Name="guardar" Content="Button" HorizontalAlignment="Left" Margin="701,14,0,0" VerticalAlignment="Top" Height="30" Width="119" />
         </Grid>
 
         <!--Generamos bordes para el Grid Formulario-->
@@ -151,7 +151,7 @@
 
                     <Grid Grid.Column="1">
                         <StackPanel x:Name="Stack_civil" Margin="24,0,0,7" Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Center">
-                            <RadioButton x:Name="SolteroRadio" Content="SOLTERO" Width="101" Height="28" Panel.ZIndex="0" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" IsChecked="True"/>
+                            <RadioButton x:Name="SolteroRadio" Content="SOLTERO" Width="101" Height="28" Panel.ZIndex="0" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" IsChecked="True" />
                             <RadioButton x:Name="CasadoRadio" Content="CASADO" Width="101" Height="30" Panel.ZIndex="1" VerticalAlignment="Stretch" FlowDirection="RightToLeft" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"/>
                         </StackPanel>
                     </Grid>

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "o7VUQJpzQIjsSfZA4tFUxGPDe++6N8fxZDt3ZNksFBPuyRnxBCuTDCSEiTWcm9FpEC27z7SyGQk++X3Gp18a6Q==",
+  "dgSpecHash": "5u9fQbmkAAlyMdm5sSWFtgXVK1qu9+Bfh2iQSIEzveoSpTklIkwgtcgy2pdoVqAgSJ0KnlbRUdqKn42fCZXakg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mauro\\Desktop\\Proyectos de C#\\ProyectoFinalRegistroEstudiantes\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
   "expectedPackageFiles": [
@@ -83,8 +83,7 @@
     "C:\\Users\\Mauro\\.nuget\\packages\\system.threading.tasks.extensions\\4.3.0\\system.threading.tasks.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\Mauro\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\Mauro\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\Mauro\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Mauro\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.12\\microsoft.netcore.app.host.win-x64.3.1.12.nupkg.sha512"
+    "C:\\Users\\Mauro\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
