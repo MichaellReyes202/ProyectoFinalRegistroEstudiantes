@@ -12,10 +12,10 @@ namespace ProyecFinalPro2.Models
 
         public List<string> NombreMatriculas { get; set; } = new List<string>();
         public List<FileInfo> RutaMatriculas { get; set; } = new List<FileInfo>();
-        
-        
-        
-        
+
+        public string MatriculaSeleccion { get; set; }
+        public FileInfo infoMatricula { get; set; }
+
         //public string Nombre { get => nombre; set => nombre = value; }
         //public string Carnet { get => carnet; set => carnet = value; }
     }

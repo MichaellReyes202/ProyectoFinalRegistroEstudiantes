@@ -17,6 +17,8 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>-->
+
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
@@ -25,26 +27,29 @@
 
         </Grid.RowDefinitions>
 
-        <DataGrid x:Name="People"  CanUserAddRows="False" AutoGenerateColumns="False">
+        <DataGrid x:Name="People" ItemsSource="{Binding}"  CanUserAddRows="False" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Nombre Completo" Binding="{Binding Path=nombre}"/>
-                <DataGridTextColumn Header="Carne" Binding="{Binding Path=carnet}"/>
-                
+                <DataGridTextColumn Header="Nombre Completo" Binding="{Binding Path=nombre}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Carne" Binding="{Binding Path=carnet}" IsReadOnly="True"/>
+
+                <!--<DataGridComboBoxColumn Header="Matriculas Realizadas" SelectedItemBinding="{Binding Status}" ItemsSource="{Binding Source=NombreMatriculas}" />-->
 
 
-                <DataGridTemplateColumn Header="Primary Address">
+
+                <DataGridTemplateColumn Header="Matriculas Realizadas">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Path=PrimaryAddress.FullAddress}" />
+                            <TextBlock Text="{Binding Path=infoMatricula.Name}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
 
                     <DataGridTemplateColumn.CellEditingTemplate>
                         <DataTemplate>
-                            <ComboBox ItemsSource="{Binding Path=Addresses}" SelectedItem="{Binding Path=PrimaryAddress}">
+                            <!--<ComboBox ItemsSource="{Binding Path=NombreMatriculas}" SelectedItem="{Binding Path=MatriculaSeleccion}">-->
+                            <ComboBox ItemsSource="{Binding Path=RutaMatriculas}" SelectedItem="{Binding infoMatricula}" >
                                 <ComboBox.ItemTemplate>
                                     <DataTemplate>
-                                        <TextBlock Text="{Binding Path=FullAddress}" />
+                                        <TextBlock Text="{Binding Path=Name}" />
                                     </DataTemplate>
                                 </ComboBox.ItemTemplate>
                             </ComboBox>

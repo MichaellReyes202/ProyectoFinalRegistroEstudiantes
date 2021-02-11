@@ -4,10 +4,6 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-<<<<<<< HEAD
-    <Import Project="$(NuGetPackageRoot)materialdesignthemes\4.0.0-ci2397\build\MaterialDesignThemes.targets" Condition="Exists('$(NuGetPackageRoot)materialdesignthemes\4.0.0-ci2397\build\MaterialDesignThemes.targets')" />
-=======
     <Import Project="$(NuGetPackageRoot)materialdesignthemes\4.0.0-ci2405\build\MaterialDesignThemes.targets" Condition="Exists('$(NuGetPackageRoot)materialdesignthemes\4.0.0-ci2405\build\MaterialDesignThemes.targets')" />
->>>>>>> a0b915107ee55f78551413fb038593bf8d9fef3c
   </ImportGroup>
 </Project>
