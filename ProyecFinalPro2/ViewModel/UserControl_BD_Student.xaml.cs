@@ -1,15 +1,9 @@
-﻿using System;
+﻿
+using ProyecFinalPro2.Models;
 using System.Collections.Generic;
-using System.Text;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows;
+
 
 namespace ProyecFinalPro2.ViewModel
 {
@@ -18,9 +12,29 @@ namespace ProyecFinalPro2.ViewModel
     /// </summary>
     public partial class UserControl_BD_Student : UserControl
     {
+
         public UserControl_BD_Student()
         {
             InitializeComponent();
+
+
+            DataAccess da = new DataAccess();
+            
+            List<Models_Registros> per = da.GetPeople();
+
+
+            foreach (Models_Registros v in per)
+            {
+
+                People.Items.Add(v);
+            }
+
+
+
         }
+
+
     }
+    
+
 }
