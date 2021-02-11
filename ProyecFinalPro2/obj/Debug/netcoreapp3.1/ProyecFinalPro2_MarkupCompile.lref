@@ -1,4 +1,5 @@
 ﻿
+<<<<<<< HEAD
 FC:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\App.xaml;;
 FC:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\ViewModel\UserControlMenuItem.xaml;;
 FC:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\ViewModel\UserControlStudent.xaml;;
@@ -6,4 +7,13 @@ FC:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudi
 FC:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\ViewModel\UserControl_BD_Student.xaml;;
 FC:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\Views\LoginViews.xaml;;
 FC:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\Views\MainFrame.xaml;;
+=======
+FC:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\App.xaml;;
+FC:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\ViewModel\UserControlMenuItem.xaml;;
+FC:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\ViewModel\UserControlStudent.xaml;;
+FC:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\ViewModel\UserControlUsuario.xaml;;
+FC:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\ViewModel\UserControl_BD_Student.xaml;;
+FC:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\Views\LoginViews.xaml;;
+FC:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\Views\MainFrame.xaml;;
+>>>>>>> a0b915107ee55f78551413fb038593bf8d9fef3c
 

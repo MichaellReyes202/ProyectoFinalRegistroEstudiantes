@@ -42,7 +42,7 @@ namespace ProyecFinalPro2.Controller
                                    MessageBox.Show("Admistr");
                                    break;
                               default:
-                                   MessageBox.Show("No exite");
+                                   MessageBox.Show("No existe");
                                    break;
                          }
                          break;

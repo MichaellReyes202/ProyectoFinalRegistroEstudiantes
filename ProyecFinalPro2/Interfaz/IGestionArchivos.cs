@@ -6,7 +6,7 @@ namespace ProyecFinalPro2.Interfaz
 {
      interface IGestionArchivos<T>
      {
-          void Guardar(T obj);
+          void Guardar(T obj, string carpeta, string txt);
 
           void Guardar(List<T> listas, bool v);
 

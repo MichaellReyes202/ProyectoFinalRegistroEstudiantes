@@ -22,6 +22,7 @@
             <StackPanel x:Name="UNI" Width="159" HorizontalAlignment="Left" Margin="21,10,0,10">
                 <Image Source="/Views/Resources/UNI.png" Height="101" Width="148" HorizontalAlignment="Stretch"/>
             </StackPanel>
+            <Button x:Name="guardar" Content="Button" HorizontalAlignment="Left" Margin="701,14,0,0" VerticalAlignment="Top" Height="30" Width="119" />
         </Grid>
 
         <!--Generamos bordes para el Grid Formulario-->
@@ -150,7 +151,7 @@
 
                     <Grid Grid.Column="1">
                         <StackPanel x:Name="Stack_civil" Margin="24,0,0,7" Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Center">
-                            <RadioButton x:Name="SolteroRadio" Content="SOLTERO" Width="101" Height="28" Panel.ZIndex="0" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" IsChecked="True"/>
+                            <RadioButton x:Name="SolteroRadio" Content="SOLTERO" Width="101" Height="28" Panel.ZIndex="0" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" IsChecked="True" />
                             <RadioButton x:Name="CasadoRadio" Content="CASADO" Width="101" Height="30" Panel.ZIndex="1" VerticalAlignment="Stretch" FlowDirection="RightToLeft" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"/>
                         </StackPanel>
                     </Grid>
@@ -377,10 +378,27 @@
                 </Grid>
 
                 <Grid Grid.Row="1">
-                    <DataGrid x:Name="DatGrid" AutoGenerateColumns="False" Margin="10,0,10,0">
-                        <DataGrid.CellStyle>
-                            <Style/>
-                        </DataGrid.CellStyle>
+                    <DataGrid x:Name="DatGrid" AutoGenerateColumns="True" Margin="10,0,10,0" >
+
+                        <DataGrid.Resources>
+                            <Style TargetType="{x:Type DataGridColumnHeader}">
+                                <Setter Property="Background" Value="CornflowerBlue"/>
+                                <Setter Property="FontWeight" Value="SemiBold"/>
+                                <Setter Property="BorderThickness" Value="1,1,1,1"/>
+                                <Setter Property="BorderBrush" Value="Black"/>
+                                <Setter Property="FontSize" Value="14"/>
+                                <Setter Property="FontFamily" Value="Eras ITC"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="FontStyle" Value="Italic"/>
+                                <Setter Property="Foreground" Value="Blue"/>
+                            </Style>
+                        </DataGrid.Resources>
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn x:Name="CodigoDataG" Header=" Codigo" Width="200" FontWeight="Bold" FontStyle="Italic" />
+                            <DataGridTextColumn x:Name="AsignaturasDataG" Header=" Asignaturas" Width="410"/>
+                            <DataGridTextColumn x:Name="GrupoDataG" Header=" Grupo" Width="200"/>
+                        </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
 

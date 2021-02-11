@@ -19,6 +19,10 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Controls.Ribbon;
 using System.Windows.Data;
 using System.Windows.Documents;
+<<<<<<< HEAD
+=======
+using System.Windows.Forms.Integration;
+>>>>>>> a0b915107ee55f78551413fb038593bf8d9fef3c
 using System.Windows.Ink;
 using System.Windows.Input;
 using System.Windows.Markup;
@@ -47,7 +51,11 @@ namespace ProyecFinalPro2 {
         /// InitializeComponent
         /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+<<<<<<< HEAD
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.2.0")]
+=======
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.3.0")]
+>>>>>>> a0b915107ee55f78551413fb038593bf8d9fef3c
         public void InitializeComponent() {
             if (_contentLoaded) {
                 return;
@@ -73,7 +81,11 @@ namespace ProyecFinalPro2 {
         /// </summary>
         [System.STAThreadAttribute()]
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
+<<<<<<< HEAD
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.2.0")]
+=======
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.3.0")]
+>>>>>>> a0b915107ee55f78551413fb038593bf8d9fef3c
         public static void Main() {
             ProyecFinalPro2.App app = new ProyecFinalPro2.App();
             app.InitializeComponent();
