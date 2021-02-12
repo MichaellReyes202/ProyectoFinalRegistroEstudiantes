@@ -1,37 +1,20 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\user\\Desktop\\Proyecto Final Programacion 2\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj": {}
+    "C:\\Users\\David_Moody\\Desktop\\C#\\WPFNetCore\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\Proyecto Final Programacion 2\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj": {
+    "C:\\Users\\David_Moody\\Desktop\\C#\\WPFNetCore\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\Proyecto Final Programacion 2\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
+        "projectUniqueName": "C:\\Users\\David_Moody\\Desktop\\C#\\WPFNetCore\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
         "projectName": "ProyecFinalPro2",
-        "projectPath": "C:\\Users\\user\\Desktop\\Proyecto Final Programacion 2\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\Proyecto Final Programacion 2\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\obj\\",
+        "projectPath": "C:\\Users\\David_Moody\\Desktop\\C#\\WPFNetCore\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
+        "packagesPath": "C:\\Users\\David_Moody\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\David_Moody\\Desktop\\C#\\WPFNetCore\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-    "C:\\Users\\Mauro\\Desktop\\Proyectos de C#\\ProyectoFinalRegistroEstudiantes\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\Mauro\\Desktop\\Proyectos de C#\\ProyectoFinalRegistroEstudiantes\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Mauro\\Desktop\\Proyectos de C#\\ProyectoFinalRegistroEstudiantes\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
-        "projectName": "ProyecFinalPro2",
-        "projectPath": "C:\\Users\\Mauro\\Desktop\\Proyectos de C#\\ProyectoFinalRegistroEstudiantes\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
-        "packagesPath": "C:\\Users\\Mauro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mauro\\Desktop\\Proyectos de C#\\ProyectoFinalRegistroEstudiantes\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Mauro\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> a0b915107ee55f78551413fb038593bf8d9fef3c
+          "C:\\Users\\David_Moody\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,7 +26,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -55,21 +37,9 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Caliburn.Micro": {
               "target": "Package",
-<<<<<<< HEAD
-              "version": "[3.2.0, )"
-            },
-            "MaterialDesignColors": {
-              "target": "Package",
-              "version": "[2.0.0-ci2397, )"
-            },
-            "MaterialDesignThemes": {
-              "target": "Package",
-              "version": "[4.0.0-ci2397, )"
-=======
               "version": "[4.0.136-rc, )"
             },
             "MaterialDesignColors": {
@@ -79,7 +49,6 @@
             "MaterialDesignThemes": {
               "target": "Package",
               "version": "[4.0.0-ci2405, )"
->>>>>>> a0b915107ee55f78551413fb038593bf8d9fef3c
             }
           },
           "imports": [
@@ -100,11 +69,7 @@
               "privateAssets": "none"
             }
           },
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
->>>>>>> a0b915107ee55f78551413fb038593bf8d9fef3c
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

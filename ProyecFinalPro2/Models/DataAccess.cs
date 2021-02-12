@@ -19,7 +19,7 @@ namespace ProyecFinalPro2.Models
 
         }
 
-        private string ruta = @"C:\Users\user\Desktop\ProyectoFinalRegistroEstudiantes\Registro.txt";
+        private string ruta = @"Registro.txt";
 
         private string parte1;  // hace referencia al nombre
         private string parte2;  // hace referencial al carnet
@@ -31,23 +31,26 @@ namespace ProyecFinalPro2.Models
 
             List<Models_Registros> output = new List<Models_Registros>();
 
-            using (Stream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read))
-            {
-                using (StreamReader sr = new StreamReader(fs))
-                {
-                    while (!sr.EndOfStream)
-                    {
-                        line = sr.ReadLine();
-                        Particion(line);
+               try {
+                    using (Stream fs = new FileStream(ruta,FileMode.Open,FileAccess.Read)) {
+                         using (StreamReader sr = new StreamReader(fs)) {
+                              while (!sr.EndOfStream) {
+                                   line = sr.ReadLine();
+                                   Particion(line);
 
 
-                        //MessageBox.Show(line);
+                                   //MessageBox.Show(line);
 
-                        output.Add(new Models_Registros { nombre= parte1,carnet=parte2,NombreMatriculas= ListasNombre_Matricula(),RutaMatriculas= ListaRuta_Matricula()});
+                                   output.Add(new Models_Registros { nombre = parte1,carnet = parte2,NombreMatriculas = ListasNombre_Matricula(),RutaMatriculas = ListaRuta_Matricula() });
 
+                              }
+                         }
                     }
-                }
-            }
+
+               } catch (Exception x) {
+                    System.Windows.MessageBox.Show("Ocurrio un problema");
+               }
+           
             return output;
         }
 

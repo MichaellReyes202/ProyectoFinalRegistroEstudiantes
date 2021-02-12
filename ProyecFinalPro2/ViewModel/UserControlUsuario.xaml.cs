@@ -10,17 +10,28 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ProyecFinalPro2.Archivos;
+using ProyecFinalPro2.Models;
 
 namespace ProyecFinalPro2.ViewModel
 {
-    /// <summary>
-    /// Lógica de interacción para UserControlAddEstudent.xaml
-    /// </summary>
-    public partial class UserControlAddEstudent : UserControl
-    {
-        public UserControlAddEstudent()
-        {
-            InitializeComponent();
-        }
-    }
+     public partial class UserControlUsuario : UserControl
+     {
+          private UsuarioArchivos usuarioArchivos;
+
+          public UserControlUsuario() {
+               InitializeComponent();
+               usuarioArchivos = new UsuarioArchivos();
+               CargarDataGridTable(usuarioArchivos.Abrir());
+               CargarDataGridTable(usuarioArchivos.Abrir());
+               CargarDataGridTable(usuarioArchivos.Abrir());
+               CargarDataGridTable(usuarioArchivos.Abrir());
+          }
+
+          public void CargarDataGridTable(List<UsuariosModels> listas) {
+               foreach (var v in listas) {
+                    DataGridTable.Items.Add(v);
+               }
+          }
+     }
 }
