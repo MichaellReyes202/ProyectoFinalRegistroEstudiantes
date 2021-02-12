@@ -1,8 +1,8 @@
 ﻿
 using ProyecFinalPro2.Models;
 using System.Collections.Generic;
-using System.Windows.Controls;
 using System.Windows;
+using System.Windows.Controls;
 
 
 namespace ProyecFinalPro2.ViewModel
@@ -17,24 +17,19 @@ namespace ProyecFinalPro2.ViewModel
         {
             InitializeComponent();
 
-
             DataAccess da = new DataAccess();
-            
+
             List<Models_Registros> per = da.GetPeople();
 
+            People.DataContext = per;
 
-            foreach (Models_Registros v in per)
-            {
-
-                People.Items.Add(v);
-            }
-
-
+            //foreach (Models_Registros v in per)
+            //{
+            //    MessageBox.Show("Mierda");
+            //    People.Items.Add(v);
+            //}
 
         }
 
-
     }
-    
-
 }
