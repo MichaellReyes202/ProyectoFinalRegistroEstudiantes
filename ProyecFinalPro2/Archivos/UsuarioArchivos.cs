@@ -9,25 +9,25 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace ProyecFinalPro2.Archivos
 {
-     class UsuarioArchivos : IGestionArchivos<UsuarioModels>
+     class UsuarioArchivos : IGestionArchivos<UsuariosModels>
      {
-          private string path = @"c:\Datos Usuarios\";
+          private string path = @"Datos Usuarios\";
           private BinaryFormatter binaryFormatter;
-          private List<UsuarioModels> listas;
+          private List<UsuariosModels> listas;
           private string contenido;
 
           public UsuarioArchivos() {
                binaryFormatter = new BinaryFormatter();
           }
 
-          public List<UsuarioModels> Abrir() {
-               listas = new List<UsuarioModels>();
+          public List<UsuariosModels> Abrir() {
+               listas = new List<UsuariosModels>();
 
                try {
                     StreamReader streamReader = new StreamReader(path + "ListaUsuarios.txt");
                     while ((contenido = streamReader.ReadLine()) != null) {
                          string[] delimitador = contenido.Split(",");
-                         UsuarioModels usuario = new UsuarioModels();
+                         UsuariosModels usuario = new UsuariosModels();
                          usuario.nombre = delimitador[0];
                          usuario.clave = delimitador[1];
                          usuario.tipoU = delimitador[2];
@@ -38,12 +38,12 @@ namespace ProyecFinalPro2.Archivos
                return listas;
           }
 
-          public void Guardar(List<UsuarioModels> listas,bool v) {
+          public void Guardar(List<UsuariosModels> listas,bool v) {
                if (!Directory.Exists(path)) { Directory.CreateDirectory(path); }
 
                try {
                     StreamWriter streamWriter = new StreamWriter(path + "ListaUsuarios.txt",v);
-                    foreach (UsuarioModels u in listas) {
+                    foreach (UsuariosModels u in listas) {
                          streamWriter.WriteLine(u.nombre + "," + u.clave + "," + u.tipoU);
                     }
                     streamWriter.Flush(); streamWriter.Close();
@@ -61,7 +61,7 @@ namespace ProyecFinalPro2.Archivos
                throw new NotImplementedException();
           }
 
-          public void Guardar(UsuarioModels usuario, string a , string b) {
+          public void Guardar(UsuariosModels usuario, string a , string b) {
                if (!Directory.Exists(path)) { Directory.CreateDirectory(path); }
                try {
                     Stream stream = new FileStream(path + "Usuario.txt",FileMode.Create,FileAccess.Write,FileShare.None);
