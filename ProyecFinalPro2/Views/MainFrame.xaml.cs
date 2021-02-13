@@ -18,63 +18,59 @@ using ProyecFinalPro2.Interfaz;
 
 namespace ProyecFinalPro2.Views
 {
-    public partial class MainFrame : Window, IGestionWPF
-    {
-        private MainController MC;
-        public MainFrame()
-        {
-            InitializeComponent();
-            AddItemMainFrame();
-            SeputControllers();
-        }
+     public partial class MainFrame : Window, IGestionWPF
+     {
+          private MainController MC;
+          public MainFrame() {
+               InitializeComponent();
+               AddItemMainFrame();
+               SeputControllers();
+          }
 
-        private void AddItemMainFrame()
-        {
+          private void AddItemMainFrame() {
 
-            var menuRegister = new List<SubItem>();
-            
-            
-            menuRegister.Add(new SubItem("New registration", new UserControlStudent()));
-            menuRegister.Add(new SubItem("Registry", new UserControl_BD_Student()));
-            
-            var item6 = new ItemMenu("  Student", menuRegister, PackIconKind.Register);
+               var menuRegister = new List<SubItem>();
 
-            var menuSchedule = new List<SubItem>();
-            var menuReports = new List<SubItem>();
-            menuReports.Add(new SubItem(" Add"));
-            menuReports.Add(new SubItem(" Delete"));
-            menuReports.Add(new SubItem(" Update"));
-            var item2 = new ItemMenu("  Admin", menuReports, PackIconKind.FileReport);
+
+               menuRegister.Add(new SubItem("New registration",new UserControlStudent()));
+               menuRegister.Add(new SubItem("Registry",new UserControl_BD_Student()));
+
+               var item6 = new ItemMenu("  Student",menuRegister,PackIconKind.Register);
+
+               var menuSchedule = new List<SubItem>();
+               var menuReports = new List<SubItem>();
+               menuReports.Add(new SubItem(" Add", new UserControlUsuario()));
+               menuReports.Add(new SubItem(" Delete"));
+               menuReports.Add(new SubItem(" Update"));
+               var item2 = new ItemMenu("  Admin",menuReports,PackIconKind.FileReport);
 
 
 
-            var item0 = new ItemMenu(" Opciones", new UserControl(), PackIconKind.ViewDashboard);
 
-            MenuItem.Children.Add(new UserControlMenuItem(item0, this));
-            MenuItem.Children.Add(new UserControlMenuItem(item6, this));
-            MenuItem.Children.Add(new UserControlMenuItem(item2, this));
-        }
-        //-----------------------------------------------------------------------------------------------------------------
-        internal void SwitchScreen(object sender)
-        {
-            var screen = ((UserControl)sender);
-            if (screen != null)
-            {
-                StackPanelMain.Children.Clear();
-                StackPanelMain.Children.Add(screen);
-            }
-        }
-        //-----------------------------------------------------------------------------------------------------------------
+               var item0 = new ItemMenu(" Opciones",new UserControl(),PackIconKind.ViewDashboard);
 
-
-        public void SeputControllers()
-        {
-            MC = new MainController(this);
-            this.ButtonMin.Click += new RoutedEventHandler(MC.ButtonHandler);
-            this.ButtonExit.Click += new RoutedEventHandler(MC.ButtonHandler);
-            this.BarraSuperior.MouseDown += new MouseButtonEventHandler(MC.DragMoveWindows); ;
-        }
+               MenuItem.Children.Add(new UserControlMenuItem(item0,this));
+               MenuItem.Children.Add(new UserControlMenuItem(item6,this));
+               MenuItem.Children.Add(new UserControlMenuItem(item2,this));
+          }
+          //-----------------------------------------------------------------------------------------------------------------
+          internal void SwitchScreen(object sender) {
+               var screen = ((UserControl) sender);
+               if (screen != null) {
+                    StackPanelMain.Children.Clear();
+                    StackPanelMain.Children.Add(screen);
+               }
+          }
+          //-----------------------------------------------------------------------------------------------------------------
 
 
-    }
+          public void SeputControllers() {
+               MC = new MainController(this);
+               this.ButtonMin.Click += new RoutedEventHandler(MC.ButtonHandler);
+               this.ButtonExit.Click += new RoutedEventHandler(MC.ButtonHandler);
+               this.BarraSuperior.MouseDown += new MouseButtonEventHandler(MC.DragMoveWindows); ;
+          }
+
+
+     }
 }

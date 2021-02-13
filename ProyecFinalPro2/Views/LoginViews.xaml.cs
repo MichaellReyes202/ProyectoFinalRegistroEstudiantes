@@ -18,8 +18,8 @@ namespace ProyecFinalPro2.Views
      public partial class LoginViews : Window, IGestionWPF
      {
           private LoginController loginController;
-          private UsuarioModels usuarioViews;
-          private List<UsuarioModels> listaUsuario;
+          private UsuariosModels usuarioViews;
+          private List<UsuariosModels> listaUsuario;
 
           public LoginViews() {
                InitializeComponent();
@@ -36,9 +36,9 @@ namespace ProyecFinalPro2.Views
                ButtonNewRegistro.Click += new RoutedEventHandler(loginController.ButtonHandler);
           }
 
-          public List<UsuarioModels> NewUser() {
-               usuarioViews = new UsuarioModels();
-               listaUsuario = new List<UsuarioModels>();
+          public List<UsuariosModels> NewUser() {
+               usuarioViews = new UsuariosModels();
+               listaUsuario = new List<UsuariosModels>();
 
                usuarioViews.nombre = TextBlockNewUsuario.Text;
                usuarioViews.clave = PasswordBoxNewUsuario.Password;
@@ -53,8 +53,8 @@ namespace ProyecFinalPro2.Views
                return listaUsuario;
           }
 
-          public UsuarioModels ValidarUsuario() {
-               usuarioViews = new UsuarioModels();
+          public UsuariosModels ValidarUsuario() {
+               usuarioViews = new UsuariosModels();
                usuarioViews.nombre = TextBlockUsuario.Text;
                usuarioViews.clave = PasswordBoxUsuario.Password;
                return usuarioViews;

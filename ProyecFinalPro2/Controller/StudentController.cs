@@ -20,42 +20,25 @@ namespace ProyecFinalPro2.Controller
         public void Guardar(object sender, RoutedEventArgs e)
         {
             EstudiantesArchivos estudiantesarchivo = new EstudiantesArchivos();
-            foreach (var lista in estudiantesarchivo.BuscarDirectorio(Controlestudiante.mandar_carnet())) 
-            {
-                MessageBox.Show(lista);
-            }
-            //estudiantesarchivo.Guardar(Controlestudiante.getAll(), Controlestudiante.mandar_carnet(), "Matriculado el " + Controlestudiante.mandar_fecha()+"Prueba");
-            /*
-            switch (buscar_carnet(estudiantesarchivo.Abrir())) 
-            {
-                case "1": 
-                    {
-                        estudiantesarchivo.Guardar(Controlestudiante.getAll(), Controlestudiante.mandar_carnet(), "Matriculado el " + Controlestudiante.mandar_fecha()+"Prueba");
-                        break;
-                    }
-                case "2":
-                    {
-                        estudiantesarchivo.Guardar(Controlestudiante.getAll(),Controlestudiante.mandar_carnet(),"Matriculado el "+Controlestudiante.mandar_fecha());
-                        break;
-                    }
             
-            
+            if (!buscar_carnet(estudiantesarchivo.Abrir())) 
+            {
+                estudiantesarchivo.Guardar(Controlestudiante.getestudiantes(), true);
             }
-            */
-            //estudiantesarchivo.Guardar(Controlestudiante.getestudiantes(),true);
-
+            estudiantesarchivo.Guardar(Controlestudiante.getAll(),Controlestudiante.mandar_carnet(),"Matriculado el "+Controlestudiante.mandar_fecha()+".txt");
+           
         }
 
-        public string buscar_carnet(List<Student> a) 
+        public bool buscar_carnet(List<Student> a) 
         {
             foreach (Student guard in a) 
             {
                 if ( guard.CarnetBox.Equals(Controlestudiante.mandar_carnet())) 
                 {
-                    return "1";
+                    return true;
                 }
             }
-            return "2";
+            return false;
         }
     }
 }

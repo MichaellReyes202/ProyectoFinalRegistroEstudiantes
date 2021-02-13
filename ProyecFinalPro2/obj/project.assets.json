@@ -4894,19 +4894,46 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
+    "C:\\Users\\Mauro\\.nuget\\packages\\": {}
+=======
+<<<<<<< HEAD
+    "C:\\Users\\David_Moody\\.nuget\\packages\\": {}
+=======
     "C:\\Users\\user\\.nuget\\packages\\": {}
+>>>>>>> 2e06407cf8b89c530fdd6274b5976668aa798eb0
+>>>>>>> 82aef71a79fc4923d97956f6c174a3c72ffd60ac
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\Proyecto Final Programacion 2\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\Mauro\\Desktop\\Proyectos de C#\\ProyectoFinalRegistroEstudiantes\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
+=======
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\David_Moody\\Desktop\\C#\\WPFNetCore\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
       "projectName": "ProyecFinalPro2",
-      "projectPath": "C:\\Users\\user\\Desktop\\Proyecto Final Programacion 2\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\Proyecto Final Programacion 2\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\obj\\",
+      "projectPath": "C:\\Users\\David_Moody\\Desktop\\C#\\WPFNetCore\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
+      "packagesPath": "C:\\Users\\David_Moody\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\David_Moody\\Desktop\\C#\\WPFNetCore\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
+        "C:\\Users\\David_Moody\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\Proyecto Final Programacion 2\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
+>>>>>>> 82aef71a79fc4923d97956f6c174a3c72ffd60ac
+      "projectName": "ProyecFinalPro2",
+      "projectPath": "C:\\Users\\Mauro\\Desktop\\Proyectos de C#\\ProyectoFinalRegistroEstudiantes\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
+      "packagesPath": "C:\\Users\\Mauro\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mauro\\Desktop\\Proyectos de C#\\ProyectoFinalRegistroEstudiantes\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+<<<<<<< HEAD
+        "C:\\Users\\Mauro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 2e06407cf8b89c530fdd6274b5976668aa798eb0
+>>>>>>> 82aef71a79fc4923d97956f6c174a3c72ffd60ac
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4918,7 +4945,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -4930,7 +4956,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Caliburn.Micro": {
             "target": "Package",
@@ -4963,7 +4988,19 @@
             "privateAssets": "none"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+=======
+<<<<<<< HEAD
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+=======
+<<<<<<< HEAD
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+>>>>>>> 2e06407cf8b89c530fdd6274b5976668aa798eb0
+>>>>>>> 82aef71a79fc4923d97956f6c174a3c72ffd60ac
+>>>>>>> 62fa6dab21c8103f3d0e2eff20057b9853a00d8f
       }
     }
   }

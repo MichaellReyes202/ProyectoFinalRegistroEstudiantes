@@ -49,8 +49,8 @@ namespace ProyecFinalPro2.Controller
                }
           }
 
-          public string ValidarUsuarioDatos(List<UsuarioModels> l,UsuarioModels u) {
-               foreach (UsuarioModels usuario in l) {
+          public string ValidarUsuarioDatos(List<UsuariosModels> l,UsuariosModels u) {
+               foreach (UsuariosModels usuario in l) {
                     if (usuario.nombre.Equals(u.nombre) && usuario.clave.Equals(u.clave)) {
                          return usuario.tipoU;
                     }
