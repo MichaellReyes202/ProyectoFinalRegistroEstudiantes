@@ -1,6 +1,26 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    "C:\\Users\\Mauro\\Desktop\\Proyectos de C#\\ProyectoFinalRegistroEstudiantes\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Mauro\\Desktop\\Proyectos de C#\\ProyectoFinalRegistroEstudiantes\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mauro\\Desktop\\Proyectos de C#\\ProyectoFinalRegistroEstudiantes\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
+        "projectName": "ProyecFinalPro2",
+        "projectPath": "C:\\Users\\Mauro\\Desktop\\Proyectos de C#\\ProyectoFinalRegistroEstudiantes\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
+        "packagesPath": "C:\\Users\\Mauro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mauro\\Desktop\\Proyectos de C#\\ProyectoFinalRegistroEstudiantes\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mauro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+<<<<<<< HEAD
+>>>>>>> ea96592f7df0a287bce9049576abe0579edc1617
     "C:\\Users\\David_Moody\\Desktop\\C#\\WPFNetCore\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj": {}
   },
   "projects": {
@@ -15,6 +35,13 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\David_Moody\\AppData\\Roaming\\NuGet\\NuGet.Config",
+<<<<<<< HEAD
+=======
+=======
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 2e06407cf8b89c530fdd6274b5976668aa798eb0
+>>>>>>> 82aef71a79fc4923d97956f6c174a3c72ffd60ac
+>>>>>>> ea96592f7df0a287bce9049576abe0579edc1617
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -69,7 +96,23 @@
               "privateAssets": "none"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+=======
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+=======
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+=======
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+>>>>>>> 2e06407cf8b89c530fdd6274b5976668aa798eb0
+>>>>>>> 82aef71a79fc4923d97956f6c174a3c72ffd60ac
+>>>>>>> 62fa6dab21c8103f3d0e2eff20057b9853a00d8f
+>>>>>>> ea96592f7df0a287bce9049576abe0579edc1617
         }
       }
     }

@@ -20,23 +20,29 @@ namespace ProyecFinalPro2.Archivos
         public List<Student> Abrir()
         {
             Lista = new List<Student>();
-
-            try
+            if (!Directory.Exists(path + "ListaUsuarios.txt"))
             {
-                StreamReader streamReader = new StreamReader(path + "ListaUsuarios.txt");
-                while ((contenido = streamReader.ReadLine()) != null)
+                try
                 {
-                    string[] delimitador = contenido.Split("-");
-                    
-                    Student Estudiante = new Student();
-                    Estudiante.NyABox = delimitador[0];
-                    Estudiante.CarnetBox = delimitador[1];
-                    Lista.Add(Estudiante);
-                    MessageBox.Show(contenido);
+                    StreamReader streamReader = new StreamReader(path + "ListaUsuarios.txt");
+                    while ((contenido = streamReader.ReadLine()) != null)
+                    {
+                        string[] delimitador = contenido.Split("-");
+
+                        Student Estudiante = new Student();
+                        Estudiante.NyABox = delimitador[0];
+                        Estudiante.CarnetBox = delimitador[1];
+                        Lista.Add(Estudiante);
+                        MessageBox.Show(contenido);
+                    }
+                    streamReader.Close();
                 }
-                streamReader.Close();
+                catch (Exception) { MessageBox.Show("Error Archivo Read"); }
             }
-            catch (Exception) { MessageBox.Show("Error Archivo Read"); }
+            else 
+            {
+                MessageBox.Show("no existe directorio");
+            }
             return Lista;
         }
 
@@ -79,7 +85,7 @@ namespace ProyecFinalPro2.Archivos
                 Binar.Serialize(stream, Est);
                 stream.Flush(); stream.Close();
             }
-            catch (Exception x)
+            catch (Exception )
             {
                 MessageBox.Show("No serializar");
             }

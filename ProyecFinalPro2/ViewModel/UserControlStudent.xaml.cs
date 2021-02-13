@@ -95,7 +95,7 @@ namespace ProyecFinalPro2.Views
 
         public string mandar_fecha() 
         {
-            return FechaBlock.Text ; 
+            return FechaBlock.Text; 
         }
 
     }

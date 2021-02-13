@@ -4,6 +4,13 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\
+=======
+<<<<<<< HEAD
+>>>>>>> ea96592f7df0a287bce9049576abe0579edc1617
 C:\Users\David_Moody\Desktop\C#\WPFNetCore\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\
 ProyecFinalPro2
 none
@@ -14,6 +21,26 @@ C:\Users\David_Moody\Desktop\C#\WPFNetCore\ProyectoFinalRegistroEstudiantes\Proy
 
 251553745629
 204-993649848
+<<<<<<< HEAD
+=======
+=======
+C:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\
+>>>>>>> 82aef71a79fc4923d97956f6c174a3c72ffd60ac
+ProyecFinalPro2
+none
+false
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\App.xaml
+6728276186
+
+24-1356658679
+<<<<<<< HEAD
+204864111369
+=======
+204-487834848
+>>>>>>> 2e06407cf8b89c530fdd6274b5976668aa798eb0
+>>>>>>> 82aef71a79fc4923d97956f6c174a3c72ffd60ac
+>>>>>>> ea96592f7df0a287bce9049576abe0579edc1617
 ViewModel\UserControlMenuItem.xaml;ViewModel\UserControlStudent.xaml;ViewModel\UserControlUsuario.xaml;ViewModel\UserControl_BD_Student.xaml;Views\LoginViews.xaml;Views\MainFrame.xaml;
 
 False
