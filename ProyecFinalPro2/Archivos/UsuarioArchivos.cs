@@ -34,7 +34,8 @@ namespace ProyecFinalPro2.Archivos
                          listas.Add(usuario);
                     }
                     streamReader.Close();
-               } catch (Exception x) { MessageBox.Show("Error Archivo Read"); }
+               } catch (Exception) { }
+
                return listas;
           }
 

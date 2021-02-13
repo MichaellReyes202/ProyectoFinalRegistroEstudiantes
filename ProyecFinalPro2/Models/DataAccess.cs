@@ -4,10 +4,6 @@ using System.IO;
 using System.Text;
 using System.Windows;
 using System;
-
-
-
-
 using System.Windows.Shapes;
 
 namespace ProyecFinalPro2.Models
