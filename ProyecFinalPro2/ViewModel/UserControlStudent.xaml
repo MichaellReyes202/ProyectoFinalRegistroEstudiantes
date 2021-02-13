@@ -27,8 +27,7 @@
 
         <!--Generamos bordes para el Grid Formulario-->
         <Grid Grid.Row="1">
-            <Border Background="Transparent" BorderBrush="#FF1D79D4" BorderThickness="2" CornerRadius="10" Margin="0,-19,0,10">
-            </Border>
+            <Border Background="Transparent" BorderBrush="#FF1D79D4" BorderThickness="2" CornerRadius="10" Margin="0,-19,0,10"/>
         </Grid>
 
         <!--Definimos las herramientas a usar en Grid Formulario-->
@@ -124,7 +123,7 @@
                         </Grid.ColumnDefinitions>
 
                         <Grid Grid.Column="0">
-                            <TextBlock x:Name="Carne" Margin="10,12,208,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="22" Width="80" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" HorizontalAlignment="Left"><Run Text="CARNET"/><Run Language="es-ni" Text=" #"/><LineBreak/><Run Language="es-ni"/></TextBlock>
+                            <TextBlock x:Name="Carne" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="80" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" HorizontalAlignment="Left"><Run Text="CARNET"/><Run Language="es-ni" Text=" #"/><LineBreak/><Run Language="es-ni"/></TextBlock>
                             <TextBox x:Name="CarnetBox" Margin="95,0,10,0" TextWrapping="Wrap" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" VerticalAlignment="Center"/>
 
                         </Grid>

@@ -26,27 +26,35 @@ namespace ProyecFinalPro2.Models
         private string parte3;  // hacer referencia a la ruta donde estan todas las matriculas
         private string line;
 
+        
         public List<Models_Registros> GetPeople()
         {
-
             List<Models_Registros> output = new List<Models_Registros>();
-
-            using (Stream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read))
-            {
-                using (StreamReader sr = new StreamReader(fs))
+            try {
+                
+                using (Stream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read))
                 {
-                    while (!sr.EndOfStream)
+                    using (StreamReader sr = new StreamReader(fs))
                     {
-                        line = sr.ReadLine();
-                        Particion(line);
+                        while (!sr.EndOfStream)
+                        {
+                            line = sr.ReadLine();
+                            Particion(line);
 
 
-                        //MessageBox.Show(line);
+                            //MessageBox.Show(line);
 
-                        output.Add(new Models_Registros { nombre= parte1,carnet=parte2,NombreMatriculas= ListasNombre_Matricula(),RutaMatriculas= ListaRuta_Matricula()});
+                            output.Add(new Models_Registros { nombre = parte1, carnet = parte2, NombreMatriculas = ListasNombre_Matricula(), RutaMatriculas = ListaRuta_Matricula() });
 
+                        }
                     }
                 }
+
+            }
+            catch ( Exception) 
+            {
+
+                MessageBox.Show("Prueba");
             }
             return output;
         }
