@@ -14,6 +14,7 @@ using ProyecFinalPro2.Archivos;
 using ProyecFinalPro2.Models;
 using ProyecFinalPro2.Controller;
 using ProyecFinalPro2.Interfaz;
+using ProyecFinalPro2.ViewModel;
 
 namespace ProyecFinalPro2.ViewModel
 {
@@ -28,6 +29,7 @@ namespace ProyecFinalPro2.ViewModel
                SeputControllers();
                usuarioArchivos = new UsuarioArchivos();
                CargarDataGridTable(usuarioArchivos.Abrir());
+
           }
 
           public void CargarDataGridTable(List<UsuariosModels> listas) {
@@ -40,6 +42,8 @@ namespace ProyecFinalPro2.ViewModel
           public void SeputControllers() {
                usuarioControllersAdm = new UsuarioControllersAdm(this);
                ButtonNew.Click += new RoutedEventHandler(usuarioControllersAdm.ButtonHandler);
+               DataGridTable.MouseDown += new MouseButtonEventHandler(usuarioControllersAdm.e);
+               ButtonModific.Click += new RoutedEventHandler(usuarioControllersAdm.ButtonHandler);
           }
 
           public List<UsuariosModels> GetUser() {
@@ -52,12 +56,28 @@ namespace ProyecFinalPro2.ViewModel
                return listas;
           }
 
-          private void DataGridTable_MouseDoubleClick_1(object sender,MouseButtonEventArgs e) {
-               try {
-                    MessageBox.Show("Fila ");
-               } catch (Exception) {
+          public UsuariosModels GetUs() {
+               usuariosModels = new UsuariosModels();
+               usuariosModels.nombre = TextBoxName.Text;
+               usuariosModels.clave = TextBoxPassword.Text;
+               usuariosModels.tipoU = TextBoxUserType.Text;
+               return usuariosModels;
+          }
 
-               }
+          public void SetText(UsuariosModels a) {
+               TextBoxName.Text = a.nombre;
+               TextBoxPassword.Text = a.clave;
+               TextBoxUserType.Text = a.tipoU;
+          }
+
+          public int pp() {
+               int p = DataGridTable.SelectedIndex;
+               DataGridTable.Items.RemoveAt(p);
+               return p;
+          }
+
+          public int GetSelectdIndex() {
+               return DataGridTable.SelectedIndex;
           }
      }
 }

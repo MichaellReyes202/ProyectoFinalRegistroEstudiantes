@@ -1,5 +1,5 @@
 ﻿ProyecFinalPro2
-
+1.0.0.0
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\David_Moody\Desktop\C#\WPFNetCore\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\App.xaml
 6319606311
 
-25-2132551180
+27145800245
 204-993649848
 ViewModel\UserControlMenuItem.xaml;ViewModel\UserControlStudent.xaml;ViewModel\UserControlUsuari.xaml;ViewModel\UserControl_BD_Student.xaml;Views\LoginViews.xaml;Views\MainFrame.xaml;
 
-False
+True
 

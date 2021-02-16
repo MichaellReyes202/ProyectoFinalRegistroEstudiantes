@@ -32,6 +32,7 @@ namespace ProyecFinalPro2.Archivos
                          usuario.clave = delimitador[1];
                          usuario.tipoU = delimitador[2];
                          listas.Add(usuario);
+                       
                     }
                     streamReader.Close();
                } catch (Exception) { }

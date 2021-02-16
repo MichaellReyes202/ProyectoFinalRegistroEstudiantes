@@ -45,7 +45,12 @@ namespace ProyecFinalPro2.Controller
 
         public void DragMoveWindows(object sender, MouseButtonEventArgs e)
         {
-             M_Ventan.DragMove();
+               try {
+                    M_Ventan.DragMove();
+               } catch (Exception) {
+
+               }
+             
         }
     }
 }
