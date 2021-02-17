@@ -42,7 +42,7 @@ namespace ProyecFinalPro2.Models
                             line = sr.ReadLine();
 
                             Particion(line);
-                            MessageBox.Show(line);
+                            //MessageBox.Show(line);
 
                             output.Add(new Models_Registros { nombre = parte1, carnet = parte2, RutaMatriculas = ListaRuta_Matricula() });
 
@@ -70,24 +70,6 @@ namespace ProyecFinalPro2.Models
             parte2 = particion[1];
 
         }
-
-        // Listas todos el nombre de todos los archivos en el directorio
-
-        /*
-        private List<string> ListasNombre_Matricula()
-        {
-            List<string> Nombres_matriculas = new List<string>();
-
-            DirectoryInfo info = new DirectoryInfo(path+parte2);
-
-            foreach (FileInfo fi in info.GetFiles())
-            {
-                Nombres_matriculas.Add(fi.Name);
-            }
-
-            return Nombres_matriculas;
-        }
-        */
 
 
         private List<FileInfo> ListaRuta_Matricula()

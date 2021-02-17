@@ -4,6 +4,20 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 
+using System;
+
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.IO;
 
 namespace ProyecFinalPro2.ViewModel
 {
@@ -20,7 +34,12 @@ namespace ProyecFinalPro2.ViewModel
             List<Models_Registros> per = da.GetPeople();
 
             People.DataContext = per;*/
-            
+
+            da = new DataAccess();
+
+            List<Models_Registros> per = da.GetPeople();
+
+            People.DataContext = per;
 
         }
 
@@ -33,13 +52,36 @@ namespace ProyecFinalPro2.ViewModel
             People.DataContext = per;
         }
 
-        private void People_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        private void DataGridTextColumn_Collapsed(object sender, RoutedEventArgs e)
         {
-            da = new DataAccess();
 
-            List<Models_Registros> per = da.GetPeople();
+        }
+        private void TextBlock_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            //if (listPoblacion.SelectedItem != null)
+            //{
+            //    MessageBox.Show( (listPoblacion.SelectedItem as Poblaciones).Poblacion1);
+            //}
 
-            People.DataContext = per;
+            //DirectoryInfo info = (DirectoryInfo)sender;
+
+            //ListBox lb = (ListBox)sender;
+
+            //if(lb.SelectedItem != null)
+            //{
+            //    MessageBox.Show((lb.SelectedItem as DirectoryInfo).Name);
+            //}
+
+            MessageBox.Show("Soy una mierda");
+
+
+        }
+
+        
+
+        private void TextBlock_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("La matrucula seleccionada fue : " );
         }
     }
 }
