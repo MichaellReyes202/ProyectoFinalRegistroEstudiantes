@@ -49,6 +49,12 @@ namespace ProyecFinalPro2 {
         /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.3.0")]
+<<<<<<< HEAD
+=======
+=======
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.8.1.0")]
+>>>>>>> 16b07255c3a3adfa3abcdfa3ff0dd2826a34f468
+>>>>>>> e72bd6716258c2753bcf82e82942796f6cae8fc6
         public void InitializeComponent() {
             if (_contentLoaded) {
                 return;
@@ -75,6 +81,12 @@ namespace ProyecFinalPro2 {
         [System.STAThreadAttribute()]
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.3.0")]
+<<<<<<< HEAD
+=======
+=======
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.8.1.0")]
+>>>>>>> 16b07255c3a3adfa3abcdfa3ff0dd2826a34f468
+>>>>>>> e72bd6716258c2753bcf82e82942796f6cae8fc6
         public static void Main() {
             ProyecFinalPro2.App app = new ProyecFinalPro2.App();
             app.InitializeComponent();

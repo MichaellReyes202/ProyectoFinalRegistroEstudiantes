@@ -10,25 +10,34 @@ namespace ProyecFinalPro2.Models
 {
     public class DataAccess
     {
-        public DataAccess()
-        {
 
-        }
+        private string ruta = @"./RegistroEstudiantes/ListaUsuarios.txt";
+        private string path = @"RegistroEstudiantes/";
 
-        private string ruta = @"Registro.txt";
+
 
         private string parte1;  // hace referencia al nombre
         private string parte2;  // hace referencial al carnet
-        private string parte3;  // hacer referencia a la ruta donde estan todas las matriculas
         private string line;
 
-        
+
         public List<Models_Registros> GetPeople()
         {
             List<Models_Registros> output = new List<Models_Registros>();
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+            
+      
+            try
+            {
+
+=======
+>>>>>>> e72bd6716258c2753bcf82e82942796f6cae8fc6
             try {
                 
+>>>>>>> 16b07255c3a3adfa3abcdfa3ff0dd2826a34f468
                 using (Stream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read))
                 {
                     using (StreamReader sr = new StreamReader(fs))
@@ -36,24 +45,28 @@ namespace ProyecFinalPro2.Models
                         while (!sr.EndOfStream)
                         {
                             line = sr.ReadLine();
+
                             Particion(line);
-
-
                             //MessageBox.Show(line);
 
-                            output.Add(new Models_Registros { nombre = parte1, carnet = parte2, NombreMatriculas = ListasNombre_Matricula(), RutaMatriculas = ListaRuta_Matricula() });
+                            output.Add(new Models_Registros { nombre = parte1, carnet = parte2, RutaMatriculas = ListaRuta_Matricula() });
 
                         }
                     }
                 }
 
             }
-            catch ( Exception) 
+            catch (Exception)
             {
 
                 MessageBox.Show("Prueba");
             }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> e72bd6716258c2753bcf82e82942796f6cae8fc6
 
                try {
                     using (Stream fs = new FileStream(ruta,FileMode.Open,FileAccess.Read)) {
@@ -75,7 +88,11 @@ namespace ProyecFinalPro2.Models
                     System.Windows.MessageBox.Show("Ocurrio un problema");
                }
            
+<<<<<<< HEAD
 
+=======
+>>>>>>> 16b07255c3a3adfa3abcdfa3ff0dd2826a34f468
+>>>>>>> e72bd6716258c2753bcf82e82942796f6cae8fc6
             return output;
         }
 
@@ -84,41 +101,23 @@ namespace ProyecFinalPro2.Models
         // Divide la cadena que recibe del archivo donde estan todos los estudiantes        
         private void Particion(String Datos)
         {
-            string[] particion = Datos.Split(",");
+            string[] particion = Datos.Split("-");
 
             parte1 = particion[0];
-            
             parte2 = particion[1];
-            
-            parte3 = particion[2];
-            
+
         }
 
-        // Listas todos el nombre de todos los archivos en el directorio
-        private List<string> ListasNombre_Matricula()
-        {
-            List<string> Nombres_matriculas = new List<string>();
-
-            DirectoryInfo info = new DirectoryInfo(parte3);
-
-            foreach (FileInfo fi in info.GetFiles())
-            {
-                Nombres_matriculas.Add(fi.Name);
-                //Console.WriteLine(fi.Name);
-            }
-
-            return Nombres_matriculas;
-        }
 
         private List<FileInfo> ListaRuta_Matricula()
         {
             List<FileInfo> Rutas = new List<FileInfo>();
-            DirectoryInfo info = new DirectoryInfo(parte3);
+            DirectoryInfo info = new DirectoryInfo(path + parte2);
 
             foreach (FileInfo fi in info.GetFiles())
             {
                 Rutas.Add(fi);
-                
+
             }
             return Rutas;
         }
