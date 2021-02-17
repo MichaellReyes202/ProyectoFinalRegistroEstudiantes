@@ -4,10 +4,6 @@ using System.IO;
 using System.Text;
 using System.Windows;
 using System;
-
-
-
-
 using System.Windows.Shapes;
 
 namespace ProyecFinalPro2.Models
@@ -28,11 +24,16 @@ namespace ProyecFinalPro2.Models
         public List<Models_Registros> GetPeople()
         {
             List<Models_Registros> output = new List<Models_Registros>();
+<<<<<<< HEAD
             
       
             try
             {
 
+=======
+            try {
+                
+>>>>>>> 16b07255c3a3adfa3abcdfa3ff0dd2826a34f468
                 using (Stream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read))
                 {
                     using (StreamReader sr = new StreamReader(fs))
@@ -56,6 +57,30 @@ namespace ProyecFinalPro2.Models
 
                 MessageBox.Show("Prueba");
             }
+<<<<<<< HEAD
+=======
+
+               try {
+                    using (Stream fs = new FileStream(ruta,FileMode.Open,FileAccess.Read)) {
+                         using (StreamReader sr = new StreamReader(fs)) {
+                              while (!sr.EndOfStream) {
+                                   line = sr.ReadLine();
+                                   Particion(line);
+
+
+                                   //MessageBox.Show(line);
+
+                                   output.Add(new Models_Registros { nombre = parte1,carnet = parte2,NombreMatriculas = ListasNombre_Matricula(),RutaMatriculas = ListaRuta_Matricula() });
+
+                              }
+                         }
+                    }
+
+               } catch (Exception x) {
+                    System.Windows.MessageBox.Show("Ocurrio un problema");
+               }
+           
+>>>>>>> 16b07255c3a3adfa3abcdfa3ff0dd2826a34f468
             return output;
         }
 
