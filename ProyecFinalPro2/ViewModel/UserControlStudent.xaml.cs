@@ -30,6 +30,8 @@ namespace ProyecFinalPro2.Views
         {
             InitializeComponent();
             SeputControllers();
+            bool_Deparmento(false);
+            bool_Municipio(false);
             TituloBlock.Text = Student.Title();
             FechaBlock.Text = Student.Day() + "-" + Student.Moth() + "-" + Student.Year();
             
@@ -39,6 +41,8 @@ namespace ProyecFinalPro2.Views
         {
             StudentController EstControl = new StudentController(this);
             guardar.Click += new RoutedEventHandler(EstControl.Guardar);
+            ComboNacional.SelectionChanged += new SelectionChangedEventHandler(EstControl.Nacional_SelectionChanged);
+            ComboDepart.SelectionChanged += new SelectionChangedEventHandler(EstControl.Departamento_SelectionChanged);
         }
 
         public List<Student> getestudiantes() 
@@ -88,15 +92,26 @@ namespace ProyecFinalPro2.Views
             return Estudiante;    
         }
 
-        public string mandar_carnet() 
-        {
-            return CarnetBox.Text;
-        }
+        public void item_Departamento(string d) {ComboDepart.Items.Add(d);}
 
-        public string mandar_fecha() 
-        {
-            return FechaBlock.Text; 
-        }
+        public void item_Municipio(string m) {ComboMuni.Items.Add(m);}
+
+        public void bool_Deparmento(bool d) { ComboDepart.IsEnabled = d;}
+
+        public void bool_Municipio(bool m) { ComboMuni.IsEnabled = m;}
+
+        public string Obtener_Nacionalidad() { return ComboNacional.SelectedIndex.ToString(); }
+
+        public int Obtener_Departamento() { return ComboDepart.SelectedIndex; }
+
+        public void limpiar_Departamento() { ComboDepart.Items.Clear(); }
+
+        public void limpiar_Municipio() { ComboMuni.Items.Clear(); }
+
+
+        public string mandar_carnet() {return CarnetBox.Text;}
+
+        public string mandar_fecha() {return FechaBlock.Text;}
 
     }
 }

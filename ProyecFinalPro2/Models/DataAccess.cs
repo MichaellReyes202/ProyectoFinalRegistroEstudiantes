@@ -4,10 +4,6 @@ using System.IO;
 using System.Text;
 using System.Windows;
 using System;
-
-
-
-
 using System.Windows.Shapes;
 
 namespace ProyecFinalPro2.Models
@@ -30,7 +26,7 @@ namespace ProyecFinalPro2.Models
         public List<Models_Registros> GetPeople()
         {
             List<Models_Registros> output = new List<Models_Registros>();
-<<<<<<< HEAD
+
             try {
                 
                 using (Stream fs = new FileStream(ruta, FileMode.Open, FileAccess.Read))
@@ -57,7 +53,7 @@ namespace ProyecFinalPro2.Models
 
                 MessageBox.Show("Prueba");
             }
-=======
+
 
                try {
                     using (Stream fs = new FileStream(ruta,FileMode.Open,FileAccess.Read)) {
@@ -79,7 +75,7 @@ namespace ProyecFinalPro2.Models
                     System.Windows.MessageBox.Show("Ocurrio un problema");
                }
            
->>>>>>> 82aef71a79fc4923d97956f6c174a3c72ffd60ac
+
             return output;
         }
 

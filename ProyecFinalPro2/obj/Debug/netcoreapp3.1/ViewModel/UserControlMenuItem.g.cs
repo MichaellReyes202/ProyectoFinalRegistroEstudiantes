@@ -75,15 +75,7 @@ namespace ProyecFinalPro2.ViewModel {
         /// InitializeComponent
         /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-<<<<<<< HEAD
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.3.0")]
-=======
-<<<<<<< HEAD
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.8.1.0")]
-=======
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.2.0")]
->>>>>>> 2e06407cf8b89c530fdd6274b5976668aa798eb0
->>>>>>> 82aef71a79fc4923d97956f6c174a3c72ffd60ac
         public void InitializeComponent() {
             if (_contentLoaded) {
                 return;
@@ -99,15 +91,7 @@ namespace ProyecFinalPro2.ViewModel {
         }
         
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-<<<<<<< HEAD
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.3.0")]
-=======
-<<<<<<< HEAD
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.8.1.0")]
-=======
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.2.0")]
->>>>>>> 2e06407cf8b89c530fdd6274b5976668aa798eb0
->>>>>>> 82aef71a79fc4923d97956f6c174a3c72ffd60ac
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
