@@ -69,6 +69,7 @@ namespace ProyecFinalPro2.Controller
                          user.LoadDataGridTable(usuarioArchivos.Abrir());
                          user.ClearUsersTextBox();
                          listas.Clear();
+
                     } else if (e.ChangedButton == MouseButton.Left) {
                          MessageBox.Show("Modificar");
                          int i = 0;
@@ -100,7 +101,6 @@ namespace ProyecFinalPro2.Controller
                usuarioArchivos.Guardar(listas,false);
                listas.Clear();
           }
-
           public void DragMoveWindows(object sender,MouseButtonEventArgs e) {
                throw new NotImplementedException();
           }
