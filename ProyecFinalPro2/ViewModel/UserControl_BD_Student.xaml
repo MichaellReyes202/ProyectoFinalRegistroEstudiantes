@@ -6,28 +6,20 @@
              xmlns:local="clr-namespace:ProyecFinalPro2.ViewModel" xmlns:local1="clr-namespace:ProyecFinalPro2"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    
-    
-    <!--<UserControl.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary>
-                    <local1:Bootstrapper x:Key="Bootstrapper" />
-                </ResourceDictionary>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </UserControl.Resources>-->
-
 
     <Grid>
+          
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-
         </Grid.RowDefinitions>
 
-        <DataGrid x:Name="People" ItemsSource="{Binding}"  CanUserAddRows="False" AutoGenerateColumns="False">
+        <Grid Grid.Row="0">
+            <Button x:Name="Actulizar" Click="Actulizar_Click">Actualizar Tabla</Button>
+        </Grid>
+        
+        
+        <DataGrid x:Name="People" Grid.Row="1" ItemsSource="{Binding}"  CanUserAddRows="False" AutoGenerateColumns="False" DataContextChanged="People_DataContextChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nombre Completo" Binding="{Binding Path=nombre}" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Carne" Binding="{Binding Path=carnet}" IsReadOnly="True"/>

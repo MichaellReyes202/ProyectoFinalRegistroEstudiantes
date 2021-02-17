@@ -33,7 +33,15 @@ namespace ProyecFinalPro2.ViewModel
 
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            _context.SwitchScreen(((SubItem)((ListView)sender).SelectedItem).Screen);
+            try
+            {
+                _context.SwitchScreen(((SubItem)((ListView)sender).SelectedItem).Screen);
+            }
+            catch (Exception ex)
+            {
+
+            }
+           
         }
     }
 }
