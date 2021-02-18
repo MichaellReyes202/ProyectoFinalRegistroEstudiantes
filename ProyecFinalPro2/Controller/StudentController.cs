@@ -12,6 +12,7 @@ namespace ProyecFinalPro2.Controller
     class StudentController
     {
         private UserControlStudent Controlestudiante;
+
         private Student prueba = new Student();
         private int contar;
 
