@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ProyecFinalPro2.Views"
+             xmlns:local="clr-namespace:ProyecFinalPro2.Views" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" d:DesignWidth="830" Height="1224">
     <Grid>
         <!--Generamos 2 grid una para el Titulo y otro para el formulario-->
@@ -18,11 +18,31 @@
         <!--Definimos las herramientas que se ban a Implementar para el Grid Titulo-->
 
         <Grid Grid.Row="0" Margin="0,0,0,3">
-            <TextBlock x:Name="TituloBlock" FontSize="20" FontWeight="Bold" FontStyle="Italic" FontFamily="Eras ITC" TextAlignment="Center" Text="" Foreground="#FF1D79D4" HorizontalAlignment="Stretch" Width="635" Margin="185,49,0,27"/>
-            <StackPanel x:Name="UNI" Width="159" HorizontalAlignment="Left" Margin="21,10,0,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="39*"/>
+                <RowDefinition Height="101*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="TituloBlock" FontSize="20" FontWeight="Bold" FontStyle="Italic" FontFamily="Eras ITC" TextAlignment="Center" Text="" Foreground="#FF1D79D4" Width="635" Margin="190,10,5,27" Grid.Row="1"/>
+            <StackPanel x:Name="UNI" Width="159" HorizontalAlignment="Left" Margin="21,10,0,10" Grid.RowSpan="2">
                 <Image Source="/Views/Resources/UNI.png" Height="101" Width="148" HorizontalAlignment="Stretch"/>
             </StackPanel>
-            <Button x:Name="guardar" Content="Button" HorizontalAlignment="Left" Margin="701,14,0,0" VerticalAlignment="Top" Height="30" Width="119" />
+
+            <Grid Grid.Row="0">
+                <materialDesign:PopupBox PlacementMode="BottomAndAlignCentres" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="0,0,40,0" >
+                    <StackPanel Width="110" Orientation="Vertical" Height="140">
+                        <Button x:Name="guardar" Content="Guardar datos" VerticalAlignment="Center">
+
+                        </Button>
+                        <Button x:Name="imprimir" Content="Imprimir Hoja" VerticalAlignment="Center">
+
+                        </Button>
+                        <Button x:Name="cerrar" Content="Cerrar Hoja" VerticalAlignment="Center">
+
+                        </Button>
+                    </StackPanel>
+                </materialDesign:PopupBox>
+            </Grid>
         </Grid>
 
         <!--Generamos bordes para el Grid Formulario-->
@@ -442,5 +462,5 @@
         </Grid>
 
     </Grid>
-
+    
 </UserControl>

@@ -99,11 +99,7 @@ namespace ProyecFinalPro2.ViewModel {
         /// InitializeComponent
         /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-<<<<<<< HEAD:ProyecFinalPro2/obj/Debug/netcoreapp3.1/ViewModel/UserControlUsuario.g.cs
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.3.0")]
-=======
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.8.1.0")]
->>>>>>> e72bd6716258c2753bcf82e82942796f6cae8fc6:ProyecFinalPro2/obj/Debug/netcoreapp3.1/ViewModel/UserControlUsuari.g.i.cs
         public void InitializeComponent() {
             if (_contentLoaded) {
                 return;
@@ -119,11 +115,7 @@ namespace ProyecFinalPro2.ViewModel {
         }
         
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-<<<<<<< HEAD:ProyecFinalPro2/obj/Debug/netcoreapp3.1/ViewModel/UserControlUsuario.g.cs
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.3.0")]
-=======
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.8.1.0")]
->>>>>>> e72bd6716258c2753bcf82e82942796f6cae8fc6:ProyecFinalPro2/obj/Debug/netcoreapp3.1/ViewModel/UserControlUsuari.g.i.cs
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
