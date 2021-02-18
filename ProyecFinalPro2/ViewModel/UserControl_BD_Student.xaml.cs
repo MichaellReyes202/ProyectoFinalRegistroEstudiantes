@@ -49,39 +49,46 @@ namespace ProyecFinalPro2.ViewModel
 
             List<Models_Registros> per = da.GetPeople();
 
+            
+
             People.DataContext = per;
         }
 
-        private void DataGridTextColumn_Collapsed(object sender, RoutedEventArgs e)
-        {
-
-        }
         private void TextBlock_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            //if (listPoblacion.SelectedItem != null)
-            //{
-            //    MessageBox.Show( (listPoblacion.SelectedItem as Poblaciones).Poblacion1);
-            //}
+            TextBlock ls = (TextBlock)sender;
 
-            //DirectoryInfo info = (DirectoryInfo)sender;
+            FileInfo f = new FileInfo("" + ls.DataContext);
 
-            //ListBox lb = (ListBox)sender;
-
-            //if(lb.SelectedItem != null)
-            //{
-            //    MessageBox.Show((lb.SelectedItem as DirectoryInfo).Name);
-            //}
-
-            MessageBox.Show("Soy una mierda");
+            MessageBox.Show("El indice es = "+f.DirectoryName);
 
 
         }
 
         
-
         private void TextBlock_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             MessageBox.Show("La matrucula seleccionada fue : " );
+        }
+
+        private void MenuContextual_Matricula_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem selection = (MenuItem)sender;
+
+            switch(selection.Name)
+            {
+                case "Modificar_Matricula":
+                    {
+
+                        MessageBox.Show("Has seleccionado Modificar La Matricula");
+                    }
+                    break;
+                case "Eliminar_Matricula":
+                    {
+                        MessageBox.Show("Has seleccionado Elimiar La Matricula");
+                    }
+                    break;
+            }
         }
     }
 }

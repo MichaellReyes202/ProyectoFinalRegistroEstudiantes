@@ -30,7 +30,6 @@
             <Grid  >
                 <materialDesign:PopupBox PlacementMode="LeftAndAlignMiddles" HorizontalAlignment="Right" Margin="15" >
                     <StackPanel Width="110" Orientation="Horizontal" Height="30">
-
                         <Button x:Name="ButtonMin" VerticalAlignment="Center" >
                             <materialDesign:PackIcon Kind="WindowMaximize" Width="20" Height="20" Margin="2" />
                         </Button>

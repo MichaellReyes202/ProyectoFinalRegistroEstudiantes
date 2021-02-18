@@ -13,13 +13,18 @@ namespace ProyecFinalPro2.Controller
 {
      class UsuarioControllersAdm : IGestionController
      {
+
           private UserControlUsuario user;
           private UsuarioArchivos usuarioArchivos;
-          private int pElimi { get; set; }
+          private List<UsuariosModels> listas;
+
+          private int index { get; set; }
+          private int i { get; set; }
 
           public UsuarioControllersAdm(UserControlUsuario user) {
                this.user = user;
                usuarioArchivos = new UsuarioArchivos();
+               listas = new List<UsuariosModels>();
           }
 
           public void ButtonHandler(object sender,RoutedEventArgs e) {
@@ -27,85 +32,75 @@ namespace ProyecFinalPro2.Controller
 
                switch (button.Name) {
                     case "ButtonNew":
-                         if (!UserExite(usuarioArchivos.Abrir(),user.GetUs())) {
-                              usuarioArchivos.Guardar(user.GetUser(),true);
-                              user.CargarDataGridTable(usuarioArchivos.Abrir());
+                         if (!user.TextBoxUserFull(user.GetUsers())) {
+                              if (!UsersExite(usuarioArchivos.Abrir(),user.GetUsers())) {
+                                   usuarioArchivos.Guardar(user.GetUsersList(user.GetUsers()),true);
+                                   user.LoadDataGridTable(usuarioArchivos.Abrir());
+                                   user.ClearUsersTextBox();
+                              } else {
+                                   MessageBox.Show("El usuario exite");
+                              }
                          } else {
-                              MessageBox.Show("El usuario exite");
+                              MessageBox.Show("Campos basios");
                          }
                          break;
                     case "ButtonModific":
-                        
-                         Modificar();
-                         user.CargarDataGridTable(usuarioArchivos.Abrir());
+                         if (!user.TextBoxUserFull(user.GetUsers()) && index >= 0) {
+                              UserModify();
+                              user.LoadDataGridTable(usuarioArchivos.Abrir());
+                              user.ClearUsersTextBox();
+                         } else {
+                              MessageBox.Show("Campos basios");
+                         }
+
                          break;
                }
           }
 
           public void e(object sender,MouseButtonEventArgs e) {
+               index = user.GetDataGridTableSelectdIndex();
+               listas = usuarioArchivos.Abrir();
+
                try {
                     if (e.ChangedButton == MouseButton.Right) {
-                         List<UsuariosModels> listas = usuarioArchivos.Abrir();
-                         int p = user.pp();
-                         listas.RemoveAt(p);
+                         MessageBox.Show("eliminaar");
+                         listas.RemoveAt(index);
                          usuarioArchivos.Guardar(listas,false);
-                         user.CargarDataGridTable(usuarioArchivos.Abrir());
+                         user.LoadDataGridTable(usuarioArchivos.Abrir());
+                         user.ClearUsersTextBox();
+                         listas.Clear();
 
                     } else if (e.ChangedButton == MouseButton.Left) {
                          MessageBox.Show("Modificar");
-                         pElimi = user.GetSelectdIndex();
                          int i = 0;
-                         List<UsuariosModels> listas = usuarioArchivos.Abrir();
                          foreach (var a in listas) {
-                              if (pElimi == i) {
-                                   user.SetText(a);
+                              if (index == i) {
+                                   user.SetUsersTextBox(a);
                                    break;
                               }
                               i++;
                          }
-                         user.pp();
- 
-
                     }
                } catch (Exception) {
 
                }
           }
 
-          public void Modificar() {
-               List<UsuariosModels> listas = usuarioArchivos.Abrir();
-              
-               
-               try {
-                    listas.RemoveAt(pElimi);
-               } catch (Exception ) {
-                    MessageBox.Show("errro");
-               }
-
-               try {
-                    listas.Insert(pElimi,user.GetUs());
-               } catch (Exception) {
-                    MessageBox.Show("errro11");
-               }
-
-               try {
-                    usuarioArchivos.Guardar(listas,false);
-               } catch (Exception) {
-                    MessageBox.Show("errro22");
-               }
-
-               
-          }
-
-          public bool UserExite(List<UsuariosModels> a,UsuariosModels b) {
-               foreach (var v in a) {
-                    if (v.nombre.Equals(b.nombre) || v.clave.Equals(b.clave)) {
+          public bool UsersExite(List<UsuariosModels> listas,UsuariosModels users) {
+               foreach (var v in listas) {
+                    if (v.nombre.Equals(users.nombre) || v.clave.Equals(users.clave)) {
                          return true;
                     }
                }
                return false;
           }
 
+          public void UserModify() {
+               listas.RemoveAt(index);
+               listas.Insert(index,user.GetUsers());
+               usuarioArchivos.Guardar(listas,false);
+               listas.Clear();
+          }
           public void DragMoveWindows(object sender,MouseButtonEventArgs e) {
                throw new NotImplementedException();
           }

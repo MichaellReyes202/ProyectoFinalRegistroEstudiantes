@@ -5,69 +5,64 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-
-
-
+    
     <Grid>
-
-        <DataGrid x:Name="People" Grid.Row="1" ItemsSource="{Binding}"  CanUserAddRows="False" AutoGenerateColumns="False" >
+        <DataGrid x:Name="People" Grid.Row="1" ItemsSource="{Binding}"  CanUserAddRows="False" AutoGenerateColumns="False"  >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Nombre Completo" Binding="{Binding Path=nombre}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Carne" Binding="{Binding Path=carnet}" IsReadOnly="True" />
-
+                <DataGridTextColumn  Binding="{Binding Path=nombre}" IsReadOnly="True" FontSize="15">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="Nombre Completo" FontSize="15"/>
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Carne" Binding="{Binding Path=carnet}" IsReadOnly="True" FontSize="15" />
+                
                 <DataGridTemplateColumn Header="Matriculas Realizadas">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Path=infoMatricula.Name}"/>
+                            <TextBlock Text="{Binding Path=infoMatricula.Name}" FontSize="25"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
-
                     <DataGridTemplateColumn.CellEditingTemplate>
                         <DataTemplate>
-
                             <ComboBox ItemsSource="{Binding Path=RutaMatriculas}" SelectedItem="{Binding infoMatricula}" >
                                 <ComboBox.ItemTemplate>
                                     <DataTemplate>
-                                        <TextBlock Text="{Binding Path=Name}" />
+                                        <TextBlock Text="{Binding Path=Name}" FontSize="16"/>
                                     </DataTemplate>
                                 </ComboBox.ItemTemplate>
                             </ComboBox>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellEditingTemplate>
                 </DataGridTemplateColumn>
-
             </DataGrid.Columns>
-
-            <DataGrid.RowDetailsTemplate  >
-
-                <DataTemplate>
-
-                    <Expander Header="Matriculas Realizadas" Foreground="Blue">
-
-                        <ListBox Name="ListRuta"  ItemsSource="{Binding Path=RutaMatriculas}" SelectedItem="{Binding infoMatricula}" >
-                            <ListBox.ItemTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding Path=Name}" PreviewMouseDown="TextBlock_PreviewMouseDown"/>
-                                </DataTemplate>
-                            </ListBox.ItemTemplate>
-                            
-                            <ListBox.ContextMenu>
-                                <ContextMenu x:Name="NewEditDeleteAdvCalcFileContextMenu">
-                                    <MenuItem Name="NewAdv" Header="New"  />
-                                    <MenuItem Name="EditAdv" Header="Edit" />
-                                    <MenuItem Name="DeleteAdv" Header="Delete" />
-                                </ContextMenu>
-                            </ListBox.ContextMenu>
-                        </ListBox>
-                        
+            <DataGrid.RowDetailsTemplate >
+                <DataTemplate >
+                    <Expander Header="Matriculas Realizadas" Foreground="Blue" HorizontalAlignment="Stretch" Background="AntiqueWhite">
+                        <Border  CornerRadius="10" HorizontalAlignment="Stretch">
+                            <ListBox Name="ListRuta"  ItemsSource="{Binding Path=RutaMatriculas}" SelectedItem="{Binding infoMatricula}" HorizontalAlignment="Stretch">
+                                <ListBox.ItemTemplate >
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Path=Name}" FontSize="16" HorizontalAlignment="Stretch">
+                                            <TextBlock.ContextMenu>
+                                                <ContextMenu>
+                                                    <MenuItem Name="Modificar_Matricula" Header="Modificar Matricula" Click="MenuContextual_Matricula_Click" />
+                                                    <MenuItem Name="Eliminar_Matricula" Header="Eliminar Matricula" Click="MenuContextual_Matricula_Click" />
+                                                </ContextMenu>
+                                            </TextBlock.ContextMenu>
+                                        </TextBlock>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                                <ListBox.ContextMenu>
+                                    <ContextMenu x:Name="NewEditDeleteAdvCalcFileContextMenu">
+                                        <MenuItem Name="Modificar_Matricula" Header="Modificar Matricula" Click="MenuContextual_Matricula_Click" />
+                                        <MenuItem Name="Eliminar_Matricula" Header="Eliminar Matricula" Click="MenuContextual_Matricula_Click" />
+                                    </ContextMenu>
+                                </ListBox.ContextMenu>
+                            </ListBox>
+                        </Border>
                     </Expander>
                 </DataTemplate>
             </DataGrid.RowDetailsTemplate>
-
         </DataGrid>
-        
-        
     </Grid>
-
-
 </UserControl>

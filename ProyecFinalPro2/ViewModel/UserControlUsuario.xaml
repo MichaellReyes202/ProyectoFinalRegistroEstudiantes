@@ -34,9 +34,9 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <TextBox x:Name="TextBoxName" HorizontalAlignment="Center" Grid.Column="0" materialDesign:HintAssist.Hint="User Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="110" HorizontalContentAlignment="Center" FontSize="14" FontWeight="Bold" />
-                <TextBox x:Name="TextBoxPassword" HorizontalAlignment="Center" Grid.Column="1" materialDesign:HintAssist.Hint="User Password" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="110" HorizontalContentAlignment="Center" FontSize="14" FontWeight="Bold"/>
-                <TextBox x:Name="TextBoxUserType" HorizontalContentAlignment="Center" Grid.Column="2" materialDesign:HintAssist.Hint="User Type" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="110" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                <TextBox x:Name="TextBoxName" HorizontalAlignment="Center" Grid.Column="0" materialDesign:HintAssist.Hint="User Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="110" HorizontalContentAlignment="Center" FontSize="14" FontWeight="Bold" Height="40" />
+                <TextBox x:Name="TextBoxPassword" HorizontalAlignment="Center" Grid.Column="1" materialDesign:HintAssist.Hint="User Password" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="110" HorizontalContentAlignment="Center" FontSize="14" FontWeight="Bold" Height="40"/>
+                <TextBox x:Name="TextBoxUserType" HorizontalContentAlignment="Center" Grid.Column="2" materialDesign:HintAssist.Hint="User Type" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="110" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Height="40"/>
             </Grid>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
