@@ -625,7 +625,7 @@ namespace ProyecFinalPro2.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ProyecFinalPro2;component/viewmodel/usercontrolstudent.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ProyecFinalPro2;V1.0.0.0;component/viewmodel/usercontrolstudent.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\ViewModel\UserControlStudent.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
