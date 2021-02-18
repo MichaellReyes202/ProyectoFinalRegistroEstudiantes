@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProyecFinalPro2.Interfaz;
 using ProyecFinalPro2.Controller;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace ProyecFinalPro2.Views
 {
@@ -24,8 +25,22 @@ namespace ProyecFinalPro2.Views
     {
         //String path = @"C:\Users\Mauro\Desktop\Proyectos de C#";
        
-        
+        private FileInfo Info;
+        private Student Set_Estudiante;
+        public UserControlStudent(FileInfo info)
+        {
+            InitializeComponent();
+            this.Info = info;
+            Open();
+            setAll();
 
+            SeputControllers();
+            bool_Deparmento(false);
+            bool_Municipio(false);
+            TituloBlock.Text = Student.Title();
+            FechaBlock.Text = Student.Day() + "-" + Student.Moth() + "-" + Student.Year();
+
+        }
         public UserControlStudent()
         {
             InitializeComponent();
@@ -35,6 +50,13 @@ namespace ProyecFinalPro2.Views
             TituloBlock.Text = Student.Title();
             FechaBlock.Text = Student.Day() + "-" + Student.Moth() + "-" + Student.Year();
             
+        }
+        private void Open()
+        {
+            BinaryFormatter formateador = new BinaryFormatter();
+            Stream miStream = new FileStream(Info.FullName, FileMode.Open, FileAccess.Read, FileShare.None);
+            Set_Estudiante = (Student)formateador.Deserialize(miStream);
+            miStream.Close();
         }
 
         public void SeputControllers()
@@ -92,6 +114,13 @@ namespace ProyecFinalPro2.Views
             return Estudiante;    
         }
 
+        public void setAll()
+        {
+            Nom_ApBox.Text = Set_Estudiante.NyABox;
+            CarnetBox.Text = Set_Estudiante.CarnetBox;
+            
+        }
+
         public void item_Departamento(string d) {ComboDepart.Items.Add(d);}
 
         public void item_Municipio(string m) {ComboMuni.Items.Add(m);}
@@ -113,5 +142,6 @@ namespace ProyecFinalPro2.Views
 
         public string mandar_fecha() {return FechaBlock.Text;}
 
+        
     }
 }

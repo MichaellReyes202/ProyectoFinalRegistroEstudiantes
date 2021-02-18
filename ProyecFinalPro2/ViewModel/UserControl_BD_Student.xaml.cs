@@ -18,6 +18,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using ProyecFinalPro2.Views;
+using ProyecFinalPro2.Controller;
 
 namespace ProyecFinalPro2.ViewModel
 {
@@ -25,70 +27,58 @@ namespace ProyecFinalPro2.ViewModel
     public partial class UserControl_BD_Student : UserControl
     {
         private DataAccess da;
+        private BD_Controller BD_Ctrl;
         public UserControl_BD_Student()
         {
             InitializeComponent();
-
-            /*da = new DataAccess();
-
-            List<Models_Registros> per = da.GetPeople();
-
-            People.DataContext = per;*/
-
-            da = new DataAccess();
-
-            List<Models_Registros> per = da.GetPeople();
-
-            People.DataContext = per;
-
+            SeputControllers();
+            refrescar();
         }
 
-        private void Actulizar_Click(object sender, RoutedEventArgs e)
+        private void SeputControllers()
         {
-            da = new DataAccess();
-
-            List<Models_Registros> per = da.GetPeople();
+            //MC = new MainController(this);
+            BD_Ctrl = new BD_Controller(this);
+            //Modificar_M_Ext += new RoutedEventHandler(BD_Ctrl.ButtonHandler );
+            //this.ButtonMin.Click += new RoutedEventHandler(MC.ButtonHandler);
 
             
-
-            People.DataContext = per;
         }
 
-        private void TextBlock_PreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            TextBlock ls = (TextBlock)sender;
-
-            FileInfo f = new FileInfo("" + ls.DataContext);
-
-            MessageBox.Show("El indice es = "+f.DirectoryName);
-
-
-        }
-
-        
-        private void TextBlock_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            MessageBox.Show("La matrucula seleccionada fue : " );
-        }
-
-        private void MenuContextual_Matricula_Click(object sender, RoutedEventArgs e)
+        public void MenuContextual_Matricula_Click(object sender, RoutedEventArgs e)
         {
             MenuItem selection = (MenuItem)sender;
 
-            switch(selection.Name)
-            {
-                case "Modificar_Matricula":
-                    {
+            FileInfo fl = new FileInfo("" + selection.DataContext);
 
-                        MessageBox.Show("Has seleccionado Modificar La Matricula");
+            switch (selection.Name)
+            {
+                case "Modificar":
+                    {
+                        VentanaDataGrid ventana = new VentanaDataGrid(fl);
+                        ventana.ShowDialog();
                     }
                     break;
-                case "Eliminar_Matricula":
+                case "Eliminar":
                     {
-                        MessageBox.Show("Has seleccionado Elimiar La Matricula");
+                        File.Delete("" + selection.DataContext);
+                        refrescar();
                     }
                     break;
             }
+        }
+
+        public void setDataContex_People(List<object> Obj)
+        {
+            People.DataContext = Obj;
+            
+        }
+
+        private void refrescar()
+        {
+            da = new DataAccess();
+            People.DataContext = da.GetPeople();
+
         }
     }
 }

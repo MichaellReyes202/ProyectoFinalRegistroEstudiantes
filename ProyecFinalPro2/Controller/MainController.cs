@@ -11,10 +11,10 @@ namespace ProyecFinalPro2.Controller
 {
     class MainController : IGestionController
     {
-        private MainFrame M_Ventan;
+        private MainFrame M_Ventana;
         public MainController(MainFrame Venta)
         {
-            this.M_Ventan = Venta;
+            this.M_Ventana = Venta;
         }
 
         public void ButtonHandler(object sender, RoutedEventArgs e)
@@ -24,19 +24,19 @@ namespace ProyecFinalPro2.Controller
             {
                 case "ButtonMin":
                     {
-                        if (M_Ventan.WindowState == WindowState.Normal)
+                        if (M_Ventana.WindowState == WindowState.Normal)
                         {
-                            M_Ventan.WindowState = WindowState.Maximized;
+                            M_Ventana.WindowState = WindowState.Maximized;
                         }
                         else
                         {
-                            M_Ventan.WindowState = WindowState.Normal;
+                            M_Ventana.WindowState = WindowState.Normal;
                         }
                     }
                     break;
                 case "ButtonExit":
                     {
-                        M_Ventan.Close();
+                        M_Ventana.Close();
                     }
                     break;
             }
@@ -47,7 +47,7 @@ namespace ProyecFinalPro2.Controller
         {
             try
             {
-                M_Ventan.DragMove();
+                M_Ventana.DragMove();
             }catch(Exception) { }
 
         }

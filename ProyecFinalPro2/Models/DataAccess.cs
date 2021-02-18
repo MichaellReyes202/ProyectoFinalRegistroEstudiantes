@@ -29,9 +29,8 @@ namespace ProyecFinalPro2.Models
                         while (!sr.EndOfStream)
                         {
                             line = sr.ReadLine();
-
-                            Particion(line);
                             //MessageBox.Show(line);
+                            Particion(line);
 
                             output.Add(new Models_Registros { nombre = parte1, carnet = parte2, RutaMatriculas = ListaRuta_Matricula() });
 
@@ -43,7 +42,7 @@ namespace ProyecFinalPro2.Models
             catch (Exception)
             {
 
-                MessageBox.Show("Prueba");
+                MessageBox.Show("Ocurrio un Error");
             }
 
             return output;

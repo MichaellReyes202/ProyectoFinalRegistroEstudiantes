@@ -35,18 +35,19 @@
                     </DataGridTemplateColumn.CellEditingTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
-            <DataGrid.RowDetailsTemplate >
-                <DataTemplate >
-                    <Expander Header="Matriculas Realizadas" Foreground="Blue" HorizontalAlignment="Stretch" Background="AntiqueWhite">
-                        <Border  CornerRadius="10" HorizontalAlignment="Stretch">
-                            <ListBox Name="ListRuta"  ItemsSource="{Binding Path=RutaMatriculas}" SelectedItem="{Binding infoMatricula}" HorizontalAlignment="Stretch">
+            
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate x:Name="dataaaa" >
+                    <Expander x:Name="Expand" Header="Matriculas Realizadas" Foreground="Blue" HorizontalAlignment="Stretch" Background="AntiqueWhite">
+                        <Border x:Name="boderrr" CornerRadius="10" HorizontalAlignment="Stretch">
+                            <ListBox x:Name="ListRuta"  ItemsSource="{Binding Path=RutaMatriculas}" SelectedItem="{Binding infoMatricula}" HorizontalAlignment="Stretch">
                                 <ListBox.ItemTemplate >
                                     <DataTemplate>
                                         <TextBlock Text="{Binding Path=Name}" FontSize="16" HorizontalAlignment="Stretch">
                                             <TextBlock.ContextMenu>
                                                 <ContextMenu>
-                                                    <MenuItem Name="Modificar_Matricula" Header="Modificar Matricula" Click="MenuContextual_Matricula_Click" />
-                                                    <MenuItem Name="Eliminar_Matricula" Header="Eliminar Matricula" Click="MenuContextual_Matricula_Click" />
+                                                    <MenuItem x:Name="Modificar" Header="Modificar Matricula" Click="MenuContextual_Matricula_Click"/>
+                                                    <MenuItem x:Name="Eliminar" Header="Eliminar Matricula" Click="MenuContextual_Matricula_Click" />
                                                 </ContextMenu>
                                             </TextBlock.ContextMenu>
                                         </TextBlock>
@@ -54,8 +55,8 @@
                                 </ListBox.ItemTemplate>
                                 <ListBox.ContextMenu>
                                     <ContextMenu x:Name="NewEditDeleteAdvCalcFileContextMenu">
-                                        <MenuItem Name="Modificar_Matricula" Header="Modificar Matricula" Click="MenuContextual_Matricula_Click" />
-                                        <MenuItem Name="Eliminar_Matricula" Header="Eliminar Matricula" Click="MenuContextual_Matricula_Click" />
+                                        <MenuItem Name="Modificar" Header="Modificar Matricula" Click="MenuContextual_Matricula_Click" />
+                                        <MenuItem Name="Eliminar" Header="Eliminar Matricula" Click="MenuContextual_Matricula_Click" />
                                     </ContextMenu>
                                 </ListBox.ContextMenu>
                             </ListBox>

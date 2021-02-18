@@ -18,6 +18,9 @@
     <Compile Update="Views\LoginViews.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\VentanaDataGrid.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="ViewModel\UserControlStudent.xaml">
@@ -30,6 +33,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\LoginViews.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\VentanaDataGrid.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
