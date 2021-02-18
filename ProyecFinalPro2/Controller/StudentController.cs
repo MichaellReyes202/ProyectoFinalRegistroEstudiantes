@@ -185,6 +185,46 @@ namespace ProyecFinalPro2.Controller
             }
         }
 
+        public void ComboCuatrimestres_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox cb = (ComboBox)sender;
+            switch (cb.SelectedIndex)
+            {
+                case 0:
+                    {
+                        agregar_cuatrimestre(prueba.Primero);
+                        break;
+                    }
+                case 1:
+                    {
+                        agregar_cuatrimestre(prueba.Segundo);
+                        break;
+                    }
+                case 2:
+                    {
+                        agregar_cuatrimestre(prueba.Tecero);
+                        break;
+                    }
+                case 3:
+                    {
+                        agregar_cuatrimestre(prueba.Cuarto);
+                        break;
+                    }
+            }
+        }
+
+        public void agregar_cuatrimestre(string[] clase)
+        {
+            Controlestudiante.limpiar_Inscribir();
+            foreach (var u in clase)
+            {
+                if (!Controlestudiante.contenedor_Inscrito(u))
+                {
+                    Controlestudiante.items_Inscribir(u);
+                }
+            }
+
+        }
 
 
     }
