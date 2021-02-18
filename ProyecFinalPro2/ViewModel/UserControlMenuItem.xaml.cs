@@ -37,7 +37,7 @@ namespace ProyecFinalPro2.ViewModel
             {
                 _context.SwitchScreen(((SubItem)((ListView)sender).SelectedItem).Screen);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

@@ -50,7 +50,7 @@ namespace ProyecFinalPro2.Archivos
                     }
                     streamWriter.Flush(); streamWriter.Close();
 
-               } catch (Exception x) { MessageBox.Show("Errro Archvio Write"); }
+               } catch (Exception ) { MessageBox.Show("Errro Archvio Write"); }
           }
 
           //public void ller() {
@@ -69,7 +69,7 @@ namespace ProyecFinalPro2.Archivos
                     Stream stream = new FileStream(path + "Usuario.txt",FileMode.Create,FileAccess.Write,FileShare.None);
                     binaryFormatter.Serialize(stream,usuario);
                     stream.Flush(); stream.Close();
-               } catch (Exception x) {
+               } catch (Exception) {
                     MessageBox.Show("No serializar");
                }
           }
