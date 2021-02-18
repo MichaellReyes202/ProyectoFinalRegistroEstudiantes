@@ -26,6 +26,12 @@ namespace ProyecFinalPro2.Models
         public string[] NuevaS = new string[] { "Ciudad Antigua", "Dipilto", "El Jícaro", "Jalapa", "Macuelizo", "Mozonte", "Murra", "Ocotal", "Quilalí", "San Fernando", "Santa María", "Wiwilí" };
         public string[] RSanJ = new string[] { "El Almendro", "El Castillo", "Morrito", "San Carlos", "San Juan del Norte", "San Miguelito" };
         public string[] Rivas = new string[] { "Altagracia", "Belén", "Buenos Aires", "Cárdenas", "Moyogalpa", "Potosí", "Rivas", "San Jorge", "San Juan del Sur", "Tola" };
+
+        public string[] Primero = new string[] { "Contabilidad Financiera", "Matematicas I", "Introduccion a la programacion", "Redaccion Tecnica" };
+        public string[] Segundo = new string[] { "Contabilidad de Costos", "Matematicas II", "Programacion I", "Ingles I" };
+        public string[] Tecero = new string[] { "Contabilidad Gerencial", "Matematicas III", "Programacion II", "Ingles II" };
+        public string[] Cuarto = new string[] { "Ingeniería Económica", "Algebra Lineal", "Estadistica I", "Filosofia" };
+
         public string GrupBox { get; set; }
         public int ComboTurno { get; set; }
         public string NyABox { get; set; }

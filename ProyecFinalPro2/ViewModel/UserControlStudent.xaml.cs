@@ -23,8 +23,6 @@ namespace ProyecFinalPro2.Views
     public partial class UserControlStudent : UserControl, IGestionWPF
     {
         //String path = @"C:\Users\Mauro\Desktop\Proyectos de C#";
-       
-        
 
         public UserControlStudent()
         {
@@ -43,6 +41,7 @@ namespace ProyecFinalPro2.Views
             guardar.Click += new RoutedEventHandler(EstControl.Guardar);
             ComboNacional.SelectionChanged += new SelectionChangedEventHandler(EstControl.Nacional_SelectionChanged);
             ComboDepart.SelectionChanged += new SelectionChangedEventHandler(EstControl.Departamento_SelectionChanged);
+            ComboCuatrimestres.SelectionChanged += new SelectionChangedEventHandler(EstControl.ComboCuatrimestres_SelectionChanged);
         }
 
         public List<Student> getestudiantes() 
@@ -103,6 +102,12 @@ namespace ProyecFinalPro2.Views
         public string Obtener_Nacionalidad() { return ComboNacional.SelectedIndex.ToString(); }
 
         public int Obtener_Departamento() { return ComboDepart.SelectedIndex; }
+
+        public void limpiar_Inscribir() { Inscribir.Items.Clear(); }
+
+        public bool contenedor_Inscrito(string u) { return Inscrito.Items.Contains(u);}
+
+        public void items_Inscribir(string u) { Inscribir.Items.Add(u); }
 
         public void limpiar_Departamento() { ComboDepart.Items.Clear(); }
 
