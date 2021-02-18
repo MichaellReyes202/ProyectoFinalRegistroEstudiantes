@@ -73,3 +73,4 @@ C:\Users\David_Moody\Desktop\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\ob
 C:\Users\David_Moody\Desktop\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.pdb
 C:\Users\David_Moody\Desktop\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.genruntimeconfig.cache
 >>>>>>> f89e0bec2bb7f6fde5668fd5fef17ba58a21da09
+C:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ViewModel\UserControlUsuario.g.cs
