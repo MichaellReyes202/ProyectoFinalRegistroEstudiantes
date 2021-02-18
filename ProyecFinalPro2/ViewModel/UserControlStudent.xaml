@@ -79,7 +79,14 @@
 
                 <Grid Grid.Row="2" Grid.Column="0">
                     <TextBlock x:Name="turno" HorizontalAlignment="Left" Margin="10,15,0,0" Text="TURNO :" TextWrapping="Wrap" VerticalAlignment="Center" Height="24" Width="64" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" FontSize="14" TextAlignment="Center" Foreground="#FF1D79D4"/>
-                    <ComboBox x:Name="ComboTurno" HorizontalAlignment="Left" Height="23" Width="113" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" Margin="79,0,0,0"/>
+                    <ComboBox x:Name="ComboTurno" HorizontalAlignment="Left" Height="23" Width="113" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" Margin="79,0,0,0" FontSize="14">
+                        <ComboBoxItem>
+                            Sabatino
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            Dominical
+                        </ComboBoxItem>
+                    </ComboBox>
                 </Grid>
 
                 <Grid Grid.Row="2" Grid.Column="2" >
@@ -200,17 +207,24 @@
 
                         <Grid Grid.Column="0">
                             <TextBlock x:Name="Nacional" HorizontalAlignment="Left" Margin="10,18,0,9" TextWrapping="Wrap" Width="133" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="NACIONALIDAD :"/></TextBlock>
-                            <ComboBox x:Name="ComboNacional" Margin="148,0,10,0" Height="24"/>
+                            <ComboBox x:Name="ComboNacional" Margin="148,0,10,0" Height="24" FontSize="14" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" >
+                                <ComboBoxItem>
+                                    Nacional
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    Extranjero
+                                </ComboBoxItem>
+                            </ComboBox>
                         </Grid>
 
                         <Grid Grid.Column="1">
                             <TextBlock x:Name="Depart" HorizontalAlignment="Left" Margin="10,18,0,9" TextWrapping="Wrap" Width="133" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="DEPARTAMENTO "/><Run Text=":"/></TextBlock>
-                            <ComboBox x:Name="ComboDepart" Margin="148,0,10,0" Height="24"/>
+                            <ComboBox x:Name="ComboDepart" Margin="148,0,10,0" Height="24" FontSize="14" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" />
                         </Grid>
 
                         <Grid Grid.Column="2">
                             <TextBlock x:Name="Muni" HorizontalAlignment="Left" Margin="10,17,0,10" TextWrapping="Wrap" Width="89" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4"><Run Language="es-ni" Text="MUNICIPIO : "/></TextBlock>
-                            <ComboBox x:Name="ComboMuni" Margin="106,0,10,0" Height="26"/>
+                            <ComboBox x:Name="ComboMuni" Margin="106,0,10,0" Height="26" FontSize="14" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" />
                         </Grid>
 
                     </Grid>
@@ -395,7 +409,7 @@
 
                         <DataGrid.Columns>
                             <DataGridTextColumn x:Name="CodigoDataG" Header=" Codigo" Width="200" FontWeight="Bold" FontStyle="Italic" />
-                            <DataGridTextColumn x:Name="AsignaturasDataG" Header=" Asignaturas" Width="410"/>
+                            <DataGridTextColumn x:Name="AsignaturasDataG" Header=" Asignaturas" Width="*"/>
                             <DataGridTextColumn x:Name="GrupoDataG" Header=" Grupo" Width="200"/>
                         </DataGrid.Columns>
                     </DataGrid>

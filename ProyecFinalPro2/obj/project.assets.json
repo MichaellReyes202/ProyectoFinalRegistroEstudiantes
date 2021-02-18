@@ -4894,11 +4894,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\user\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\David_Moody\\.nuget\\packages\\": {}
+>>>>>>> f89e0bec2bb7f6fde5668fd5fef17ba58a21da09
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\user\\Desktop\\Proyecto Final Programacion 2\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
       "projectName": "ProyecFinalPro2",
       "projectPath": "C:\\Users\\user\\Desktop\\Proyecto Final Programacion 2\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
@@ -4907,6 +4912,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\David_Moody\\Desktop\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
+      "projectName": "ProyecFinalPro2",
+      "projectPath": "C:\\Users\\David_Moody\\Desktop\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\ProyecFinalPro2.csproj",
+      "packagesPath": "C:\\Users\\David_Moody\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\David_Moody\\Desktop\\ProyectoFinalRegistroEstudiantes\\ProyecFinalPro2\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\David_Moody\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> f89e0bec2bb7f6fde5668fd5fef17ba58a21da09
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4918,7 +4933,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -4930,7 +4944,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Caliburn.Micro": {
             "target": "Package",
@@ -4963,7 +4976,11 @@
             "privateAssets": "none"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+>>>>>>> f89e0bec2bb7f6fde5668fd5fef17ba58a21da09
       }
     }
   }
