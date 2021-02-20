@@ -7,6 +7,7 @@ namespace ProyecFinalPro2.Models
     [Serializable]
      public class Student 
     {
+        //departamentos y municipios
         public string[] nacional = new string[] { "Nacional", "Extranjero" };
         public string[] departamento = new string[] { "Boaco", "Carazo", "Chinandega", "Chontales", "Costa Caribe Norte", "Costa Caribe Sur", "Estelí", "Granada", "Jinotega", "León", "Madriz", "Managua", "Masaya", "Matagalpa", "Nueva Segovia", "Río San Juan", "Rivas" };
         public string[] Boaco = new string[] { "Boaco", "Camoapa", "San José de los Remates", "San Lorenzo", "Santa Lucía", "Teustepe" };
@@ -27,10 +28,22 @@ namespace ProyecFinalPro2.Models
         public string[] RSanJ = new string[] { "El Almendro", "El Castillo", "Morrito", "San Carlos", "San Juan del Norte", "San Miguelito" };
         public string[] Rivas = new string[] { "Altagracia", "Belén", "Buenos Aires", "Cárdenas", "Moyogalpa", "Potosí", "Rivas", "San Jorge", "San Juan del Sur", "Tola" };
 
+        //clases de cada cuatrimestre
         public string[] Primero = new string[] { "Contabilidad Financiera", "Matematicas I", "Introduccion a la programacion", "Redaccion Tecnica" };
         public string[] Segundo = new string[] { "Contabilidad de Costos", "Matematicas II", "Programacion I", "Ingles I" };
         public string[] Tecero = new string[] { "Contabilidad Gerencial", "Matematicas III", "Programacion II", "Ingles II" };
         public string[] Cuarto = new string[] { "Ingeniería Económica", "Algebra Lineal", "Estadistica I", "Filosofia" };
+        public string[] Quinto = new string[] { "Finanzas I","Microeconomia","Estadistica II","Base de Datos I" };
+        public string[] Sexto = new string[] { "Sociologia","Macroeconomia","Base de Datos II","Método Numerico"};
+        public string[] Septimo = new string[] { "Finanzas II","Mercadotecnia","Producción I","Fisica I" };
+        public string[] Octavo = new string[] { "Cultura de Paz y Derechos Humanos","Producción II","Ingenieria de Sofware I","Fisica II" }; 
+        public string[] Noveno = new string[] { "Organización I","Investigacion de Operaciones I","Ingenieria de Sofware II","Arquitectura de Maquina" };
+        public string[] Decimo = new string[] { "Organizacion II","Investigacion de Operciones II","Produccion III","Aplicaciones Gráficas y Multimedia" };
+        public string[] DecimoPrimero = new string[] { "Ingenieria de Sistemas","Sistemas Operativos","Inteligencia Artificial","Historia CA y Nicaragua" };
+        public string[] DecimoSegundo = new string[] { "Modelación y Simulación de Sistemas","Sistemas Operativos de Redes","Metodología de la Investigación" };
+        public string[] DecimoTercero = new string[] { "Formulación y Evaluación de Proyectos","Sistemas de Información","Ética Profesional"};
+        public string[] DecimoCuarto = new string[] { "Administración de Proyectos","Administración de Informática","Auditoría de Sistemas"};
+        public string[] DecimoQuinto = new string[] { "Diseño de Sistemas en Internet","Sistemas de Manufacturacion","Tecnologia de Medio Ambiente"};
 
         public string GrupBox { get; set; }
         public int ComboTurno { get; set; }

@@ -14,7 +14,7 @@ namespace ProyecFinalPro2.Controller
         private UserControlStudent Controlestudiante;
 
         private Student prueba = new Student();
-        private int contar;
+        private int contar; 
 
         public StudentController(UserControlStudent est)
         {
@@ -187,8 +187,12 @@ namespace ProyecFinalPro2.Controller
 
         public void ComboCuatrimestres_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ComboBox cb = (ComboBox)sender;
-            switch (cb.SelectedIndex)
+            refrescar();   
+        }
+
+        public void refrescar() 
+        {
+            switch (Controlestudiante.select_ComboCuatrimestre())
             {
                 case 0:
                     {
@@ -210,6 +214,61 @@ namespace ProyecFinalPro2.Controller
                         agregar_cuatrimestre(prueba.Cuarto);
                         break;
                     }
+                case 4:
+                    {
+                        agregar_cuatrimestre(prueba.Quinto);
+                        break;
+                    }
+                case 5:
+                    {
+                        agregar_cuatrimestre(prueba.Sexto);
+                        break;
+                    }
+                case 6:
+                    {
+                        agregar_cuatrimestre(prueba.Septimo);
+                        break;
+                    }
+                case 7:
+                    {
+                        agregar_cuatrimestre(prueba.Octavo);
+                        break;
+                    }
+                case 8:
+                    {
+                        agregar_cuatrimestre(prueba.Noveno);
+                        break;
+                    }
+                case 9:
+                    {
+                        agregar_cuatrimestre(prueba.Decimo);
+                        break;
+                    }
+                case 10:
+                    {
+                        agregar_cuatrimestre(prueba.DecimoPrimero);
+                        break;
+                    }
+                case 11:
+                    {
+                        agregar_cuatrimestre(prueba.DecimoSegundo);
+                        break;
+                    }
+                case 12:
+                    {
+                        agregar_cuatrimestre(prueba.DecimoTercero);
+                        break;
+                    }
+                case 13:
+                    {
+                        agregar_cuatrimestre(prueba.DecimoCuarto);
+                        break;
+                    }
+                case 14:
+                    {
+                        agregar_cuatrimestre(prueba.DecimoQuinto);
+                        break;
+                    }
             }
         }
 
@@ -218,14 +277,75 @@ namespace ProyecFinalPro2.Controller
             Controlestudiante.limpiar_Inscribir();
             foreach (var u in clase)
             {
-                if (!Controlestudiante.contenedor_Inscrito(u))
+                if (!Controlestudiante.contenedor_Inscrito(u) )
                 {
-                    Controlestudiante.items_Inscribir(u);
+                    Controlestudiante.agregar_Inscribir(u);
                 }
             }
 
         }
 
+        public void ListBoxButtons_Click(object sender, RoutedEventArgs e)
+        {
+            Button bb = (Button)sender; 
+            switch (bb.Name)
+            {
+                case "Mandar":
+                    {
+                        try
+                        {
+                            if (!Controlestudiante.prueba())
+                            {
+                                if (Controlestudiante.contador_Incrito() <= 5)
+                                {
+                                    Controlestudiante.selected_Inscrito();
+                                }
+                                else 
+                                {
+                                    MessageBox.Show("Solo se pueden incribir un maximo de 6 clases");
+                                }
+                                
+                            }
+                        }
+                        catch (Exception) { }
+                        break;
+                    }
+                case "Mandar_Todo":
+                    {
+                        foreach (var u in Controlestudiante.items_Inscribir())
+                        {
+                            if (Controlestudiante.contador_Incrito() <= 5)
+                            {
+                                Controlestudiante.agregar_Inscrito(u.ToString());
+                            }
+                            else
+                            {
+                                if (contar==1) 
+                                {
+                                    MessageBox.Show("Solo se pueden incribir un maximo de 6 clases");
+                                }
+                                contar++;
+                            }
+                        }
+                        Controlestudiante.limpiar_Inscribir();
+                        refrescar();
+                        break;
+                    }
+                case "Remove":
+                    {
+                        Controlestudiante.remove_Inscrito();
+                        refrescar();
+                        break;
+                    }
+                case "RemoveAll":
+                    {
+                        Controlestudiante.limpiar_Inscrito();
+                        refrescar();
+                        break;
+                    }
 
+            }
+            contar = 0;
+        }
     }
 }

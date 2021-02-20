@@ -35,3 +35,41 @@ C:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudia
 C:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.dll
 C:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.pdb
 C:\Users\user\Desktop\Proyecto Final Programacion 2\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.genruntimeconfig.cache
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\bin\Debug\netcoreapp3.1\ProyecFinalPro2.exe
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\bin\Debug\netcoreapp3.1\ProyecFinalPro2.deps.json
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\bin\Debug\netcoreapp3.1\ProyecFinalPro2.runtimeconfig.json
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\bin\Debug\netcoreapp3.1\ProyecFinalPro2.runtimeconfig.dev.json
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\bin\Debug\netcoreapp3.1\ProyecFinalPro2.dll
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\bin\Debug\netcoreapp3.1\ProyecFinalPro2.pdb
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\bin\Debug\netcoreapp3.1\Caliburn.Micro.Platform.dll
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\bin\Debug\netcoreapp3.1\Caliburn.Micro.Core.dll
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\bin\Debug\netcoreapp3.1\MaterialDesignColors.dll
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\bin\Debug\netcoreapp3.1\MaterialDesignThemes.Wpf.dll
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\bin\Debug\netcoreapp3.1\Microsoft.Xaml.Behaviors.dll
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.csprojAssemblyReference.cache
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ViewModel\UserControl_BD_Student.baml
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ViewModel\UserControlMenuItem.g.cs
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ViewModel\UserControlStudent.g.cs
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ViewModel\UserControlUsuario.g.cs
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ViewModel\UserControl_BD_Student.g.cs
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\Views\LoginViews.g.cs
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\Views\MainFrame.g.cs
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\Views\VentanaDataGrid.g.cs
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2_MarkupCompile.cache
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2_MarkupCompile.lref
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\App.baml
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ViewModel\UserControlMenuItem.baml
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ViewModel\UserControlStudent.baml
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ViewModel\UserControlUsuario.baml
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\Views\LoginViews.baml
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\Views\MainFrame.baml
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\Views\VentanaDataGrid.baml
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.g.resources
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.AssemblyInfoInputs.cache
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.AssemblyInfo.cs
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.csproj.CoreCompileInputs.cache
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.csproj.CopyComplete
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.dll
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.pdb
+C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\ProyecFinalPro2.genruntimeconfig.cache

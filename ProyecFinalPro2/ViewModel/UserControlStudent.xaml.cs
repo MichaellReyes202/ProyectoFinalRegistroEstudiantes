@@ -40,8 +40,6 @@ namespace ProyecFinalPro2.Views
             bool_Municipio(false);
             TituloBlock.Text = Student.Title();
             FechaBlock.Text = Student.Day() + "-" + Student.Moth() + "-" + Student.Year();
-
-
         }
         public UserControlStudent()
         {
@@ -68,6 +66,10 @@ namespace ProyecFinalPro2.Views
             ComboNacional.SelectionChanged += new SelectionChangedEventHandler(EstControl.Nacional_SelectionChanged);
             ComboDepart.SelectionChanged += new SelectionChangedEventHandler(EstControl.Departamento_SelectionChanged);
             ComboCuatrimestres.SelectionChanged += new SelectionChangedEventHandler(EstControl.ComboCuatrimestres_SelectionChanged);
+            Mandar.Click += new RoutedEventHandler(EstControl.ListBoxButtons_Click);
+            Mandar_Todo.Click += new RoutedEventHandler(EstControl.ListBoxButtons_Click);
+            Remove.Click += new RoutedEventHandler(EstControl.ListBoxButtons_Click);
+            RemoveAll.Click += new RoutedEventHandler(EstControl.ListBoxButtons_Click);
         }
 
         public List<Student> getestudiantes() 
@@ -136,21 +138,41 @@ namespace ProyecFinalPro2.Views
 
         public int Obtener_Departamento() { return ComboDepart.SelectedIndex; }
 
-        public void limpiar_Inscribir() { Inscribir.Items.Clear(); }
-
-        public bool contenedor_Inscrito(string u) { return Inscrito.Items.Contains(u);}
-
-        public void items_Inscribir(string u) { Inscribir.Items.Add(u); }
-
         public void limpiar_Departamento() { ComboDepart.Items.Clear(); }
 
         public void limpiar_Municipio() { ComboMuni.Items.Clear(); }
-
 
         public string mandar_carnet() {return CarnetBox.Text;}
 
         public string mandar_fecha() {return FechaBlock.Text;}
 
-        
+        public void limpiar_Inscribir() { Inscribir.Items.Clear(); }
+
+        public void limpiar_Inscrito() { Inscrito.Items.Clear();}
+
+        public bool contenedor_Inscrito(string u) { return Inscrito.Items.Contains(u); }
+
+        public void agregar_Inscribir(string u) { Inscribir.Items.Add(u); }
+
+        public void agregar_Inscrito(string u) { Inscrito.Items.Add(u); }
+
+        public int select_ComboCuatrimestre() { return ComboCuatrimestres.SelectedIndex; }
+
+        public void selected_Inscribir() {  Inscribir.Items.Add(Inscrito.SelectedItem); }
+
+        public void selected_Inscrito() { Inscrito.Items.Add(Inscribir.SelectedItem); remove_Inscribir(); }
+
+        public void remove_Inscribir() { Inscribir.Items.Remove(Inscribir.SelectedItem); }  
+
+        public void remove_Inscrito() { Inscrito.Items.Remove(Inscrito.SelectedItem); }
+
+        public void actulizar_Inscribir() { Inscribir.Items.Refresh();}
+
+        public bool prueba() { return Inscribir.SelectedItem.Equals(""); }
+
+        public ItemCollection items_Inscribir() {  return Inscribir.Items; }
+
+        public int contador_Incrito() { return Inscrito.Items.Count; }
+
     }
 }

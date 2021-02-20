@@ -409,7 +409,19 @@
                 </Grid.RowDefinitions>
 
                 <Grid Grid.Row="0">
-                    <TextBlock x:Name="Datos3" HorizontalAlignment="Left" Margin="10,0,0,0" Text="III. ASIGNATURA QUE INSCRIBE" TextWrapping="Wrap" VerticalAlignment="Center" Height="13" Width="252" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="276*"/>
+                        <ColumnDefinition Width="303*"/>
+                        <ColumnDefinition Width="251*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="32*"/>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="25*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="Datos3" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center"  Text="III. ASIGNATURA QUE INSCRIBE" TextWrapping="Wrap" VerticalAlignment="Stretch" Height="14" Width="252" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"/>
+                    <TextBlock x:Name="Datos3_1" Grid.Row="2" Grid.Column="0" Text="CLASES A INCRIBIR" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Stretch" Height="14" Width="200" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" />
+                    <TextBlock x:Name="Datos3_2" Grid.Row="2" Grid.Column="2" Text="CLASES INSCRITAS" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Stretch" Height="14" Width="200" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" />
                 </Grid>
 
                 <Grid Grid.Row="1">
@@ -423,8 +435,8 @@
                         <Border Margin="10,0,10,0" BorderBrush="#FF1D79D4" BorderThickness="1.5" CornerRadius="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                     </Grid>
 
-                    <Grid Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                        <ListBox x:Name="Inscribir" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="15,0,15,0" />
+                    <Grid Grid.Column="0" >
+                        <ListBox x:Name="Inscribir"  Margin="15,0,15,0" />
                     </Grid>
 
                     <Grid Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -484,15 +496,15 @@
                                 </ComboBoxItem>
                             </ComboBox>
                         </Grid>
-                            
+
                         <Grid Grid.Row="1" Margin="0,5,0,5">
-                            <Button VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Content=">>" FontSize="20" FontFamily="Eras ITC" FontWeight="Bold" Background="Transparent" Foreground="#FF1D79D4"/>
-                            <Button VerticalAlignment="Top" HorizontalAlignment="Stretch" Content=">" FontSize="20" FontFamily="Eras ITC" FontWeight="Bold" Background="Transparent" Foreground="#FF1D79D4"/>
+                            <Button x:Name="Mandar_Todo" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Content=">>" FontSize="20" FontFamily="Eras ITC" FontWeight="Bold" Background="Transparent" Foreground="#FF1D79D4"/>
+                            <Button x:Name="Mandar" VerticalAlignment="Top" HorizontalAlignment="Stretch" Content=">" FontSize="20" FontFamily="Eras ITC" FontWeight="Bold" Background="Transparent" Foreground="#FF1D79D4"/>
                         </Grid>
 
                         <Grid Grid.Row="2" Margin="0,5,0,5">
-                            <Button VerticalAlignment="Top" HorizontalAlignment="Stretch" Content="REMOVE" FontSize="14" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Background="Transparent" Foreground="#FF1D79D4" />
-                            <Button VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Content="REMOVE ALL" FontSize="14" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Background="Transparent" Foreground="#FF1D79D4"/>
+                            <Button x:Name="Remove" VerticalAlignment="Top" HorizontalAlignment="Stretch" Content="REMOVE" FontSize="14" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Background="Transparent" Foreground="#FF1D79D4" />
+                            <Button x:Name="RemoveAll" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Content="REMOVE ALL" FontSize="14" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Background="Transparent" Foreground="#FF1D79D4"/>
                         </Grid>
 
                     </Grid>
@@ -501,8 +513,8 @@
                         <Border Margin="10,0,10,0" BorderBrush="#FF1D79D4" BorderThickness="1.5" CornerRadius="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                     </Grid>
 
-                    <Grid Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                        <ListBox x:Name="Inscrito" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="15,0,15,0"/>
+                    <Grid Grid.Column="2" >
+                        <ListBox x:Name="Inscrito"  Margin="15,0,15,0"/>
                     </Grid>
 
                 </Grid>
@@ -520,12 +532,12 @@
                     </Grid>
 
                     <Grid Grid.Column="1">
-                        <TextBlock x:Name="Firma_Fun" HorizontalAlignment="Left" Margin="78,44,0,0" Text="FIRMA DEL FUNCIONARIO" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="198" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" OpacityMask="Black" Grid.Column="1"/>
+                        <TextBlock x:Name="Firma_Fun" HorizontalAlignment="Center" Margin="0,38,0,0" Text="FIRMA DEL FUNCIONARIO" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="198" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" OpacityMask="Black"/>
                         <Separator Width="250" VerticalAlignment="Bottom" Height="40" Background="Black"/>
                     </Grid>
 
                     <Grid Grid.Column="2">
-                        <TextBlock x:Name="Firma_Est" HorizontalAlignment="Left" Margin="76,44,0,0" Text="FIRMA DEL ESTUDIANTE" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="183" FontWeight="Bold" FontStyle="Italic" FontFamily="Eras ITC" FontSize="14" Foreground="#FF1D79D4" Grid.Column="2"/>
+                        <TextBlock x:Name="Firma_Est" HorizontalAlignment="Center" Margin="0,38,0,0" Text="FIRMA DEL ESTUDIANTE" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="183" FontWeight="Bold" FontStyle="Italic" FontFamily="Eras ITC" FontSize="14" Foreground="#FF1D79D4"/>
                         <Separator Width="250" VerticalAlignment="Bottom" Height="40" Background="Black"/>
                     </Grid>
 
