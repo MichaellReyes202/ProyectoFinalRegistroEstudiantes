@@ -46,40 +46,11 @@
                         <Button x:Name="ButtonLogin" Width="130" Height="40" Background ="#FF1368BD" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="20" BorderThickness="0" Foreground="White" Content="Entrar" FontFamily="Segoe UI"  FontSize="23">
                         </Button>
                     </StackPanel>
-                    <StackPanel Margin="10" HorizontalAlignment="Center">
-                        <Button x:Name="ButtonRegistro"  Width="150" Height="40" Background ="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF1368BD" Content="Registrarte" FontFamily="Segoe UI" FontSize="23">
-                        </Button>
-                    </StackPanel>
+                   
                 </StackPanel>
 
                 <!-- ====================================================================================================================== -->
 
-                <StackPanel x:Name="Panel2" Margin="20 40">
-                    <TextBlock Text="Usuario Registro" Margin="20" Foreground="#FF1368BD" TextAlignment="Center" FontSize="30" FontFamily="Segoe UI"  FontWeight="Bold" Width="250"/>
-                    <StackPanel Orientation="Horizontal" Margin="10">
-                        <materialDesign:PackIcon Kind="User" Width="25" Height="25" Foreground="#FF1368BD"/>
-                        <TextBox x:Name="TextBlockNewUsuario" Margin="10 0" materialDesign:HintAssist.Hint="Usuario" Foreground="Black" Width="250" FontSize="16" FontFamily="Segoe UI" Cursor="IBeam" BorderBrush="#FF1368BD" SelectionBrush="White"/>
-                    </StackPanel>
-                    <StackPanel>
-                        <Grid Width="200" Height="40">
-                            <RadioButton x:Name="RadioUsuario" Content="Usuario" FontFamily="Segoe UI"  Foreground="#FF1368BD" HorizontalAlignment="Left"></RadioButton>
-                            <RadioButton x:Name="RadioAdminis" Content="Administrador" FontFamily="Segoe UI"  Foreground="#FF1368BD" HorizontalAlignment="Right"></RadioButton>
-                        </Grid>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="10">
-                        <materialDesign:PackIcon Kind="Lock" Width="25" Height="25" Foreground="#FF1368BD"/>
-                        <PasswordBox x:Name="PasswordBoxNewUsuario" Margin="10 0" materialDesign:HintAssist.Hint="Contraseña" Foreground="Black" Width="250" FontSize="16" FontFamily="Segoe UI"  Cursor="IBeam" FontWeight="Normal" BorderBrush="#FF1368BD" SelectionBrush="White"/>
-                    </StackPanel>
-                    <StackPanel Margin="10" HorizontalAlignment="Center">
-                        <Button x:Name="ButtonNewRegistro" Width="130" Height="40" Background ="#FF1368BD" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="20" BorderThickness="0" Foreground="White" Content="Registrarte" FontFamily="Segoe UI" FontSize="16">
-                        </Button>
-                    </StackPanel>
-                    <StackPanel>
-                        <Button x:Name="ButtoNewExit" Margin="10 20" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Background="#FF1368BD" BorderBrush="{x:Null}" Width="40" Height="40" FontFamily="Segoe UI">
-                            <materialDesign:PackIcon Kind="Close" Foreground="White" Width="25" Height="25"/>
-                        </Button>
-                    </StackPanel>
-                </StackPanel>
             </StackPanel>
             <StackPanel Width=" 100">
                 <Button x:Name="ButtonExit" Margin="10 20" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Background="#FF1368BD" BorderBrush="#FF1368BD" FontFamily="Segoe UI" >
