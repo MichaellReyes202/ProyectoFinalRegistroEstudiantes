@@ -34,12 +34,10 @@ namespace ProyecFinalPro2.Views
             this.Info = info;
             Open();
             setAll();
-
             SeputControllers();
             bool_Deparmento(false);
             bool_Municipio(false);
-            TituloBlock.Text = Student.Title();
-            FechaBlock.Text = Student.Day() + "-" + Student.Moth() + "-" + Student.Year();
+            CarnetBox.IsReadOnly= true;
         }
         public UserControlStudent()
         {
@@ -85,8 +83,9 @@ namespace ProyecFinalPro2.Views
         public Student getAll() 
         {
             Student Estudiante = new Student();
-            Estudiante.GrupBox = CarnetBox.Text;
-            Estudiante.ComboTurno = Convert.ToInt32(ComboTurno.SelectedIndex);
+            Estudiante.TituloBlock = TituloBlock.Text ;
+            Estudiante.GrupBox = GrupBox.Text;
+            Estudiante.ComboTurno = ComboTurno.SelectedIndex;
             Estudiante.NyABox = Nom_ApBox.Text;
             Estudiante.CarnetBox = CarnetBox.Text;
             Estudiante.SolteroRadio = SolteroRadio.IsChecked;
@@ -95,11 +94,12 @@ namespace ProyecFinalPro2.Views
             Estudiante.FRadio = FRadio.IsChecked;
             Estudiante.LyFBox = LyFBox.Text;
             Estudiante.AgeBox = AgeBox.Text;
-            Estudiante.ComboNacional = Convert.ToInt32(ComboNacional.SelectedIndex);
-            Estudiante.ComboDepart = Convert.ToInt32(ComboDepart.SelectedIndex);
-            Estudiante.ComboMuni = Convert.ToInt32(ComboMuni.SelectedIndex);
+            Estudiante.ComboNacional = ComboNacional.SelectedIndex;
+            Estudiante.ComboDepart = ComboDepart.SelectedIndex;
+            Estudiante.ComboMuni = ComboMuni.SelectedIndex;
             Estudiante.DirectBox = DirectionBox.Text;
             Estudiante.TelfBox = Phonebox.Text;
+            Estudiante.EmailBox = E_MailBox.Text;
             Estudiante.CelBox = Cel_box.Text;
             Estudiante.CentroBox = CentroBox.Text;
             Estudiante.EstaRadio = EstaRadio.IsChecked;
@@ -116,14 +116,53 @@ namespace ProyecFinalPro2.Views
             Estudiante.TrasExteRadio = TrasExRadio.IsChecked;
             Estudiante.ContCarrRadio = ContiRadio.IsChecked;
             Estudiante.SegCarrRadio = SegRadio.IsChecked;
+            Estudiante.ComboCuatrimestres = ComboCuatrimestres.SelectedIndex;
+            Estudiante.Inscrito = get_Inscrito();
+            Estudiante.FechaBlock = FechaBlock.Text;
             return Estudiante;    
         }
 
         public void setAll()
         {
+            TituloBlock.Text = Set_Estudiante.TituloBlock;
+            GrupBox.Text = Set_Estudiante.GrupBox;
+            ComboTurno.SelectedIndex = Set_Estudiante.ComboTurno;
             Nom_ApBox.Text = Set_Estudiante.NyABox;
             CarnetBox.Text = Set_Estudiante.CarnetBox;
-            
+            SolteroRadio.IsChecked = Set_Estudiante.SolteroRadio;
+            CasadoRadio.IsChecked = Set_Estudiante.CasadoRadio;
+            MRadio.IsChecked = Set_Estudiante.MRadio;
+            FRadio.IsChecked = Set_Estudiante.FRadio;
+            LyFBox.Text = Set_Estudiante.LyFBox;
+            AgeBox.Text = Set_Estudiante.AgeBox;
+            ComboNacional.SelectedIndex = Set_Estudiante.ComboNacional;
+            ComboDepart.SelectedIndex = Set_Estudiante.ComboDepart;
+            ComboMuni.SelectedIndex = Set_Estudiante.ComboMuni;
+            DirectionBox.Text = Set_Estudiante.DirectBox;
+            Phonebox.Text = Set_Estudiante.TelfBox;
+            Cel_box.Text = Set_Estudiante.CelBox;
+            E_MailBox.Text = Set_Estudiante.EmailBox;
+            CentroBox.Text = Set_Estudiante.CentroBox;
+            EstaRadio.IsChecked = Set_Estudiante.EstaRadio;
+            PrivRadio.IsChecked = Set_Estudiante.PrivRadio;
+            SubRadio.IsChecked = Set_Estudiante.SubvRadio;
+            OrdiRadio.IsChecked = Set_Estudiante.OrdiRadio;
+            BecRadio.IsChecked = Set_Estudiante.BecRadio;
+            TrabRadio.IsChecked = Set_Estudiante.TrabRadio;
+            TrabSRadio.IsChecked = Set_Estudiante.TrabajaSRadio;
+            TrabNRadio.IsChecked = Set_Estudiante.TrabajaNRadio;
+            IngrRadio.IsChecked = Set_Estudiante.NIngrRadio;
+            ReingrRadio.IsChecked = Set_Estudiante.ReingreRadio;
+            TrasIntRadio.IsChecked = Set_Estudiante.TrasIntRadio;
+            TrasExRadio.IsChecked = Set_Estudiante.TrasExteRadio;
+            ContiRadio.IsChecked = Set_Estudiante.ContCarrRadio;
+            SegRadio.IsChecked = Set_Estudiante.SegCarrRadio;
+            ComboCuatrimestres.SelectedIndex = Set_Estudiante.ComboCuatrimestres;
+            foreach (string u in Set_Estudiante.Inscrito) 
+            {
+                Inscrito.Items.Add(u);
+            }
+            FechaBlock.Text = Set_Estudiante.FechaBlock;
         }
 
         public void item_Departamento(string d) {ComboDepart.Items.Add(d);}
@@ -134,7 +173,7 @@ namespace ProyecFinalPro2.Views
 
         public void bool_Municipio(bool m) { ComboMuni.IsEnabled = m;}
 
-        public string Obtener_Nacionalidad() { return ComboNacional.SelectedIndex.ToString(); }
+        public int Obtener_Nacionalidad() { return ComboNacional.SelectedIndex; }
 
         public int Obtener_Departamento() { return ComboDepart.SelectedIndex; }
 
@@ -173,6 +212,16 @@ namespace ProyecFinalPro2.Views
         public ItemCollection items_Inscribir() {  return Inscribir.Items; }
 
         public int contador_Incrito() { return Inscrito.Items.Count; }
+
+        public List<string> get_Inscrito() 
+        {
+            List<string> prueb = new List<string>();
+            foreach (var u in Inscrito.Items) 
+            {
+                prueb.Add(u.ToString());
+            }
+            return prueb;
+        }
 
     }
 }

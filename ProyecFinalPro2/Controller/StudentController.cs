@@ -48,11 +48,9 @@ namespace ProyecFinalPro2.Controller
 
         public void Nacional_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            MessageBox.Show(Controlestudiante.Obtener_Nacionalidad());
             switch (Controlestudiante.Obtener_Nacionalidad())
-            {
-                
-                case "0":
+            {                
+                case 0:
                     {
                         Controlestudiante.bool_Deparmento(true);
                         if (contar <= 0)
@@ -66,7 +64,7 @@ namespace ProyecFinalPro2.Controller
                         break;
 
                     }
-                case "1":
+                case 1:
                     {
                         contar = 0;
                         Controlestudiante.limpiar_Departamento();

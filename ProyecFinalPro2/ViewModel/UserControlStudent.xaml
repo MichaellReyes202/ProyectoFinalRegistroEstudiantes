@@ -140,7 +140,7 @@
 
                     <Grid Grid.Row="1">
                         <TextBlock x:Name="Nom" HorizontalAlignment="Left" Margin="10,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="180" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" FontSize="14" Foreground="#FF1D79D4"><Run Text="NOMBRE Y APELLIDOS"/><Run Language="es-ni" Text=" :"/></TextBlock>
-                        <TextBox x:Name="Nom_ApBox" Margin="195,3,10,0" TextWrapping="Wrap" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" Foreground="#FF1D79D4" FontSize="14"/>
+                        <TextBox x:Name="Nom_ApBox" Margin="195,3,10,0" TextWrapping="Wrap" FontFamily="Eras ITC" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" Foreground="#FF1D79D4" FontSize="14" />
                     </Grid>
 
                     <Grid Grid.Row="2">
@@ -153,7 +153,7 @@
 
                         <Grid Grid.Column="0">
                             <TextBlock x:Name="Carne" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="80" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" HorizontalAlignment="Left"><Run Text="CARNET"/><Run Language="es-ni" Text=" #"/><LineBreak/><Run Language="es-ni"/></TextBlock>
-                            <TextBox x:Name="CarnetBox" Margin="95,0,10,0" TextWrapping="Wrap" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" VerticalAlignment="Center"/>
+                            <TextBox x:Name="CarnetBox" Margin="95,0,10,0" TextWrapping="Wrap" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" VerticalAlignment="Center" Foreground="#FF1D79D4"/>
 
                         </Grid>
 
@@ -214,7 +214,7 @@
 
                         <Grid Grid.Column="1">
                             <TextBlock x:Name="age" HorizontalAlignment="Left" Margin="10,15,0,0" TextWrapping="Wrap" Width="57" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4" VerticalAlignment="Top"><Run Language="es-ni" Text="EDAD:"/></TextBlock>
-                            <TextBox x:Name="AgeBox" Margin="67,0,15,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="24" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam"/>
+                            <TextBox x:Name="AgeBox" Margin="67,0,15,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="24" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Cursor="IBeam" Foreground="#FF1D79D4"/>
 
                         </Grid>
 
@@ -436,7 +436,7 @@
                     </Grid>
 
                     <Grid Grid.Column="0" >
-                        <ListBox x:Name="Inscribir"  Margin="15,0,15,0" />
+                        <ListBox x:Name="Inscribir"  Margin="15,0,15,0" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" />
                     </Grid>
 
                     <Grid Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -448,7 +448,7 @@
 
                         <Grid Grid.Row="0" Margin="0,5,0,5">
                             <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Text="CUATRIMESTRES" TextAlignment="Center" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"/>
-                            <ComboBox x:Name="ComboCuatrimestres" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" FontSize="14" BorderBrush="#FF1D79D4" BorderThickness="1">
+                            <ComboBox x:Name="ComboCuatrimestres" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" FontSize="14" BorderBrush="#FF1D79D4" BorderThickness="1" FontFamily="Eras ITC" FontWeight="Bold" Foreground="#FF1D79D4" HorizontalContentAlignment="Center">
                                 <ComboBoxItem>
                                     I
                                 </ComboBoxItem>
@@ -514,7 +514,7 @@
                     </Grid>
 
                     <Grid Grid.Column="2" >
-                        <ListBox x:Name="Inscrito"  Margin="15,0,15,0"/>
+                        <ListBox x:Name="Inscrito"  Margin="15,0,15,0" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"/>
                     </Grid>
 
                 </Grid>
@@ -527,8 +527,12 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBlock x:Name="Fecha" HorizontalAlignment="Center" Text="FECHA" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="52" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4" Margin="0,25,0,0"/>
-                        <TextBlock x:Name="FechaBlock" Margin="24,50,24,-21" TextWrapping="Wrap" Height="31" Width="126" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" />
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock x:Name="Fecha" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Stretch" Text="FECHA" TextWrapping="Wrap" Height="20" Width="52" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center" Foreground="#FF1D79D4" Margin="0,10,0,0"/>
+                        <TextBlock x:Name="FechaBlock" Grid.Row="1" Height="41" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" HorizontalAlignment="Center" VerticalAlignment="Stretch" />
                     </Grid>
 
                     <Grid Grid.Column="1">

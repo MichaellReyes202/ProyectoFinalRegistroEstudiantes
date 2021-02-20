@@ -45,6 +45,8 @@ namespace ProyecFinalPro2.Models
         public string[] DecimoCuarto = new string[] { "Administración de Proyectos","Administración de Informática","Auditoría de Sistemas"};
         public string[] DecimoQuinto = new string[] { "Diseño de Sistemas en Internet","Sistemas de Manufacturacion","Tecnologia de Medio Ambiente"};
 
+
+        public string TituloBlock { get; set; }
         public string GrupBox { get; set; }
         public int ComboTurno { get; set; }
         public string NyABox { get; set; }
@@ -77,8 +79,10 @@ namespace ProyecFinalPro2.Models
         public bool? TrasExteRadio { get; set; }
         public bool? ContCarrRadio { get; set; }
         public bool? SegCarrRadio { get; set; }
+        public List<string> Inscrito { get; set; }
+        public string FechaBlock { get; set; }
+        public int ComboCuatrimestres { get; set; }
 
-        
         public static string Title() 
         {
             return "HOJA DE MATRICULA CURSO ELECTIVO "+Year()+"\nPROGRAMA DE MODALIDAD ESPECIAL (PROMECYS)";

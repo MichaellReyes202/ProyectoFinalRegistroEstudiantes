@@ -4,31 +4,17 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
 C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\
 ProyecFinalPro2
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\App.xaml
-7-159002054
+7-1799673885
 
-27-1265486209
+271192117045
 204864111369
-ViewModel\UserControlMenuItem.xaml;ViewModel\UserControlStudent.xaml;ViewModel\UserControlUsuario.xaml;ViewModel\UserControl_BD_Student.xaml;Views\LoginViews.xaml;Views\MainFrame.xaml;Views\VentanaDataGrid.xaml;
-=======
-C:\Users\David_Moody\Desktop\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\
-ProyecFinalPro2
-none
-false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\David_Moody\Desktop\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\App.xaml
-8-1015043049
-
-311505687734
-204-993649848
-ViewModel\UserControlMenuItem.xaml;ViewModel\UserControlStudent.xaml;ViewModel\UserControlUsuario.xaml;ViewModel\UserControlViewModel.xaml;ViewModel\UserControl_BD_Student.xaml;Views\LoginViews.xaml;Views\MainFrame.xaml;Views\VentanaDataGrid.xaml;
->>>>>>> c8db9c3d9d0ca4ae1082515711e1e395cbff7038
+ViewModel\UserControlMenuItem.xaml;ViewModel\UserControlStudent.xaml;ViewModel\UserControlViewModel.xaml;ViewModel\UserControl_BD_Student.xaml;Views\LoginViews.xaml;Views\MainFrame.xaml;Views\VentanaDataGrid.xaml;
 
 False
 
