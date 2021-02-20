@@ -15,9 +15,6 @@
     <Compile Update="Views\MainFrame.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\LoginViews.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Views\VentanaDataGrid.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -29,10 +26,13 @@
     <Page Update="ViewModel\UserControlMenuItem.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\MainFrame.xaml">
+    <Page Update="ViewModel\UserControlViewModel.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\LoginViews.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MainFrame.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\VentanaDataGrid.xaml">

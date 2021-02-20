@@ -15,47 +15,69 @@ namespace ProyecFinalPro2.Controller
      public class LoginController : IGestionController
      {
           private LoginViews loginViews;
-          private UsuarioArchivos usuarioArchivos;
+          private UsersFile usersFile;
+          private MainFrame mainFrame1;
+
+          public LoginController(MainFrame mainFrame1) {
+               this.mainFrame1 = mainFrame1;
+          }
 
           public LoginController(LoginViews loginViews) {
                this.loginViews = loginViews;
-               usuarioArchivos = new UsuarioArchivos();
+               usersFile = new UsersFile();
           }
 
           public void ButtonHandler(object sender,RoutedEventArgs e) {
                Button button = (Button) sender;
 
                switch (button.Name) {
-                    case "ButtonExit": loginViews.Exit(); break;
-                    case "ButtoNewExit": loginViews.OcultarPanel2(); break;
-                    case "ButtonRegistro": loginViews.OcultarPanel1(); break;
-                    case "ButtonNewRegistro":
-                         usuarioArchivos.Guardar(loginViews.NewUser(),true);
-                         loginViews.OcultarPanel2();
+                    case "ButtonExit":
+                         this.loginViews.Close();
                          break;
                     case "ButtonLogin":
-                         switch (ValidarUsuarioDatos(usuarioArchivos.Abrir(),loginViews.ValidarUsuario())) {
-                              case "Usuario":
-                                   MessageBox.Show("Usuario");
-                                   break;
-                              case "Administrador":
-                                   MessageBox.Show("Admistr");
-                                   break;
-                              default:
-                                   MessageBox.Show("No existe");
-                                   break;
+                         if (!TextBoxFull(loginViews.GetUser())) {
+                              string type = ValidateData(usersFile.Abrir(),loginViews.GetUser());
+
+                              switch (type) {
+                                   case "Usuario":
+                                        ShowMainFrame(false);
+                                        break;
+                                   case "Administrador":
+                                        ShowMainFrame(true);
+                                        break;
+                                   default:
+                                        MessageBox.Show("El Usuario no existe","Login");
+                                        break;
+                              }
+                         } else {
+                              MessageBox.Show("Completar Registro","Login");
                          }
                          break;
                }
+               loginViews.ClearUsers();
           }
 
-          public string ValidarUsuarioDatos(List<UsuariosModels> l,UsuariosModels u) {
-               foreach (UsuariosModels usuario in l) {
-                    if (usuario.nombre.Equals(u.nombre) && usuario.clave.Equals(u.clave)) {
-                         return usuario.tipoU;
+          private string ValidateData(List<UsersModels> l,UsersModels u) {
+               foreach (UsersModels usuario in l) {
+                    if (usuario.name.Equals(u.name) && usuario.password.Equals(u.password)) {
+                         return usuario.type;
                     }
                }
                return "No existe";
+          }
+
+          public bool TextBoxFull(UsersModels users) {
+               if (users.name.Equals("") || users.password.Equals("")) {
+                    return true;
+               }
+               return false;
+          }
+
+          private void ShowMainFrame(bool v) {
+               this.loginViews.Hide();
+               MainFrame mainFrame = new MainFrame(v);
+               mainFrame.ShowDialog();
+               this.loginViews.Close();
           }
 
           public void DragMoveWindows(object sender,MouseButtonEventArgs e) {

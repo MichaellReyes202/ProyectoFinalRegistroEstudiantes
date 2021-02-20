@@ -18,8 +18,7 @@ namespace ProyecFinalPro2.Views
      public partial class LoginViews : Window, IGestionWPF
      {
           private LoginController loginController;
-          private UsuariosModels usuarioViews;
-          private List<UsuariosModels> listaUsuario;
+          private UsersModels usuarioViews;
 
           public LoginViews() {
                InitializeComponent();
@@ -27,51 +26,22 @@ namespace ProyecFinalPro2.Views
           }
           public void SeputControllers() {
                loginController = new LoginController(this);
-               Panel2.Visibility = Visibility.Collapsed;
 
                ButtonLogin.Click += new RoutedEventHandler(loginController.ButtonHandler);
                ButtonExit.Click += new RoutedEventHandler(loginController.ButtonHandler);
-               ButtonRegistro.Click += new RoutedEventHandler(loginController.ButtonHandler);
-               ButtoNewExit.Click += new RoutedEventHandler(loginController.ButtonHandler);
-               ButtonNewRegistro.Click += new RoutedEventHandler(loginController.ButtonHandler);
           }
 
-          public List<UsuariosModels> NewUser() {
-               usuarioViews = new UsuariosModels();
-               listaUsuario = new List<UsuariosModels>();
-
-               usuarioViews.nombre = TextBlockNewUsuario.Text;
-               usuarioViews.clave = PasswordBoxNewUsuario.Password;
-
-               if (RadioUsuario.IsChecked == true) {
-                    usuarioViews.tipoU = "Usuario";
-               } else if (RadioAdminis.IsChecked == true) {
-                    usuarioViews.tipoU = "Administrador";
-               }
-
-               listaUsuario.Add(usuarioViews);
-               return listaUsuario;
-          }
-
-          public UsuariosModels ValidarUsuario() {
-               usuarioViews = new UsuariosModels();
-               usuarioViews.nombre = TextBlockUsuario.Text;
-               usuarioViews.clave = PasswordBoxUsuario.Password;
+          public UsersModels GetUser() {
+               usuarioViews = new UsersModels();
+               usuarioViews.name = TextBlockUsuario.Text.Trim();
+               usuarioViews.password = PasswordBoxUsuario.Password.Trim();
                return usuarioViews;
           }
 
+          public void ClearUsers() {
+               TextBlockUsuario.Clear();
+               PasswordBoxUsuario.Clear();
+          }
           public void DragMoveWindows() => this.DragMove();
-
-          public void Exit() => this.Close();
-
-          public void OcultarPanel1() {
-               Panel1.Visibility = Visibility.Collapsed;
-               Panel2.Visibility = Visibility.Visible;
-          }
-
-          public void OcultarPanel2() {
-               Panel2.Visibility = Visibility.Collapsed;
-               Panel1.Visibility = Visibility.Visible;
-          }
      }
 }

@@ -1,4 +1,5 @@
 ﻿
+<<<<<<< HEAD
 FC:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\App.xaml;;
 FC:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\ViewModel\UserControlMenuItem.xaml;;
 FC:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\ViewModel\UserControlStudent.xaml;;
@@ -6,4 +7,14 @@ FC:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\Proyect
 FC:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\Views\LoginViews.xaml;;
 FC:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\Views\MainFrame.xaml;;
 FC:\Users\Mauro\Desktop\Proyectos de C#\ProyectoFinalRegistroEstudiantes\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\Views\VentanaDataGrid.xaml;;
+=======
+FC:\Users\David_Moody\Desktop\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\App.xaml;;
+FC:\Users\David_Moody\Desktop\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\ViewModel\UserControlMenuItem.xaml;;
+FC:\Users\David_Moody\Desktop\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\ViewModel\UserControlStudent.xaml;;
+FC:\Users\David_Moody\Desktop\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\ViewModel\UserControlUsuario.xaml;;
+FC:\Users\David_Moody\Desktop\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\ViewModel\UserControlViewModel.xaml;;
+FC:\Users\David_Moody\Desktop\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\Views\LoginViews.xaml;;
+FC:\Users\David_Moody\Desktop\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\Views\MainFrame.xaml;;
+FC:\Users\David_Moody\Desktop\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\Views\VentanaDataGrid.xaml;;
+>>>>>>> c8db9c3d9d0ca4ae1082515711e1e395cbff7038
 
