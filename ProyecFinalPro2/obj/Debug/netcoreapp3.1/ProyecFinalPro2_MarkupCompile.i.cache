@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\David_Moody\Desktop\C#\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\
+C:\Users\David_Moody\Desktop\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\obj\Debug\netcoreapp3.1\
 ProyecFinalPro2
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\David_Moody\Desktop\C#\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\App.xaml
-7-1799673885
+C:\Users\David_Moody\Desktop\ProyectoFinalRegistroEstudiantes\ProyecFinalPro2\App.xaml
+8-1015043049
 
-29-824498826
+33-510928137
 204-993649848
-ViewModel\UserControlMenuItem.xaml;ViewModel\UserControlStudent.xaml;ViewModel\UserControlViewModel.xaml;ViewModel\UserControl_BD_Student.xaml;Views\LoginViews.xaml;Views\MainFrame.xaml;Views\VentanaDataGrid.xaml;
+ViewModel\UserControlMenuItem.xaml;ViewModel\UserControlStudent.xaml;ViewModel\UserControlUsuario.xaml;ViewModel\UserControlViewModel.xaml;ViewModel\UserControl_BD_Student.xaml;Views\LoginViews.xaml;Views\MainFrame.xaml;Views\VentanaDataGrid.xaml;
 
-True
+False
 
