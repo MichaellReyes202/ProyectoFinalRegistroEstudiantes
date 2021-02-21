@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProyecFinalPro2.Views" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" d:DesignWidth="830" Height="1224">
-    <Grid>
+    <Grid x:Name="Hoja_Registro">
         <!--Generamos 2 grid una para el Titulo y otro para el formulario-->
 
         <Grid.RowDefinitions>
@@ -34,7 +34,7 @@
                         <Button x:Name="guardar" Content="Guardar datos" VerticalAlignment="Center">
 
                         </Button>
-                        <Button x:Name="imprimir" Content="Imprimir Hoja" VerticalAlignment="Center">
+                        <Button x:Name="imprimir" Content="Imprimir Hoja" VerticalAlignment="Center" Click="Imprimir">
 
                         </Button>
                         <Button x:Name="cerrar" Content="Cerrar Hoja" VerticalAlignment="Center">

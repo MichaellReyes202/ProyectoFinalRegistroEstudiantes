@@ -33,6 +33,16 @@ namespace ProyecFinalPro2.Controller
            
         }
 
+        public void Imprimir(object sender, RoutedEventArgs e)
+        {
+            PrintDialog pd = new PrintDialog();
+            if (pd.ShowDialog()==true) 
+            { 
+            
+            }
+
+        }
+
         public bool buscar_carnet(List<Student> a)
         {
             foreach (Student guard in a)

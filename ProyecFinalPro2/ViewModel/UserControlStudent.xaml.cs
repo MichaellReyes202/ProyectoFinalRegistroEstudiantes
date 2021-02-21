@@ -223,5 +223,16 @@ namespace ProyecFinalPro2.Views
             return prueb;
         }
 
+        public void Imprimir(object sender, RoutedEventArgs e)
+        {
+            PrintDialog pd = new PrintDialog();
+
+            if (pd.ShowDialog() == true)
+            {
+                pd.PrintVisual(Hoja_Registro, "Hoja 1");
+            }
+
+        }
+
     }
 }

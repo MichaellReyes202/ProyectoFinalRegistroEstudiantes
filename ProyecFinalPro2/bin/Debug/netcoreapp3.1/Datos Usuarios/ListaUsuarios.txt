@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-David,Moody123,Administrador
-Mauro,Sistema1996,Administrador
-Michaell,20203048S,Administrador
-=======
-David,Moody1234,Administrador
->>>>>>> f8f6d723f65dc507f5a9513507befa089fcd4b99
