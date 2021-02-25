@@ -12,6 +12,9 @@
     <Compile Update="ViewModel\UserControlMenuItem.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ViewModel\UserControl_Configuracion.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\MainFrame.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -27,6 +30,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ViewModel\UserControlViewModel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ViewModel\UserControl_Configuracion.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\LoginViews.xaml">

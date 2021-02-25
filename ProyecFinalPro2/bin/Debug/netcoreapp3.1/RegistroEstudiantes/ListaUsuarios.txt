@@ -1,5 +1,17 @@
+<<<<<<< HEAD
 Mauro Antonio Gomez Zapata-2020 3023S
 Eduardo Raul Ramirez Ortiz-2020 3046S
 Michaell Joel Reyes-2020 3045F
 David Rafael Moody-2020 3089R
 Ramon Salazar Fuentes Vivas-2020 5036Y
+=======
+Michaell Joel Reyes-20203048S
+Mauro Antonio Gomez-14041723
+David  Rafael Moody-20204569
+Gerald Francisco Poveda-15041230
+Mariel Lili Fuentes-20206945
+Marvin Javier Reyes-20201459
+Armando jose Gomez-20205520
+Mayra Reyes Aguilar-20204010
+
+>>>>>>> ae412e751ebb00da52120866e3966d00d1b800c6

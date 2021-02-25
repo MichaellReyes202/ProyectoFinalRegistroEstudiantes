@@ -9,6 +9,7 @@
       "ProyecFinalPro2/1.0.0": {
         "dependencies": {
           "Caliburn.Micro": "4.0.136-rc",
+          "DocumentFormat.OpenXml": "2.12.3",
           "MaterialDesignColors": "2.0.0-ci2405",
           "MaterialDesignThemes": "4.0.0-ci2405"
         },
@@ -38,6 +39,17 @@
           "lib/netstandard1.1/Caliburn.Micro.Core.dll": {
             "assemblyVersion": "4.0.0.0",
             "fileVersion": "4.0.136.27728"
+          }
+        }
+      },
+      "DocumentFormat.OpenXml/2.12.3": {
+        "dependencies": {
+          "System.IO.Packaging": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/DocumentFormat.OpenXml.dll": {
+            "assemblyVersion": "2.12.3.0",
+            "fileVersion": "2.12.3.0"
           }
         }
       },
@@ -331,6 +343,7 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.IO.Packaging/4.7.0": {},
       "System.Linq/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -763,6 +776,13 @@
       "path": "caliburn.micro.core/4.0.136-rc",
       "hashPath": "caliburn.micro.core.4.0.136-rc.nupkg.sha512"
     },
+    "DocumentFormat.OpenXml/2.12.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qLww6khV25dTzGU3+9rG5vB6RbMoWuNA015151ZmazoepkvxW6/4a5u4QQASoXsZsBITsw5ZO0/Xpzm31tQ43g==",
+      "path": "documentformat.openxml/2.12.3",
+      "hashPath": "documentformat.openxml.2.12.3.nupkg.sha512"
+    },
     "MaterialDesignColors/2.0.0-ci2405": {
       "type": "package",
       "serviceable": true,
@@ -1049,6 +1069,13 @@
       "sha512": "sha512-6QOb2XFLch7bEc4lIcJH49nJN2HV+OC3fHDgsLVsBVBk3Y4hFAnOBGzJ2lUu7CyDDFo9IBWkSsnbkT6IBwwiMw==",
       "path": "system.io.filesystem.primitives/4.3.0",
       "hashPath": "system.io.filesystem.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.IO.Packaging/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9VV4KAbgRQZ79iEoG40KIeZy38O30oWwewScAST879+oki8g/Wa2HXZQgrhDDxQM4GkP1PnRJll05NMiVPbYAw==",
+      "path": "system.io.packaging/4.7.0",
+      "hashPath": "system.io.packaging.4.7.0.nupkg.sha512"
     },
     "System.Linq/4.3.0": {
       "type": "package",
