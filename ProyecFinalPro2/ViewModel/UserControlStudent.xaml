@@ -34,10 +34,10 @@
                         <Button x:Name="guardar" Content="Guardar datos" VerticalAlignment="Center">
 
                         </Button>
-                        <Button x:Name="imprimir" Content="Imprimir Hoja" VerticalAlignment="Center" Click="Imprimir">
+                        <Button x:Name="imprimir" Content="Imprimir Hoja" VerticalAlignment="Center" >
 
                         </Button>
-                        <Button x:Name="cerrar" Content="Cerrar Hoja" VerticalAlignment="Center">
+                        <Button x:Name="limpiar" Content="Limpiar Hoja" VerticalAlignment="Center">
 
                         </Button>
                     </StackPanel>
@@ -112,7 +112,7 @@
                 </Grid>
 
                 <Grid Grid.Row="2" Grid.Column="2" >
-                    <TextBlock x:Name="sist" Margin="30,10,10,0" TextWrapping="Wrap" VerticalAlignment="Center" Height="18" Width="290" FontFamily="Eras ITC" FontStyle="Italic" FontWeight="Bold" FontSize="14" Foreground="#FF1D79D4"><Run Language="es-ni" Text="CARRERA: DE INGENIERIA DE SISTEMAS"/></TextBlock>
+                    <TextBlock x:Name="sist" Margin="0,10,0,5" HorizontalAlignment="Center" Height="18" Width="290" FontFamily="Eras ITC" FontStyle="Italic" FontWeight="Bold" FontSize="14" Foreground="#FF1D79D4"><Run Language="es-ni" Text="CARRERA: DE INGENIERIA DE SISTEMAS"/></TextBlock>
                 </Grid>
 
             </Grid>
@@ -448,7 +448,7 @@
 
                         <Grid Grid.Row="0" Margin="0,5,0,5">
                             <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Text="CUATRIMESTRES" TextAlignment="Center" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4"/>
-                            <ComboBox x:Name="ComboCuatrimestres" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" FontSize="14" BorderBrush="#FF1D79D4" BorderThickness="1" FontFamily="Eras ITC" FontWeight="Bold" Foreground="#FF1D79D4" HorizontalContentAlignment="Center">
+                            <ComboBox x:Name="ComboCuatrimestres" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" FontSize="16" BorderBrush="#FF1D79D4" BorderThickness="1" FontFamily="Gentium Book Basic" FontWeight="Bold" Foreground="#FF1D79D4" HorizontalContentAlignment="Center">
                                 <ComboBoxItem>
                                     I
                                 </ComboBoxItem>
@@ -537,12 +537,12 @@
 
                     <Grid Grid.Column="1">
                         <TextBlock x:Name="Firma_Fun" HorizontalAlignment="Center" Margin="0,38,0,0" Text="FIRMA DEL FUNCIONARIO" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="198" FontFamily="Eras ITC" FontSize="14" FontWeight="Bold" FontStyle="Italic" Foreground="#FF1D79D4" OpacityMask="Black"/>
-                        <Separator Width="250" VerticalAlignment="Bottom" Height="40" Background="Black"/>
+                        <Separator Width="250" VerticalAlignment="Bottom" Height="40" Background="#FF1D79D4"/>
                     </Grid>
 
                     <Grid Grid.Column="2">
                         <TextBlock x:Name="Firma_Est" HorizontalAlignment="Center" Margin="0,38,0,0" Text="FIRMA DEL ESTUDIANTE" TextWrapping="Wrap" VerticalAlignment="Top" Height="17" Width="183" FontWeight="Bold" FontStyle="Italic" FontFamily="Eras ITC" FontSize="14" Foreground="#FF1D79D4"/>
-                        <Separator Width="250" VerticalAlignment="Bottom" Height="40" Background="Black"/>
+                        <Separator Width="250" VerticalAlignment="Bottom" Height="40" Background="#FF1D79D4"/>
                     </Grid>
 
                 </Grid>

@@ -1,11 +1,11 @@
-﻿using ProyecFinalPro2.Views;
+﻿using ProyecFinalPro2.Archivos;
+using ProyecFinalPro2.Models;
+using ProyecFinalPro2.Views;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Windows;
-using ProyecFinalPro2.Archivos;
-using ProyecFinalPro2.Models;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace ProyecFinalPro2.Controller
 {
@@ -14,31 +14,41 @@ namespace ProyecFinalPro2.Controller
         private UserControlStudent Controlestudiante;
 
         private Student prueba = new Student();
-        private int contar; 
+        private int contar; int count;
 
         public StudentController(UserControlStudent est)
         {
-            Controlestudiante= est;   
+            Controlestudiante = est;
         }
 
         public void Guardar(object sender, RoutedEventArgs e)
         {
             EstudiantesArchivos estudiantesarchivo = new EstudiantesArchivos();
-            
-            if (!buscar_carnet(estudiantesarchivo.Abrir())) 
+            if (Controlestudiante.carnet_leng() == 10 && !string.IsNullOrEmpty(Controlestudiante.verificar_nombre()) && Controlestudiante.contador_Incrito() >= 1)
             {
-                estudiantesarchivo.Guardar(Controlestudiante.getestudiantes(), true);
+                if (!buscar_carnet(estudiantesarchivo.Abrir()))
+                {
+                    estudiantesarchivo.Guardar(Controlestudiante.getestudiantes(), true);
+                }
+                estudiantesarchivo.Guardar(Controlestudiante.getAll(), Controlestudiante.mandar_carnet(), "Matriculado el " + Controlestudiante.mandar_fecha() + ".txt");
             }
-            estudiantesarchivo.Guardar(Controlestudiante.getAll(),Controlestudiante.mandar_carnet(),"Matriculado el "+Controlestudiante.mandar_fecha()+".txt");
-           
+            else
+            {
+                MessageBox.Show("Error, revise los campos obligatoria: Carnet, Nombre y Clases Inscritas");
+            }
+        }
+
+        public void Limpiar_Hoja(object sender, RoutedEventArgs e) 
+        {
+            Controlestudiante.limpiar_todo();
         }
 
         public void Imprimir(object sender, RoutedEventArgs e)
         {
             PrintDialog pd = new PrintDialog();
-            if (pd.ShowDialog()==true) 
-            { 
-            
+            if (pd.ShowDialog() == true)
+            {
+                pd.PrintVisual(Controlestudiante.Hoja_Registro, "Hoja 1");
             }
 
         }
@@ -59,7 +69,7 @@ namespace ProyecFinalPro2.Controller
         public void Nacional_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             switch (Controlestudiante.Obtener_Nacionalidad())
-            {                
+            {
                 case 0:
                     {
                         Controlestudiante.bool_Deparmento(true);
@@ -195,10 +205,10 @@ namespace ProyecFinalPro2.Controller
 
         public void ComboCuatrimestres_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            refrescar();   
+            refrescar();
         }
 
-        public void refrescar() 
+        public void refrescar()
         {
             switch (Controlestudiante.select_ComboCuatrimestre())
             {
@@ -285,7 +295,7 @@ namespace ProyecFinalPro2.Controller
             Controlestudiante.limpiar_Inscribir();
             foreach (var u in clase)
             {
-                if (!Controlestudiante.contenedor_Inscrito(u) )
+                if (!Controlestudiante.contenedor_Inscrito(u))
                 {
                     Controlestudiante.agregar_Inscribir(u);
                 }
@@ -295,7 +305,7 @@ namespace ProyecFinalPro2.Controller
 
         public void ListBoxButtons_Click(object sender, RoutedEventArgs e)
         {
-            Button bb = (Button)sender; 
+            Button bb = (Button)sender;
             switch (bb.Name)
             {
                 case "Mandar":
@@ -308,11 +318,11 @@ namespace ProyecFinalPro2.Controller
                                 {
                                     Controlestudiante.selected_Inscrito();
                                 }
-                                else 
+                                else
                                 {
                                     MessageBox.Show("Solo se pueden incribir un maximo de 6 clases");
                                 }
-                                
+
                             }
                         }
                         catch (Exception) { }
@@ -328,7 +338,7 @@ namespace ProyecFinalPro2.Controller
                             }
                             else
                             {
-                                if (contar==1) 
+                                if (contar == 1)
                                 {
                                     MessageBox.Show("Solo se pueden incribir un maximo de 6 clases");
                                 }
@@ -354,6 +364,103 @@ namespace ProyecFinalPro2.Controller
 
             }
             contar = 0;
+        }
+
+        public void Valida_letras(object sender, TextCompositionEventArgs e)
+        {
+            int character = Convert.ToInt32(Convert.ToChar(e.Text));
+
+            if (character >= 65 && character <= 90 || character >= 97 && character <= 122)
+            {
+                e.Handled = false;
+            }
+            else { MessageBox.Show("Solo se permiten letras"); e.Handled = true; }
+        }
+
+        public void Valida_Carnet(object sender, TextCompositionEventArgs e)
+        {
+            int character = Convert.ToInt32(Convert.ToChar(e.Text));
+            count = Controlestudiante.carnet_leng();
+            if (character >= 48 && character <= 57 && count != 9)
+            {
+                if (count <= 8)
+                {
+                    if (count.Equals(5)) { Controlestudiante.carnet_texto(count, " "); e.Handled = false; }
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+            else
+            {
+                if (count == 9)
+                {
+                    if (character >= 65 && character <= 90)
+                    {
+                        e.Handled = false;
+                    }
+                    else { MessageBox.Show("El ultimo caracter debe de ser una letra Mayuscula"); e.Handled = true; }
+                }
+                else
+                {
+                    MessageBox.Show("Solo se permiten Numeros");
+                    e.Handled = true;
+                }
+
+            }
+
+        }
+
+        public void valida_telefono(object sender, TextCompositionEventArgs e)
+        {
+            int character = Convert.ToInt32(Convert.ToChar(e.Text));
+            count = Controlestudiante.telefono_leng();
+            if (character >= 48 && character <= 57 && count != 9)
+            {
+                if (count <= 7)
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Los numeros de telefono constan de 8 digitos");
+                    e.Handled = true;
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Solo se permiten Numeros");
+                e.Handled = true;
+            }
+
+
+        }
+
+        public void valida_Celular(object sender, TextCompositionEventArgs e)
+        {
+            int character = Convert.ToInt32(Convert.ToChar(e.Text));
+            count = Controlestudiante.celular_leng();
+            if (character >= 48 && character <= 57 && count != 9)
+            {
+                if (count <= 7)
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Los numeros de telefono constan de 8 digitos");
+                    e.Handled = true;
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Solo se permiten Numeros");
+                e.Handled = true;
+            }
         }
     }
 }

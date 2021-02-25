@@ -24,8 +24,6 @@ namespace ProyecFinalPro2.Views
     public partial class UserControlStudent : UserControl, IGestionWPF
     {
         //String path = @"C:\Users\Mauro\Desktop\Proyectos de C#";
-
-       
         private FileInfo Info;
         private Student Set_Estudiante;
         public UserControlStudent(FileInfo info)
@@ -37,8 +35,9 @@ namespace ProyecFinalPro2.Views
             SeputControllers();
             bool_Deparmento(false);
             bool_Municipio(false);
-            CarnetBox.IsReadOnly= true;
+            CarnetBox.IsReadOnly = true;
         }
+
         public UserControlStudent()
         {
             InitializeComponent();
@@ -47,8 +46,9 @@ namespace ProyecFinalPro2.Views
             bool_Municipio(false);
             TituloBlock.Text = Student.Title();
             FechaBlock.Text = Student.Day() + "-" + Student.Moth() + "-" + Student.Year();
-            
+
         }
+
         private void Open()
         {
             BinaryFormatter formateador = new BinaryFormatter();
@@ -68,9 +68,15 @@ namespace ProyecFinalPro2.Views
             Mandar_Todo.Click += new RoutedEventHandler(EstControl.ListBoxButtons_Click);
             Remove.Click += new RoutedEventHandler(EstControl.ListBoxButtons_Click);
             RemoveAll.Click += new RoutedEventHandler(EstControl.ListBoxButtons_Click);
+            imprimir.Click += new RoutedEventHandler(EstControl.Imprimir);
+            Nom_ApBox.PreviewTextInput += new TextCompositionEventHandler(EstControl.Valida_letras);
+            CarnetBox.PreviewTextInput += new TextCompositionEventHandler(EstControl.Valida_Carnet);
+            Phonebox.PreviewTextInput += new TextCompositionEventHandler(EstControl.valida_telefono);
+            Cel_box.PreviewTextInput += new TextCompositionEventHandler(EstControl.valida_Celular);
+            limpiar.Click += new RoutedEventHandler(EstControl.Limpiar_Hoja);
         }
 
-        public List<Student> getestudiantes() 
+        public List<Student> getestudiantes()
         {
             Student Estudiante = new Student();
             List<Student> est = new List<Student>();
@@ -80,10 +86,10 @@ namespace ProyecFinalPro2.Views
             return est;
         }
 
-        public Student getAll() 
+        public Student getAll()
         {
             Student Estudiante = new Student();
-            Estudiante.TituloBlock = TituloBlock.Text ;
+            Estudiante.TituloBlock = TituloBlock.Text;
             Estudiante.GrupBox = GrupBox.Text;
             Estudiante.ComboTurno = ComboTurno.SelectedIndex;
             Estudiante.NyABox = Nom_ApBox.Text;
@@ -119,7 +125,7 @@ namespace ProyecFinalPro2.Views
             Estudiante.ComboCuatrimestres = ComboCuatrimestres.SelectedIndex;
             Estudiante.Inscrito = get_Inscrito();
             Estudiante.FechaBlock = FechaBlock.Text;
-            return Estudiante;    
+            return Estudiante;
         }
 
         public void setAll()
@@ -135,6 +141,7 @@ namespace ProyecFinalPro2.Views
             FRadio.IsChecked = Set_Estudiante.FRadio;
             LyFBox.Text = Set_Estudiante.LyFBox;
             AgeBox.Text = Set_Estudiante.AgeBox;
+            ComboNacional.SelectedIndex = -1;
             ComboNacional.SelectedIndex = Set_Estudiante.ComboNacional;
             ComboDepart.SelectedIndex = Set_Estudiante.ComboDepart;
             ComboMuni.SelectedIndex = Set_Estudiante.ComboMuni;
@@ -158,20 +165,61 @@ namespace ProyecFinalPro2.Views
             ContiRadio.IsChecked = Set_Estudiante.ContCarrRadio;
             SegRadio.IsChecked = Set_Estudiante.SegCarrRadio;
             ComboCuatrimestres.SelectedIndex = Set_Estudiante.ComboCuatrimestres;
-            foreach (string u in Set_Estudiante.Inscrito) 
+            foreach (string u in Set_Estudiante.Inscrito)
             {
                 Inscrito.Items.Add(u);
             }
             FechaBlock.Text = Set_Estudiante.FechaBlock;
         }
 
-        public void item_Departamento(string d) {ComboDepart.Items.Add(d);}
+        public void limpiar_todo() 
+        {
+            GrupBox.Text = "";
+            ComboTurno.SelectedIndex=-1;
+            Nom_ApBox.Text = "";
+            CarnetBox.Text = "";
+            SolteroRadio.IsChecked = true;
+            CasadoRadio.IsChecked = false;
+            MRadio.IsChecked = true;
+            FRadio.IsChecked = false;
+            LyFBox.Text = "";
+            AgeBox.Text = "";
+            ComboNacional.SelectedIndex = -1;
+            ComboDepart.Items.Clear();
+            ComboDepart.IsEnabled = false;
+            ComboMuni.Items.Clear();
+            ComboMuni.IsEnabled = false;
+            DirectionBox.Text = "";
+            Phonebox.Text = "";
+            Cel_box.Text = "";
+            E_MailBox.Text = "";
+            CentroBox.Text = "";
+            EstaRadio.IsChecked = true;
+            PrivRadio.IsChecked = false;
+            SubRadio.IsChecked = false;
+            OrdiRadio.IsChecked = true;
+            BecRadio.IsChecked = false;
+            TrabRadio.IsChecked = false;
+            TrabSRadio.IsChecked = true;
+            TrabNRadio.IsChecked = false;
+            IngrRadio.IsChecked = true;
+            ReingrRadio.IsChecked = false;
+            TrasIntRadio.IsChecked = false;
+            TrasExRadio.IsChecked = false;
+            ContiRadio.IsChecked = false;
+            SegRadio.IsChecked = false;
+            ComboCuatrimestres.SelectedIndex = -1;
+            Inscribir.Items.Clear();
+            Inscrito.Items.Clear();
+        }
 
-        public void item_Municipio(string m) {ComboMuni.Items.Add(m);}
+        public void item_Departamento(string d) { ComboDepart.Items.Add(d); }
 
-        public void bool_Deparmento(bool d) { ComboDepart.IsEnabled = d;}
+        public void item_Municipio(string m) { ComboMuni.Items.Add(m); }
 
-        public void bool_Municipio(bool m) { ComboMuni.IsEnabled = m;}
+        public void bool_Deparmento(bool d) { ComboDepart.IsEnabled = d; }
+
+        public void bool_Municipio(bool m) { ComboMuni.IsEnabled = m; }
 
         public int Obtener_Nacionalidad() { return ComboNacional.SelectedIndex; }
 
@@ -181,13 +229,13 @@ namespace ProyecFinalPro2.Views
 
         public void limpiar_Municipio() { ComboMuni.Items.Clear(); }
 
-        public string mandar_carnet() {return CarnetBox.Text;}
+        public string mandar_carnet() { return CarnetBox.Text; }
 
-        public string mandar_fecha() {return FechaBlock.Text;}
+        public string mandar_fecha() { return FechaBlock.Text; }
 
         public void limpiar_Inscribir() { Inscribir.Items.Clear(); }
 
-        public void limpiar_Inscrito() { Inscrito.Items.Clear();}
+        public void limpiar_Inscrito() { Inscrito.Items.Clear(); }
 
         public bool contenedor_Inscrito(string u) { return Inscrito.Items.Contains(u); }
 
@@ -197,42 +245,34 @@ namespace ProyecFinalPro2.Views
 
         public int select_ComboCuatrimestre() { return ComboCuatrimestres.SelectedIndex; }
 
-        public void selected_Inscribir() {  Inscribir.Items.Add(Inscrito.SelectedItem); }
+        public void selected_Inscribir() { Inscribir.Items.Add(Inscrito.SelectedItem); }
 
         public void selected_Inscrito() { Inscrito.Items.Add(Inscribir.SelectedItem); remove_Inscribir(); }
 
-        public void remove_Inscribir() { Inscribir.Items.Remove(Inscribir.SelectedItem); }  
+        public void remove_Inscribir() { Inscribir.Items.Remove(Inscribir.SelectedItem); }
 
         public void remove_Inscrito() { Inscrito.Items.Remove(Inscrito.SelectedItem); }
 
-        public void actulizar_Inscribir() { Inscribir.Items.Refresh();}
-
         public bool prueba() { return Inscribir.SelectedItem.Equals(""); }
 
-        public ItemCollection items_Inscribir() {  return Inscribir.Items; }
+        public ItemCollection items_Inscribir() { return Inscribir.Items; }
 
         public int contador_Incrito() { return Inscrito.Items.Count; }
 
-        public List<string> get_Inscrito() 
+        public List<string> get_Inscrito()
         {
             List<string> prueb = new List<string>();
-            foreach (var u in Inscrito.Items) 
+            foreach (var u in Inscrito.Items)
             {
                 prueb.Add(u.ToString());
             }
             return prueb;
         }
-
-        public void Imprimir(object sender, RoutedEventArgs e)
-        {
-            PrintDialog pd = new PrintDialog();
-
-            if (pd.ShowDialog() == true)
-            {
-                pd.PrintVisual(Hoja_Registro, "Hoja 1");
-            }
-
-        }
+        public int carnet_leng() { return CarnetBox.Text.Length; }
+        public void carnet_texto(int count, string u) { CarnetBox.Text = CarnetBox.Text.Insert(count - 1, u); CarnetBox.Select(count + 1, count); }
+        public int telefono_leng(){ return Phonebox.Text.Length; }
+        public int celular_leng() { return Cel_box.Text.Length; }
+        public string verificar_nombre() { return Nom_ApBox.Text; }
 
     }
 }
