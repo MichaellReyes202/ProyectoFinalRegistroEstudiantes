@@ -51,12 +51,21 @@ namespace ProyecFinalPro2.Views
         }
         private void Open()
         {
+            
             BinaryFormatter formateador = new BinaryFormatter();
-            Stream miStream = new FileStream(Info.FullName, FileMode.Open, FileAccess.Read, FileShare.None);
-            Set_Estudiante = (Student)formateador.Deserialize(miStream);
-            miStream.Close();
-        }
+            try
+            {
+                Stream miStream = new FileStream(Info.FullName, FileMode.Open, FileAccess.Read, FileShare.None);
+                Set_Estudiante = (Student)formateador.Deserialize(miStream);
+                miStream.Close();
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                MessageBox.Show("La direccion del archivo a Cambiado,Preciona el boton de actualizar");
+            }
 
+
+        }
         public void SeputControllers()
         {
             StudentController EstControl = new StudentController(this);

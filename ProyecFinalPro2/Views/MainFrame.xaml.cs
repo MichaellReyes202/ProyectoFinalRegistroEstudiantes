@@ -10,66 +10,72 @@ using ProyecFinalPro2.Interfaz;
 
 namespace ProyecFinalPro2.Views
 {
-     public partial class MainFrame : Window, IGestionWPF
-     {
-          private MainController MC;
-          private bool v;
-
-          public MainFrame(bool v) {
-               InitializeComponent();
-               this.v = v;
-               AddItemMainFrame();
-               SeputControllers();
-          }
-
-          private void AddItemMainFrame() {
-
-               var menuRegister = new List<SubItem>();
+    public partial class MainFrame : Window, IGestionWPF
+    {
+        private UserControl_Configuracion confi;
+        private MainController MC;
+        private bool v;
 
 
-               menuRegister.Add(new SubItem("New registration",new UserControlStudent()));
-               menuRegister.Add(new SubItem("Registry",new UserControl_BD_Student()));
+        public MainFrame(bool v)
+        {
+            InitializeComponent();
+            this.v = v;
+            AddItemMainFrame();
+            SeputControllers();
+        }
 
-               var item6 = new ItemMenu("  Student",menuRegister,PackIconKind.Register);
-
-               var menuSchedule = new List<SubItem>();
-               var menuReports = new List<SubItem>();
-
-
-               menuReports.Add(new SubItem(" Add",new UserControlViewModel()));
-             //  menuReports.Add(new SubItem(" Delete"));
-             //  menuReports.Add(new SubItem(" Update"));
-               var item2 = new ItemMenu("  Admin",menuReports,PackIconKind.FileReport);
-
-
-               var item0 = new ItemMenu(" Opciones",new UserControl(),PackIconKind.ViewDashboard);
-
-               MenuItem.Children.Add(new UserControlMenuItem(item0,this));
-               MenuItem.Children.Add(new UserControlMenuItem(item6,this));
-               if (v) {
-                    MenuItem.Children.Add(new UserControlMenuItem(item2,this));
-               }
-
-          }
-          //-----------------------------------------------------------------------------------------------------------------
-          internal void SwitchScreen(object sender) {
-               var screen = ((UserControl) sender);
-
-               if (screen != null) {
-                    StackPanelMain.Children.Clear();
-                    StackPanelMain.Children.Add(screen);
-               }
-          }
-          //-----------------------------------------------------------------------------------------------------------------
+        private void AddItemMainFrame()
+        {
+            var menuRegister = new List<SubItem>();
+            menuRegister.Add(new SubItem("New registration","Nueva Matricula",PackIconKind.Create, new UserControlStudent()));
+            menuRegister.Add(new SubItem("Registry","Registros de Matriculas",PackIconKind.Database, new UserControl_BD_Student()));
+            ItemMenu item1 = new ItemMenu("Student", menuRegister, PackIconKind.Register);
 
 
-          public void SeputControllers() {
-               MC = new MainController(this);
-               this.ButtonMin.Click += new RoutedEventHandler(MC.ButtonHandler);
-               this.ButtonExit.Click += new RoutedEventHandler(MC.ButtonHandler);
-               this.BarraSuperior.MouseDown += new MouseButtonEventHandler(MC.DragMoveWindows); ;
-          }
+            var menuReports = new List<SubItem>();
+            menuReports.Add(new SubItem("Add","Agregar Usuarios",PackIconKind.UserTick, new UserControlViewModel()));
+            ItemMenu item2 = new ItemMenu("Admin", menuReports, PackIconKind.FileReport);
+
+            
+            
+            MenuItem.Children.Add(new UserControlMenuItem(item1, this));
+
+            if (v){MenuItem.Children.Add(new UserControlMenuItem(item2, this));}
+
+            confi = new UserControl_Configuracion();
+            
+
+        }
+        //-----------------------------------------------------------------------------------------------------------------
+
+        public void SwitchScreen(UserControl screen)
+        {
+            if (screen != null)
+            {
+                StackPanelMain.Children.Clear();
+                
+                StackPanelMain.Children.Add(screen);
+            }
+            else{MessageBox.Show("Erro no se pudo cargar la ventana");}
+        }
+
+        public void SeputControllers()
+        {
+            MC = new MainController(this);
+            this.ButtonMax.Click += new RoutedEventHandler(MC.ButtonHandler);
+            this.ButtonExit.Click += new RoutedEventHandler(MC.ButtonHandler);
+            this.ButtonMin.Click += new RoutedEventHandler(MC.ButtonHandler);
+            this.BarraSuperior.MouseDown += new MouseButtonEventHandler(MC.DragMoveWindows); ;
+        }
 
 
-     }
+        
+
+        private void Configuracion_Click(object sender, RoutedEventArgs e)
+        {
+            SwitchScreen(confi);
+            
+        }
+    }
 }

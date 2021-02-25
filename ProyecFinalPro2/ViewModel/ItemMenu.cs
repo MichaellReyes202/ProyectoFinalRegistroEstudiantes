@@ -12,22 +12,17 @@ namespace BeautySolutions.View.ViewModel
     {
         public ItemMenu(string header, List<SubItem> subItems, PackIconKind icon)
         {
-            Header = header;
+            Headerr = header;
             SubItems = subItems;
             Icon = icon;
+
         }
 
-        // quitar despues 
-        public ItemMenu(string header, UserControl screen, PackIconKind icon)
-        {
-            Header = header;
-            Screen = screen;
-            Icon = icon;
-        }
-
-        public string Header { get; private set; }
+        public string Headerr { get; private set; }
         public PackIconKind Icon { get; private set; }
         public List<SubItem> SubItems { get; private set; }
-        public UserControl Screen { get; private set; }
+        public SubItem selectItem { get; set; }
+
+        
     }
 }

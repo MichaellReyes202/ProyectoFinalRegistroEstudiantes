@@ -7,47 +7,48 @@
              d:DesignHeight="450" d:DesignWidth="800">
     
     <Grid>
-        <DataGrid x:Name="People" Grid.Row="1" ItemsSource="{Binding}"  CanUserAddRows="False" AutoGenerateColumns="False"  >
-            <DataGrid.Columns>
-                <DataGridTextColumn  Binding="{Binding Path=nombre}" IsReadOnly="True" FontSize="15">
-                    <DataGridTextColumn.Header>
-                        <TextBlock Text="Nombre Completo" FontSize="15"/>
-                    </DataGridTextColumn.Header>
-                </DataGridTextColumn>
-                <DataGridTextColumn Header="Carne" Binding="{Binding Path=carnet}" IsReadOnly="True" FontSize="15" />
-                
-                <DataGridTemplateColumn Header="Matriculas Realizadas">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Path=infoMatricula.Name}" FontSize="25"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                    <DataGridTemplateColumn.CellEditingTemplate>
-                        <DataTemplate>
-                            <ComboBox ItemsSource="{Binding Path=RutaMatriculas}" SelectedItem="{Binding infoMatricula}" >
-                                <ComboBox.ItemTemplate>
-                                    <DataTemplate>
-                                        <TextBlock Text="{Binding Path=Name}" FontSize="16"/>
-                                    </DataTemplate>
-                                </ComboBox.ItemTemplate>
-                            </ComboBox>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellEditingTemplate>
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
-            
-            <DataGrid.RowDetailsTemplate>
-                <DataTemplate x:Name="dataaaa" >
-                    <Expander x:Name="Expand" Header="Matriculas Realizadas" Foreground="Blue" HorizontalAlignment="Stretch" Background="AntiqueWhite">
-                        <Border x:Name="boderrr" CornerRadius="10" HorizontalAlignment="Stretch">
+        <StackPanel>
+            <Button x:Name="Actualizar" Content="Preciona Para actualizar "></Button>
+            <DataGrid x:Name="People" Grid.Row="1" ItemsSource="{Binding}"  CanUserAddRows="False" AutoGenerateColumns="False"  >
+                <DataGrid.Columns>
+                    <DataGridTextColumn  Binding="{Binding Path=nombre}" IsReadOnly="True" FontSize="15">
+                        <DataGridTextColumn.Header>
+                            <TextBlock Text="Nombre Completo" FontSize="15"/>
+                        </DataGridTextColumn.Header>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Carne" Binding="{Binding Path=carnet}" IsReadOnly="True" FontSize="15" />
+
+                    <DataGridTemplateColumn Header="Matriculas Realizadas">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=infoMatricula.Name}" FontSize="25"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <ComboBox ItemsSource="{Binding Path=RutaMatriculas}" SelectedItem="{Binding infoMatricula}" >
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Path=Name}" FontSize="16"/>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+
+                <DataGrid.RowDetailsTemplate>
+                    <DataTemplate >
+                        <Expander Header="Matriculas Realizadas" Foreground="Blue" HorizontalAlignment="Stretch" Background="AntiqueWhite">
                             <ListBox x:Name="ListRuta"  ItemsSource="{Binding Path=RutaMatriculas}" SelectedItem="{Binding infoMatricula}" HorizontalAlignment="Stretch">
                                 <ListBox.ItemTemplate >
                                     <DataTemplate>
                                         <TextBlock Text="{Binding Path=Name}" FontSize="16" HorizontalAlignment="Stretch">
                                             <TextBlock.ContextMenu>
-                                                <ContextMenu>
-                                                    <MenuItem x:Name="Modificar" Header="Modificar Matricula" Click="MenuContextual_Matricula_Click"/>
-                                                    <MenuItem x:Name="Eliminar" Header="Eliminar Matricula" Click="MenuContextual_Matricula_Click" />
+                                                <ContextMenu x:Name="Contx_Menu">
+                                                    <MenuItem Name="Modificar" Header="Modificar Matricula" Click="MenuContextual_Matricula_Click"/>
+                                                    <MenuItem Name="Eliminar" Header="Eliminar Matricula" Click="MenuContextual_Matricula_Click" />
                                                 </ContextMenu>
                                             </TextBlock.ContextMenu>
                                         </TextBlock>
@@ -60,10 +61,10 @@
                                     </ContextMenu>
                                 </ListBox.ContextMenu>
                             </ListBox>
-                        </Border>
-                    </Expander>
-                </DataTemplate>
-            </DataGrid.RowDetailsTemplate>
-        </DataGrid>
+                        </Expander>
+                    </DataTemplate>
+                </DataGrid.RowDetailsTemplate>
+            </DataGrid>
+        </StackPanel>
     </Grid>
 </UserControl>

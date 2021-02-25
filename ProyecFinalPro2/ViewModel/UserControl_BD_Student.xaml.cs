@@ -27,21 +27,23 @@ namespace ProyecFinalPro2.ViewModel
     public partial class UserControl_BD_Student : UserControl
     {
         private DataAccess da;
+
         private BD_Controller BD_Ctrl;
+
+
         public UserControl_BD_Student()
         {
+            
             InitializeComponent();
             SeputControllers();
-            refrescar();
+            da = new DataAccess();
+            People.DataContext = da.GetPeople();
+
         }
 
         private void SeputControllers()
         {
-            //MC = new MainController(this);
             BD_Ctrl = new BD_Controller(this);
-            //Modificar_M_Ext += new RoutedEventHandler(BD_Ctrl.ButtonHandler );
-            //this.ButtonMin.Click += new RoutedEventHandler(MC.ButtonHandler);
-
             
         }
 
@@ -53,10 +55,23 @@ namespace ProyecFinalPro2.ViewModel
 
             switch (selection.Name)
             {
+                case "Actualizar":
+                    {
+                        refrescar();
+                    }
+                    break;
                 case "Modificar":
                     {
-                        VentanaDataGrid ventana = new VentanaDataGrid(fl);
-                        ventana.ShowDialog();
+                        if(fl.Exists)
+                        {
+                            VentanaDataGrid ventana = new VentanaDataGrid(fl);
+                            ventana.ShowDialog();
+                        }
+                        else
+                        {
+                            refrescar();
+                        }
+                        
                     }
                     break;
                 case "Eliminar":
@@ -68,17 +83,11 @@ namespace ProyecFinalPro2.ViewModel
             }
         }
 
-        public void setDataContex_People(List<object> Obj)
-        {
-            People.DataContext = Obj;
-            
-        }
 
-        private void refrescar()
+        public void refrescar()
         {
             da = new DataAccess();
             People.DataContext = da.GetPeople();
-
         }
     }
 }

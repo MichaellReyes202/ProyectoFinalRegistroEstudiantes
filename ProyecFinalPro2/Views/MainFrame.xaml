@@ -28,27 +28,46 @@
 
         <materialDesign:ColorZone Mode="PrimaryDark" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" >
             <Grid  >
-                <materialDesign:PopupBox PlacementMode="LeftAndAlignMiddles" HorizontalAlignment="Right" Margin="15" >
-                    <StackPanel Width="110" Orientation="Horizontal" Height="30">
-                        <Button x:Name="ButtonMin" VerticalAlignment="Center" >
-                            <materialDesign:PackIcon Kind="WindowMaximize" Width="20" Height="20" Margin="2" />
-                        </Button>
-                        <Button x:Name="ButtonExit" VerticalAlignment="Center" >
-                            <materialDesign:PackIcon Kind="Close" Width="20" Height="20" VerticalAlignment="Center" Margin="2" />
-                        </Button>
-                    </StackPanel>
-                </materialDesign:PopupBox>
+                <StackPanel Width="180" Orientation="Horizontal" Height="40" HorizontalAlignment="Right" Margin="1">
+                    <Button x:Name="ButtonMin" VerticalAlignment="Center" ToolTip="Minimizar" >
+                        <materialDesign:PackIcon Kind="WindowMinimize" Width="20" Height="20" VerticalAlignment="Center" Margin="2" />
+                    </Button>
+                    <Button x:Name="ButtonMax" VerticalAlignment="Center" ToolTip="Maximizar">
+                        <materialDesign:PackIcon Kind="WindowMaximize" Width="20" Height="20" Margin="2" />
+                    </Button>
+                    <Button x:Name="ButtonExit" VerticalAlignment="Center" ToolTip="Cerrar" >
+                        <materialDesign:PackIcon Kind="Close" Width="20" Height="20" VerticalAlignment="Center" Margin="2" />
+                    </Button>
+                </StackPanel>
             </Grid>
         </materialDesign:ColorZone>
 
         <Grid HorizontalAlignment="Stretch" Grid.Row="1" Height="auto" Background="{StaticResource PrimaryHueMidBrush}">
-            <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Margin="0,14,0,0" Grid.RowSpan="1" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+            </Grid>
 
-                <StackPanel x:Name="MenuItem" Margin="10" Height="515" VerticalAlignment="Top">
-                    <!-- donde se agregaran los item mediante el codigo C#-->
-                </StackPanel>
-
-            </ScrollViewer>
+            <Grid Grid.Row="0">
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Margin="0,14,0,0" Grid.RowSpan="1" >
+                    <StackPanel x:Name="MenuItem" Margin="10" Height="515" VerticalAlignment="Top">
+                        <!-- donde se agregaran los item mediante el codigo C#-->
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+            <Grid Grid.Row="1" VerticalAlignment="Bottom">
+                
+                <Button x:Name="Configuracion"  VerticalAlignment="Center" ToolTip="Configuracion" Click="Configuracion_Click">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Text="Configuracion  " Foreground="Black"></TextBlock>
+                        <materialDesign:PackIcon Kind="Nut" Width="20" Height="20" Margin="3" />
+                    </StackPanel>
+                  
+                </Button>
+            </Grid>
+            
         </Grid>
         <ScrollViewer Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Visible">
             <StackPanel x:Name="StackPanelMain"  HorizontalAlignment="Stretch">

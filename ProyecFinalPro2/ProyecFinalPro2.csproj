@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <PackageReference Include="Caliburn.Micro" Version="4.0.136-rc" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.12.3" />
     <PackageReference Include="MaterialDesignColors" Version="2.0.0-ci2405" />
     <PackageReference Include="MaterialDesignThemes" Version="4.0.0-ci2405" />
   </ItemGroup>

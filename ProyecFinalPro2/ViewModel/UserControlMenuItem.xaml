@@ -7,18 +7,32 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              >
-    <Grid>
+    <Grid >
+        
         <materialDesign:PackIcon Kind="{Binding Path=Icon}" Width="15" Height="15" Margin="10 16" Foreground="White"/>
         <ListBoxItem x:Name="ListViewItemMenu" Content="{Binding Path=Header}" Padding="37 14" FontSize="15" Foreground="White"/>
-        
-        <Expander x:Name="ExpanderMenu" Header="{Binding Path=Header}" IsExpanded="True" Width="210" HorizontalAlignment="Right" Background="{x:Null}" Foreground="White">
-            <ListView x:Name="ListViewMenu" ItemsSource="{Binding Path=SubItems}" Foreground="Black" FontSize="16" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding Path=Name}" Padding="20 5"/>
+
+
+        <Expander x:Name="ExpanderMenu" Header="{Binding Path=Headerr}" IsExpanded="True" Width="210" HorizontalAlignment="Right" Background="{x:Null}" Foreground="White">
+
+            <ListBox x:Name="ListViewMenu" ItemsSource="{Binding Path=SubItems}" SelectedItem="{Binding selectItem}" SelectionChanged="ListViewMenu_SelectionChanged" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate >
+                        <StackPanel Orientation="Horizontal" ToolTip="{Binding Path=tip}">
+                            <materialDesign:PackIcon Kind="{Binding Path=Icono}" 
+                                                     Width="15" Height="15" 
+                                                     Foreground="Black"
+                                                     VerticalAlignment="Center"
+                                                     HorizontalAlignment="Right"/>
+                            <TextBlock Text="{Binding Path=Name}" 
+                                       FontSize="16" 
+                                       Padding="20 5" ToolTip="{Binding Path=tip}" 
+                                       HorizontalAlignment="Right"/>
+                        </StackPanel>
+
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </Expander>
     </Grid>
 </UserControl>

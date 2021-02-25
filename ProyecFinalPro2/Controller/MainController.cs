@@ -22,7 +22,7 @@ namespace ProyecFinalPro2.Controller
             Button B = (Button)sender;
             switch (B.Name)
             {
-                case "ButtonMin":
+                case "ButtonMax":
                     {
                         if (M_Ventana.WindowState == WindowState.Normal)
                         {
@@ -34,9 +34,16 @@ namespace ProyecFinalPro2.Controller
                         }
                     }
                     break;
+                case "ButtonMin":
+                    {
+                        M_Ventana.WindowState = WindowState.Minimized;
+
+                    }break;
                 case "ButtonExit":
                     {
                         M_Ventana.Close();
+
+                        
                     }
                     break;
             }
