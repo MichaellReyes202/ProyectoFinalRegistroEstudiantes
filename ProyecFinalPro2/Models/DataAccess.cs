@@ -28,16 +28,12 @@ namespace ProyecFinalPro2.Models
             //this.con = con;
             setRuta();
         }
-
-
         public void setRuta()
         {
             string destino = ConfigurationManager.AppSettings.Get("RutaActual");
-            MessageBox.Show("ruta en DAtaAcces = " + destino);
-            
-            
+            MessageBox.Show("ruta en DAtaAcces = " + destino); 
+
             ConfigurationManager.RefreshSection("appSettings");
-            
             
             DirectoryInfo info = new DirectoryInfo(path);
 

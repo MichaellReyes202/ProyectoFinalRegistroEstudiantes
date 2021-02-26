@@ -8,7 +8,7 @@
     
     <Grid>
         <StackPanel>
-            <Button x:Name="Actualizar" Content="Preciona Para actualizar "></Button>
+            <Button x:Name="Actualizar" Content="Click para actualizar " Click="ButtonActualizar_Matricula_Click"/>
             <DataGrid x:Name="People" Grid.Row="1" ItemsSource="{Binding}"  CanUserAddRows="False" AutoGenerateColumns="False"  >
                 <DataGrid.Columns>
                     <DataGridTextColumn  Binding="{Binding Path=nombre}" IsReadOnly="True" FontSize="15">

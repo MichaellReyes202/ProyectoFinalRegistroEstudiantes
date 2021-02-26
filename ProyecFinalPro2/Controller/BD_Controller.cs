@@ -13,11 +13,12 @@ namespace ProyecFinalPro2.Controller
     {
         private UserControl_BD_Student BD;
         
-
         public BD_Controller(UserControl_BD_Student BD)
         {
             this.BD = BD;
         }
-        
+
+
+
     }
 }
