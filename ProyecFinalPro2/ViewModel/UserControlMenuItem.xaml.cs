@@ -25,7 +25,7 @@ namespace ProyecFinalPro2.ViewModel
             try
             {
                 _context.SwitchScreen(sub.Screen);
-                //this.ListViewMenu.SelectedIndex = -1;
+                this.ListViewMenu.SelectedIndex = -1;
             }
             catch (Exception){}
 

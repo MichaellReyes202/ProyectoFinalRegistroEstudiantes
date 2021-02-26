@@ -3,20 +3,6 @@ using ProyecFinalPro2.Models;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-
-using System;
-
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.IO;
 using ProyecFinalPro2.Views;
 using ProyecFinalPro2.Controller;
@@ -45,21 +31,20 @@ namespace ProyecFinalPro2.ViewModel
         {
             BD_Ctrl = new BD_Controller(this);
             
-        }
 
+
+        }
+        public void ButtonActualizar_Matricula_Click(object sender, RoutedEventArgs e)
+        {
+            refrescar();
+        }
         public void MenuContextual_Matricula_Click(object sender, RoutedEventArgs e)
         {
             MenuItem selection = (MenuItem)sender;
-
             FileInfo fl = new FileInfo("" + selection.DataContext);
-
             switch (selection.Name)
             {
-                case "Actualizar":
-                    {
-                        refrescar();
-                    }
-                    break;
+
                 case "Modificar":
                     {
                         if(fl.Exists)
@@ -69,7 +54,7 @@ namespace ProyecFinalPro2.ViewModel
                         }
                         else
                         {
-                            refrescar();
+                            MessageBox.Show("La ruta de los archivos fue modificada , actualiza la tabla");
                         }
                         
                     }
