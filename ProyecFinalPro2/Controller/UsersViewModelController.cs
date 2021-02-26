@@ -35,10 +35,10 @@ namespace ProyecFinalPro2.Controller
                                    usersFile.Guardar(userControlView.GetUsersList(),true);
                                    UpDate();
                               } else {
-                                   MessageBox.Show("El usuario exite");
+                                   MessageBox.Show("El usuario existe");
                               }
                          } else {
-                              MessageBox.Show("Campos basios");
+                              MessageBox.Show("Campos vacios");
                          }
                          break;
                     case "ButtonModific":
@@ -49,7 +49,7 @@ namespace ProyecFinalPro2.Controller
                               listas.Clear();
                               UpDate();
                          } else {
-                              MessageBox.Show("Campos basios");
+                              MessageBox.Show("Campos vacios");
                          }
                          break;
                }

@@ -38,7 +38,7 @@ namespace ProyecFinalPro2.Controller
             }
         }
 
-        public void Limpiar_Hoja(object sender, RoutedEventArgs e) 
+        public void Limpiar_Hoja(object sender, RoutedEventArgs e)
         {
             Controlestudiante.limpiar_todo();
         }
@@ -369,8 +369,7 @@ namespace ProyecFinalPro2.Controller
         public void Valida_letras(object sender, TextCompositionEventArgs e)
         {
             int character = Convert.ToInt32(Convert.ToChar(e.Text));
-
-            if (character >= 65 && character <= 90 || character >= 97 && character <= 122)
+            if (character >= 65 && character <= 90 || character >= 97 && character <= 122 || character == 209 || character == 241)
             {
                 e.Handled = false;
             }

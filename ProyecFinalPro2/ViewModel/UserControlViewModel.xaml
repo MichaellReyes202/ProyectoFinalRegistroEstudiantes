@@ -14,12 +14,13 @@
              TextOptions.TextRenderingMode="Auto"
              Background="{DynamicResource MaterialDesignPaper}"
              FontFamily="{DynamicResource MaterialDesignFont}" 
-             d:DesignWidth="800" Height="600">
+             d:DesignWidth="800" Height="800">
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100" ></RowDefinition>
-            <RowDefinition Height="500" ></RowDefinition>
+           
+            <RowDefinition Height="140" ></RowDefinition>
+            <RowDefinition Height="400" ></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
@@ -34,32 +35,40 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <TextBox x:Name="TextBoxName" HorizontalAlignment="Center" Grid.Column="0" materialDesign:HintAssist.Hint="User Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="110" HorizontalContentAlignment="Center" FontSize="14" FontWeight="Bold" Height="40" />
-                <TextBox x:Name="TextBoxPassword" HorizontalAlignment="Center" Grid.Column="1" materialDesign:HintAssist.Hint="User Password" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Width="110" HorizontalContentAlignment="Center" FontSize="14" FontWeight="Bold" Height="40"/>
+                <TextBox x:Name="TextBoxName" HorizontalAlignment="Stretch" Grid.Column="0" materialDesign:HintAssist.Hint="User Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalContentAlignment="Center" FontSize="16" FontWeight="Bold" Height="40" Width="250" Margin="15" />
+                <TextBox x:Name="TextBoxPassword" HorizontalAlignment="Stretch" Grid.Column="1" materialDesign:HintAssist.Hint="User Password" Style="{StaticResource MaterialDesignFloatingHintTextBox}" HorizontalContentAlignment="Center" FontSize="16" FontWeight="Bold" Height="40" Margin="15" Width="250"/>
 
-                <RadioButton x:Name="RadioUser" Grid.Column="2" Content="Usuario" FontFamily="Segoe UI"  Foreground="#FF1368BD" HorizontalAlignment="Left" Margin="10,10,30,1"></RadioButton>
-                <RadioButton x:Name="RadioAdmi" Grid.Column="2" Content="Administrador" FontFamily="Segoe UI"  Foreground="#FF1368BD" HorizontalAlignment="Right" Margin="10,10,30,1"></RadioButton>
+                <RadioButton x:Name="RadioUser" FontSize="16" FontWeight="Bold" Grid.Column="2" Content="Usuario" FontFamily="Segoe UI"  Foreground="#FF1368BD" HorizontalAlignment="Left" Margin="10,10,30,1"></RadioButton>
+                <RadioButton x:Name="RadioAdmi" FontSize="16" FontWeight="Bold" Grid.Column="2" Content="Administrador" FontFamily="Segoe UI"  Foreground="#FF1368BD" HorizontalAlignment="Right" Margin="10,10,30,1"></RadioButton>
 
             </Grid>
-            <Grid Grid.Row="1">
+            <Separator Height="1" Margin="20,65,20,-16" Grid.Row="1"/>
+            <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
+
                     <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
+
                 </Grid.ColumnDefinitions>
-                <Button x:Name="ButtonNew" Grid.Column="0" Content="New" Width="100" Height="25">
+                <Button x:Name="ButtonNew" Grid.Column="0" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="0" Background="#FF2196F3" BorderBrush="#FF1368BD" FontFamily="Segoe UI" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="15">
+                    <materialDesign:PackIcon Kind="UserAdd" Foreground="White" Width="25" Height="25"  />
                 </Button>
-                <Button x:Name="ButtonModific" Grid.Column="1" Content="Modific" Width="100" Height="25">
+
+                <Button x:Name="ButtonModific" Grid.Column="1" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="0" Background="#FF2196F3" BorderBrush="#FF1368BD" FontFamily="Segoe UI" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="15">
+                    <materialDesign:PackIcon Kind="ModeEdit" Foreground="White" Width="25" Height="25"  />
                 </Button>
+                <Separator Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0"/>
+                <TextBlock Text="Type User" FontSize="30" FontWeight="Bold" Foreground="#FFFBE188" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Grid>
         </Grid>
 
         <Grid Grid.Row="1">
-            <Border Background="Transparent" BorderBrush="#FF2196F3" BorderThickness="2" CornerRadius="10" Margin="10,10,10,170"/>
+            <Border Background="Transparent" BorderBrush="#FF2196F3" BorderThickness="2" CornerRadius="10" Margin="10,70,10,110"/>
         </Grid>
 
         <Grid Grid.Row="1">
-            <DataGrid x:Name="DataGridTable" IsReadOnly="True" Margin="20,20,20,0" Height="300" VerticalAlignment="Top" AutoGenerateColumns="False" AlternatingRowBackground="#FF2196F3" CanUserResizeColumns="False" CanUserResizeRows="False">
+            <DataGrid x:Name="DataGridTable" IsReadOnly="True" Margin="20,85,20,0" Height="195" VerticalAlignment="Top" AutoGenerateColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False">
 
                 <DataGrid.Resources>
                     <Style TargetType="{x:Type DataGridColumnHeader}">
@@ -68,9 +77,9 @@
                         <Setter Property="FontWeight" Value="SemiBold"/>
                         <Setter Property="BorderBrush" Value="Black"/>
                         <Setter Property="BorderThickness" Value="2"/>
-                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="Foreground" Value="#FFFBE188"/>
                         <Setter Property="BorderThickness" Value="1"/>
-                        <Setter Property="FontSize" Value="14"/>
+                        <Setter Property="FontSize" Value="20"/>
 
                     </Style>
 
