@@ -33,8 +33,8 @@ namespace ProyecFinalPro2.ViewModel
           }
 
           public UsersModels GetUsers() {
-               usersModels.name = TextBoxName.Text.Replace(" ","").Trim();
-               usersModels.password = TextBoxPassword.Text.Replace(" ","").Trim();
+               usersModels.name = TextBoxName.Text.Replace(",",".").Trim();
+               usersModels.password = TextBoxPassword.Text.Replace(",",".").Trim();
                usersModels.type = GetTypeUser();
                return usersModels;
           }

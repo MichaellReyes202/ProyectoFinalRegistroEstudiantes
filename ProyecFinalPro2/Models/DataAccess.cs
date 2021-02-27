@@ -19,10 +19,6 @@ namespace ProyecFinalPro2.Models
         private string parte2;  // hace referencial al carnet
         private string line;
 
-
-    
-
-
         public DataAccess()
         {
             //this.con = con;

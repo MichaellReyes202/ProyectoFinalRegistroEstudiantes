@@ -6,7 +6,7 @@ using System.Text;
 using System.Windows;
 using ProyecFinalPro2.Interfaz;
 using System.Runtime.Serialization.Formatters.Binary;
-
+using System.Configuration;
 
 namespace ProyecFinalPro2.Archivos
 {
@@ -17,8 +17,25 @@ namespace ProyecFinalPro2.Archivos
         private BinaryFormatter Binar = new BinaryFormatter();
         private List<Student> Lista;
 
+        public void setRuta()
+        {
+            string destino = ConfigurationManager.AppSettings.Get("RutaActual");
+            MessageBox.Show("ruta en DAtaAcces = " + destino);
+            ConfigurationManager.RefreshSection("appSettings");
+            DirectoryInfo info = new DirectoryInfo(path);
+
+            if (destino != "")
+            {
+                if (info.FullName != destino)
+                {
+                    path = destino+@"\";
+                }
+            }
+        }
+
         public List<Student> Abrir()
         {
+            setRuta();
             Lista = new List<Student>();
             if (!Directory.Exists(path + "ListaUsuarios.txt"))
             {

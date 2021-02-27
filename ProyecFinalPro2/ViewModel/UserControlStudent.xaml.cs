@@ -59,7 +59,7 @@ namespace ProyecFinalPro2.Views
                 Set_Estudiante = (Student)formateador.Deserialize(miStream);
                 miStream.Close();
             }
-            catch (DirectoryNotFoundException ex)
+            catch (DirectoryNotFoundException)
             {
                 MessageBox.Show("La direccion del archivo a Cambiado,Preciona el boton de actualizar");
             }
