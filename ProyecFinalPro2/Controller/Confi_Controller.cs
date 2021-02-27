@@ -35,41 +35,35 @@ namespace ProyecFinalPro2.Controller
             
             string origen = ConfigurationManager.AppSettings.Get("RutaDefecto");
             string destino = ConfigurationManager.AppSettings.Get("RutaActual");
-            
-
-
             FolderBrowserDialog folder = new FolderBrowserDialog();
 
             if (folder.ShowDialog() == DialogResult.OK)
             {   
                 DirectoryInfo info = new DirectoryInfo(origen);
+                string completa = folder.SelectedPath + @"\RegistroEstudiantes";
 
-                if (destino == "" && temporal=="")
+
+                if(Directory.Exists(completa))
                 {
-                    try
-                    {
-                        System.IO.Directory.Move(info.FullName, folder.SelectedPath + @"\RegistroEstudiantes");
-                        temporal = folder.SelectedPath + @"\RegistroEstudiantes";
-                        
-                    }
-                    catch(DirectoryNotFoundException ex)
-                    {
-                        System.Windows.MessageBox.Show("Direccion ya existente");
-                    }   
+                    System.Windows.MessageBox.Show("El directorio no valido, ya existe una carpete con el mismo nombres");
                 }
                 else
                 {
-                    System.IO.Directory.Move(destino, folder.SelectedPath+ @"\RegistroEstudiantes");
+                    if (destino == "")
+                    {
+                        System.IO.Directory.Move(info.FullName, completa);
+                    }
+                    else
+                    {
+                        System.IO.Directory.Move(destino, completa);
+                    }
+                    Configuration confi = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                    confi.AppSettings.Settings["RutaActual"].Value = completa;
+                    confi.Save(ConfigurationSaveMode.Modified);
+                    ConfigurationManager.RefreshSection("appSettings");
+                    lol.setUbicacion(completa);
+                    
                 }
-
-                Configuration confi = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                confi.AppSettings.Settings["RutaActual"].Value = folder.SelectedPath + @"\RegistroEstudiantes";
-                confi.Save(ConfigurationSaveMode.Modified);
-                
-                ConfigurationManager.RefreshSection("appSettings");
-
-                lol.setUbicacion(folder.SelectedPath + @"\RegistroEstudiantes");
-
 
             }
         }

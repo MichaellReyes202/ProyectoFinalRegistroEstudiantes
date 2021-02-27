@@ -14,23 +14,23 @@
 
         <Grid Grid.Row="0" Margin="5" Background="Bisque">
             <StackPanel Margin="5">
-                <TextBlock Text="Ruta actual donde se estan almacenan los Registros." 
+                <TextBlock Text="Ruta actual donde se almacenan los Registros." 
                            Margin="10 0 0 0"
                            HorizontalAlignment="Left"
                            Cursor="IBeam"
                            FontStyle="Italic"
                            FontWeight="Bold"
                            FontSize="16"/>
-                <TextBlock x:Name="Ubicacion" Width="550" 
-                           Margin="15" Height="30" 
-                           Text="sdfsd" 
-                           Background="Gray"
-                           Cursor="IBeam"
-                           FontStyle="Italic"
-                           FontWeight="Bold"
-                           FontSize="16"
-                           HorizontalAlignment="Left"
-                           
+                <TextBox x:Name="Ubicacion" 
+                            TextWrapping="Wrap"
+                            IsReadOnly="True"
+                            Margin="15"  
+                            Text="" 
+                            Background="LightGray"
+                            Cursor="IBeam"
+                            FontStyle="Italic"
+                            FontWeight="Bold"
+                            FontSize="16"
                     />
             </StackPanel>
             
@@ -44,13 +44,11 @@
                         <Button x:Name="Selec_Carpet" Content="Cambiar la ruta" 
                             FontSize="20" Width="170" 
                             Height="30" Margin="15 0 0 0" 
-                            HorizontalContentAlignment="Center" 
-                            HorizontalAlignment="Stretch" 
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Center"
                         />
-
-                        <RadioButton Content="Traslador los registro" Margin="15 0 0 0" IsChecked="False"/>
-                        <RadioButton Content="Iniciar desde " Margin="15 0 0 0" IsChecked="True"/>
-                        
                     </StackPanel>
                 </Grid>
 

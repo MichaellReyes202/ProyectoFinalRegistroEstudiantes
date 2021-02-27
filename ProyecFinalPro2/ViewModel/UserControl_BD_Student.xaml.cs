@@ -44,7 +44,6 @@ namespace ProyecFinalPro2.ViewModel
             FileInfo fl = new FileInfo("" + selection.DataContext);
             switch (selection.Name)
             {
-
                 case "Modificar":
                     {
                         if(fl.Exists)
@@ -56,7 +55,6 @@ namespace ProyecFinalPro2.ViewModel
                         {
                             MessageBox.Show("La ruta de los archivos fue modificada , actualiza la tabla");
                         }
-                        
                     }
                     break;
                 case "Eliminar":

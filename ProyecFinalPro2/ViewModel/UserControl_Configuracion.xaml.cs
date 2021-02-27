@@ -1,18 +1,9 @@
 ﻿using ProyecFinalPro2.Controller;
 using ProyecFinalPro2.Views;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Configuration;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
 
 
 namespace ProyecFinalPro2.ViewModel
@@ -27,6 +18,7 @@ namespace ProyecFinalPro2.ViewModel
         {
             InitializeComponent();
             SetupController();
+            setInicioRuta();
         }
 
         private void SetupController()
@@ -40,10 +32,18 @@ namespace ProyecFinalPro2.ViewModel
             Ubicacion.Text = u;
         }
 
-        public string getUbicacion()
+        private void setInicioRuta()
         {
-            return Ubicacion.Text;
+            string actual = ConfigurationManager.AppSettings.Get("RutaActual");
+            if(actual.Equals(""))
+            {
+                string defecto = ConfigurationManager.AppSettings.Get("RutaDefecto");
+                DirectoryInfo inf = new DirectoryInfo(defecto);
+                Ubicacion.Text = inf.FullName;
+            }
+            else{Ubicacion.Text = actual;}
         }
+
 
         
 

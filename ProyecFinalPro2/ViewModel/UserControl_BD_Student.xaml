@@ -8,17 +8,21 @@
     
     <Grid>
         <StackPanel>
-            <Button x:Name="Actualizar" Content="Click para actualizar " Click="ButtonActualizar_Matricula_Click"/>
+            <Button x:Name="Actualizar" Content="Click para actualizar " Foreground="Black" Background="LightGray" Margin="5" FontSize="17" Click="ButtonActualizar_Matricula_Click"/>
             <DataGrid x:Name="People" Grid.Row="1" ItemsSource="{Binding}"  CanUserAddRows="False" AutoGenerateColumns="False"  >
                 <DataGrid.Columns>
-                    <DataGridTextColumn  Binding="{Binding Path=nombre}" IsReadOnly="True" FontSize="15">
+                    <DataGridTextColumn  Binding="{Binding Path=nombre}" IsReadOnly="True" FontSize="16">
                         <DataGridTextColumn.Header>
-                            <TextBlock Text="Nombre Completo" FontSize="15"/>
+                            <TextBlock Text="Nombre Completo" FontSize="17" />
                         </DataGridTextColumn.Header>
                     </DataGridTextColumn>
-                    <DataGridTextColumn Header="Carne" Binding="{Binding Path=carnet}" IsReadOnly="True" FontSize="15" />
+                    <DataGridTextColumn  Binding="{Binding Path=carnet}" IsReadOnly="True" FontSize="16">
+                        <DataGridTextColumn.Header>
+                            <TextBlock Text="Carnet" FontSize="17" />
+                        </DataGridTextColumn.Header>
+                    </DataGridTextColumn>
 
-                    <DataGridTemplateColumn Header="Matriculas Realizadas">
+                    <!--<DataGridTemplateColumn Header="Matriculas Realizadas">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Path=infoMatricula.Name}" FontSize="25"/>
@@ -35,7 +39,8 @@
                                 </ComboBox>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellEditingTemplate>
-                    </DataGridTemplateColumn>
+                    </DataGridTemplateColumn>-->
+                    
                 </DataGrid.Columns>
 
                 <DataGrid.RowDetailsTemplate>
@@ -44,7 +49,7 @@
                             <ListBox x:Name="ListRuta"  ItemsSource="{Binding Path=RutaMatriculas}" SelectedItem="{Binding infoMatricula}" HorizontalAlignment="Stretch">
                                 <ListBox.ItemTemplate >
                                     <DataTemplate>
-                                        <TextBlock Text="{Binding Path=Name}" FontSize="16" HorizontalAlignment="Stretch">
+                                        <TextBlock Text="{Binding Path=Name}" FontSize="16" HorizontalAlignment="Stretch" ToolTip="Click derecho para mas opciones">
                                             <TextBlock.ContextMenu>
                                                 <ContextMenu x:Name="Contx_Menu">
                                                     <MenuItem Name="Modificar" Header="Modificar Matricula" Click="MenuContextual_Matricula_Click"/>
@@ -54,6 +59,7 @@
                                         </TextBlock>
                                     </DataTemplate>
                                 </ListBox.ItemTemplate>
+                                
                                 <ListBox.ContextMenu>
                                     <ContextMenu x:Name="NewEditDeleteAdvCalcFileContextMenu">
                                         <MenuItem Name="Modificar" Header="Modificar Matricula" Click="MenuContextual_Matricula_Click" />
