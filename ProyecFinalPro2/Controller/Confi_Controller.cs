@@ -1,18 +1,8 @@
 ﻿using ProyecFinalPro2.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
-using System.Windows.Forms;
-
-
-
 using System.Configuration;
-using System.Collections.Specialized;
 using System.IO;
-using ProyecFinalPro2.Views;
-using ProyecFinalPro2.Models;
-using DocumentFormat.OpenXml.CustomProperties;
+using System.Windows.Forms;
 
 namespace ProyecFinalPro2.Controller
 {
@@ -20,16 +10,11 @@ namespace ProyecFinalPro2.Controller
     {
         private UserControl_Configuracion lol;
 
-        private string temporal = "";
-
         public Confi_Controller(UserControl_Configuracion ucf)
         {
             this.lol = ucf;
         }
 
-
-
-        
         public void Buscar_Click(object sender, RoutedEventArgs e)
         {
             
