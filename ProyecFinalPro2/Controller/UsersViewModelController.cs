@@ -17,7 +17,7 @@ namespace ProyecFinalPro2.Controller
           private List<UsersModels> listas;
           private UsersFile usersFile;
 
-          private int index { get; set; }
+          private int index = -1;
 
           public UsersViewModelController(UserControlViewModel userControlView) {
                this.userControlView = userControlView;
@@ -42,14 +42,15 @@ namespace ProyecFinalPro2.Controller
                          }
                          break;
                     case "ButtonModific":
-                         if (!TextBoxFull(userControlView.GetUsers()) && index >= 0) {
+                         if (!TextBoxFull(userControlView.GetUsers()) && index > -1) {
                               listas.RemoveAt(index);
                               listas.Insert(index,userControlView.GetUsers());
                               usersFile.Guardar(listas,false);
                               listas.Clear();
                               UpDate();
+                              index = -1;
                          } else {
-                              MessageBox.Show("Campos vacios");
+                              MessageBox.Show("No se puede modificar");
                          }
                          break;
                }
@@ -59,28 +60,30 @@ namespace ProyecFinalPro2.Controller
                index = userControlView.GetDataGridTableSelectdIndex();
                listas = usersFile.Abrir();
                MessageBoxResult result = new MessageBoxResult();
+               if (index > -1) {
+                    if (e.ChangedButton == MouseButton.Right) {
+                         result = MessageBox.Show("Deseas Modificarlo?","Configuracion",MessageBoxButton.YesNo);
 
-               if (e.ChangedButton == MouseButton.Right) {
-                    result = MessageBox.Show("Deseas Modificarlo?","Configuracion",MessageBoxButton.YesNo);
-
-                    if (result == MessageBoxResult.Yes) {
-                         int i = 0;
-                         foreach (var a in listas) {
-                              if (index == i) {
-                                   userControlView.SetUsersTextBox(a);
-                                   break;
+                         if (result == MessageBoxResult.Yes) {
+                              int i = 0;
+                              foreach (var a in listas) {
+                                   if (index == i) {
+                                        userControlView.SetUsersTextBox(a);
+                                        break;
+                                   }
+                                   i++;
                               }
-                              i++;
+                         }
+                    } else {
+                         result = MessageBox.Show("Deseas Eliminarlo?","Configuracion",MessageBoxButton.YesNo);
+                         if (result == MessageBoxResult.Yes) {
+                              listas.RemoveAt(index);
+                              usersFile.Guardar(listas,false);
+                              UpDate();
                          }
                     }
-               } else {
-                    result = MessageBox.Show("Deseas Eliminarlo?","Configuracion",MessageBoxButton.YesNo);
-                    if (result == MessageBoxResult.Yes) {
-                         listas.RemoveAt(index);
-                         usersFile.Guardar(listas,false);
-                         UpDate();
-                    }
                }
+
           }
 
           public bool TextBoxFull(UsersModels users) {
