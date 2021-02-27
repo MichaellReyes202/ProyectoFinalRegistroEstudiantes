@@ -21,14 +21,12 @@ namespace ProyecFinalPro2.Models
 
         public DataAccess()
         {
-            //this.con = con;
             setRuta();
         }
         public void setRuta()
         {
             string destino = ConfigurationManager.AppSettings.Get("RutaActual");
-            MessageBox.Show("ruta en DAtaAcces = " + destino); 
-
+            
             ConfigurationManager.RefreshSection("appSettings");
             
             DirectoryInfo info = new DirectoryInfo(path);
@@ -63,11 +61,7 @@ namespace ProyecFinalPro2.Models
                 }
 
             }
-            catch (Exception)
-            {
-
-                MessageBox.Show("Ocurrio un Error");
-            }
+            catch (Exception){}
 
             return output;
         }
